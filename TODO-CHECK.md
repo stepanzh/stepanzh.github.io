@@ -6,6 +6,7 @@
 # TODO
 + ui - navigation
 + ui - blink chapter 1 button at 1st step
++ ui - current volume point bg change color
 + @font-face for Courier New
 + responsive font-size
 + bg no-repeat and stretch

@@ -97,7 +97,7 @@ $(document).ready(function(){
   $("#menu li:first-child").on("click", function(){
     if (!isClicked) {  
       isClicked = true;
-      $(this).find("div.menu.marker").stop(true, true).css({opacity:1});
+      $(this).find("div.menu.marker").stop(true).css({opacity:1});
     }
   });
 

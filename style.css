@@ -6,6 +6,12 @@
   font-family: "dejavu_mono";
   src: url(font/DejaVuSansMono-Bold.ttf);
 }
+#attention {
+  position: absolute;
+  top: 15vh;
+  left: 3vw;
+  width: 30vw;
+}
 body {
   background-color: #FFEEEF;
   margin: 0;

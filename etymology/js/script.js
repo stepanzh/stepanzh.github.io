@@ -76,7 +76,7 @@ function moveToEnd(){
     p_title.text(TITLES["end"]);
     $("#score").text(score_str);
     $("#nickname").text(rank_obj["name"]);
-    
+    console.log(rank_obj["name"]);
     share.updateContent({
         "image": rank_obj["img"]
     });
@@ -92,7 +92,14 @@ const TITLES = {"q": "Наше?","corr": "Верно!", "wrong": "Не-а...", "
 
 const NUM_OF_QUESTIONS = ( document.getElementsByClassName("card-wrapper").length - 2 ) / 2 ;
 const ANSWERS = [true, true, false, true, false, false, true, false, false, true, true, false, false, false, true, false, false, false, true, false, true, true, false, true, false, true, true, false, true, true, false, false, true];
-const RANKS = [{"name":"дикарь","img":"https://stepanzh.github.io/etymology/img/Risovach.jpg"}, "профан", "простак","школяр","грамотей","эрудит","лингвист","Макс Фасмер"]
+const RANKS = [{"name":"дикарь","img":"https://stepanzh.github.io/etymology/img/dikar.png",}, 
+                {"name":"профан","img":"https://stepanzh.github.io/etymology/img/profan.png"}, 
+                {"name":"простак","img":"https://stepanzh.github.io/etymology/img/prostak.png"},
+                {"name":"школяр","img":"https://stepanzh.github.io/etymology/img/shkolyar.png"},
+                {"name":"грамотей","img":"https://stepanzh.github.io/etymology/img/gramotey.png"},
+                {"name":"эрудит","img":"https://stepanzh.github.io/etymology/img/erudit.png"},
+                {"name":"лингвист","img":"https://stepanzh.github.io/etymology/img/lingvist.png"},
+                {"name":"Макс Фасмер","img":"https://stepanzh.github.io/etymology/img/fasmer.png"}]
 
 const p_title = $("#title p");
 const p_counter = $("#counter");
@@ -119,15 +126,7 @@ $cards.slick({
     touchMove: false,
     swipe: false,
     
-    speed: 500,
-    responsive: [
-        {
-            breakpoint: 768,
-            settings: {
-            speed: 1000
-            }
-        }
-    ]
+    speed: 500
 });
 
 /* CLICK events */
@@ -167,8 +166,6 @@ $(document).on("keypress", function (e){
     if ( key == 0){
         key = e.originalEvent.which;
     }
-    console.log(e);
-    console.log(key);
     if (key == 13 || key == 32){
         if ( state == 0 ){
             btn_start.trigger("click");

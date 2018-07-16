@@ -88,7 +88,7 @@ const TITLES = {"q": "Наше?","corr": "Верно!", "wrong": "Не-а...", "
 
 const NUM_OF_QUESTIONS = ( document.getElementsByClassName("card-wrapper").length - 2 ) / 2 ;
 const ANSWERS = [true, true, false, true, false, false, true, false, false, true, true, false, false, false, true, false, false, false, true, false, true, true, false, true, false, true, true, false, true, true, false, false, true];
-const RANKS = [{"name":"дикарь","img":"https://image2.slideserve.com/4267995/integer-division-1-2-n.jpg"}, "профан", "простак","школяр","грамотей","эрудит","лингвист","Макс Фасмер"]
+const RANKS = [{"name":"дикарь","img":"https://stepanzh.github.io/etymology/img/Risovach.jpg"}, "профан", "простак","школяр","грамотей","эрудит","лингвист","Макс Фасмер"]
 
 const p_title = $("#title p");
 const p_counter = $("#counter");

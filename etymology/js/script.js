@@ -96,7 +96,7 @@ const TITLES = {"q": "Наше?","corr": "Верно!", "wrong": "Не-а...", "
 
 const NUM_OF_QUESTIONS = ( document.getElementsByClassName("card-wrapper").length - 2 ) / 2 ;
 const ANSWERS = [true, true, false, true, false, false, true, false, false, true, true, false, false, false, true, false, false, false, true, false, true, true, false, true, false, true, true, false, true, true, false, false, true];
-const RANKS = [{"name":"дикарь","img":"https://img3.stockfresh.com/files/i/iqoncept/m/58/292997_stock-photo-go---green-word-and-white-globe.jpg"}, "профан", "простак","школяр","грамотей","эрудит","лингвист","Макс Фасмер"]
+const RANKS = [{"name":"дикарь","img":"https://stepanzh.github.io/etymology/img/Risovach.jpg"}, "профан", "простак","школяр","грамотей","эрудит","лингвист","Макс Фасмер"]
 
 const p_title = $("#title p");
 const p_counter = $("#counter");

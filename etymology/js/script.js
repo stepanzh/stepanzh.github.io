@@ -57,7 +57,7 @@ function getRating(){
     else if ( rate >= 0.7625 && rate < 0.925){return 5}
     else if ( rate >= 0.925 && rate < 1){return 6}
     else if (score == NUM_OF_QUESTIONS){return 7}
-
+}
 function moveToEnd(){
     var score_str = score + " из " + NUM_OF_QUESTIONS;
     var rank_obj = RANKS[ getRating() ];

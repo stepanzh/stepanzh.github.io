@@ -78,8 +78,8 @@ function moveToEnd(){
     $("#nickname").text(rank_obj["name"]);
     console.log(rank_obj["name"]);
     share.updateContent({
-        "description": rank_obj["img"]
-        //"image": rank_obj["img"]
+        //"description": rank_obj["img"]
+        "image": rank_obj["img"]
     });
     
     btn_next.css("display", "none");

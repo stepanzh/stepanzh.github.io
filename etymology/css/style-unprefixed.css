@@ -24,24 +24,13 @@ p { display: block; }
 #title {
   height: 15%;
   /*width: 100vw;*/
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   
-  -webkit-box-shadow: 0 4px 2px #1f003e;
-  
-          box-shadow: 0 4px 2px #1f003e;
+  box-shadow: 0 4px 2px #1f003e;
   background-color: #490095;
   
   font-size: 48px;
@@ -62,35 +51,19 @@ p { display: block; }
 .card {
   height: 100%;
   margin: 0 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   
   text-align: center;
   font-size: 28px;
 }
 .separator {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   justify-items: center;
 }
 .sep-line {
@@ -122,16 +95,11 @@ p { display: block; }
 }
 
 #control {
-  -ms-flex-item-align:   auto;
-      -ms-grid-row-align:   auto;
-      align-self:   auto;
+  align-self:   auto;
   
   height: 10%;
   background-color: #ff9c0c;
-  -webkit-box-shadow: 0 -4px 2px #ae6800;
-          box-shadow: 0 -4px 2px #ae6800;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
+  box-shadow: 0 -4px 2px #ae6800;
   transition: .3s;
 }
 #control:hover {
@@ -139,25 +107,12 @@ p { display: block; }
 }
 .btn {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack:  center;
-      -ms-flex-pack:  center;
-          justify-content:  center;
+  flex-direction: column;
+  align-items: center;
+  justify-content:  center;
   
   font-size: 40px;
-  
-  -webkit-transition: .3s;
-  
-  -o-transition: .3s;
   
   transition: .3s;
 }
@@ -172,16 +127,9 @@ p { display: block; }
 }
 .btns {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
 }
 .btns .btn {
   height: 100%;
@@ -214,17 +162,10 @@ p { display: block; }
 .ya-share2 > div > ul {
   height: inherit;
   width: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
 .ya-share2__icon {
@@ -266,12 +207,10 @@ p.question {
   }
   #title {
     font-size: 44px;
-    -webkit-box-shadow: 0 2px 2px #1f003e;
-            box-shadow: 0 2px 2px #1f003e;
+    box-shadow: 0 2px 2px #1f003e;
   }
   #control {
-    -webkit-box-shadow: 0 -2px 2px #ae6800;
-            box-shadow: 0 -2px 2px #ae6800;
+    box-shadow: 0 -2px 2px #ae6800;
   }
   .card#end {
     font-size: 28px;
@@ -311,9 +250,7 @@ p.question {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
   .ya-share2__icon {
     min-width: 40px;

@@ -78,12 +78,8 @@ function moveToEnd(){
     $("#nickname").text(rank_obj["name"]);
     
     share.updateContent({
-        "image": rank_obj["img"]//,
-        //"data-description": "Test description"
+        "image": rank_obj["img"]
     });
-    
-    //$(".ya-share2").attr("data-image", rank_obj["img"] );
-    //$(".ya-share2").attr("data-description", "TEST DESCRIPTION" );
     
     btn_next.css("display", "none");
     btn_share.css("display", "flex");

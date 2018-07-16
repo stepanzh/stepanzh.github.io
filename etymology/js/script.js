@@ -76,7 +76,7 @@ function moveToEnd(){
     p_title.text(TITLES["end"]);
     $("#score").text(score_str);
     $("#nickname").text(rank_obj["name"]);
-    $(".ya-share2").attr("data-image", rank_obj["img"] );
+    //$(".ya-share2").attr("data-image", rank_obj["img"] );
     $(".ya-share2").attr("data-description", "TEST DESCRIPTION" );
     
     btn_next.css("display", "none");

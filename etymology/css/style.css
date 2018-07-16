@@ -162,7 +162,6 @@ p { display: block; }
   transition: .3s;
 }
 .btn:hover {
-  /*ffa21bff ee8d00ff*/
   background-color: #ffa82aff;
   cursor: pointer;
   

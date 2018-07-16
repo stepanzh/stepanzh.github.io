@@ -57,16 +57,6 @@ function getRating(){
     else if ( rate >= 0.7625 && rate < 0.925){return 5}
     else if ( rate >= 0.925 && rate < 1){return 6}
     else if (score == NUM_OF_QUESTIONS){return 7}
-}
-/*
-function testRating(){
-    for (var i=0;i<34;i++){
-        score=i;
-        r=getRating();
-        var s = i + " " + RANKS[r];
-        console.log(s);
-    }
-}*/
 
 function moveToEnd(){
     var score_str = score + " из " + NUM_OF_QUESTIONS;
@@ -78,7 +68,6 @@ function moveToEnd(){
     $("#nickname").text(rank_obj["name"]);
     console.log(rank_obj["name"]);
     share.updateContent({
-        //"description": rank_obj["img"]
         "image": rank_obj["img"]
     });
     
@@ -93,15 +82,7 @@ const TITLES = {"q": "Наше?","corr": "Верно!", "wrong": "Не-а...", "
 
 const NUM_OF_QUESTIONS = ( document.getElementsByClassName("card-wrapper").length - 2 ) / 2 ;
 const ANSWERS = [true, true, false, true, false, false, true, false, false, true, true, false, false, false, true, false, false, false, true, false, true, true, false, true, false, true, true, false, true, true, false, false, true];
-const RANKS = [{"name":"грамотей","img":"https://stepanzh.github.io/etymology/img/gramotey.png"},
-{"name":"грамотей","img":"https://stepanzh.github.io/etymology/img/gramotey.png"},
-{"name":"грамотей","img":"https://stepanzh.github.io/etymology/img/gramotey.png"},
-{"name":"грамотей","img":"https://stepanzh.github.io/etymology/img/gramotey.png"},
-{"name":"грамотей","img":"https://stepanzh.github.io/etymology/img/gramotey.png"},
-{"name":"грамотей","img":"https://stepanzh.github.io/etymology/img/gramotey.png"},
-{"name":"грамотей","img":"https://stepanzh.github.io/etymology/img/gramotey.png"},
-{"name":"грамотей","img":"https://stepanzh.github.io/etymology/img/gramotey.png"}]
-/*[{"name":"дикарь","img":"https://stepanzh.github.io/etymology/img/dikar.png",}, 
+const RANKS = [{"name":"дикарь","img":"https://stepanzh.github.io/etymology/img/dikar.png",}, 
                 {"name":"профан","img":"https://stepanzh.github.io/etymology/img/profan.png"}, 
                 {"name":"простак","img":"https://stepanzh.github.io/etymology/img/prostak.png"},
                 {"name":"школяр","img":"https://stepanzh.github.io/etymology/img/shkolyar.png"},
@@ -109,7 +90,7 @@ const RANKS = [{"name":"грамотей","img":"https://stepanzh.github.io/etym
                 {"name":"эрудит","img":"https://stepanzh.github.io/etymology/img/erudit.png"},
                 {"name":"лингвист","img":"https://stepanzh.github.io/etymology/img/lingvist.png"},
                 {"name":"Макс Фасмер","img":"https://stepanzh.github.io/etymology/img/fasmer.png"}]
-*/
+
 const p_title = $("#title p");
 const p_counter = $("#counter");
 const btn_start = $(".btn#start");

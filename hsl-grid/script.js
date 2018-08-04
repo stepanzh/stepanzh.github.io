@@ -252,9 +252,10 @@ var points = create_grid({
 var renderer = create_renderer(fieldDOM);
 
 fieldDOM.addEventListener("mousemove", change_src_by_mouse);
-
+fieldDOM.addEventListener("touchmove", change_src_by_mouse);
 
 fieldDOM.addEventListener("mouseout", stop_animation);
+fieldDOM.addEventListener("touchend", stop_animation);
 
 window.onresize = function(e){
   renderer.reset_offsets();

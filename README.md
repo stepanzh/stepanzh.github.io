@@ -1,5 +1,5 @@
 # stepanzh.github.io
-The works listed in 
+The latest works are listed first.
 ## HSL ANIMATED GRID [[LINK]](https://stepanzh.github.io/hsl-grid/)
 A ractangle grid containing circles, which move toward to mouse and change color. Plane js.
 ## НАШЕ? (NASHE?) [[LINK]](https://stepanzh.github.io/etymology/)

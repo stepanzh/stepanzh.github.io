@@ -59,6 +59,9 @@ p { display: block; }
   height: 75%;
   background-color: #fcfcf8;
 }
+.card-wrapper {
+  height: inherit;
+}
 .card {
   height: 100%;
   margin: 0 10px;

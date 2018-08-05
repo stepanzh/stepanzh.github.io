@@ -58,6 +58,17 @@ function getRating(){
     else if ( rate >= 0.925 && rate < 1){return 6}
     else if (score == NUM_OF_QUESTIONS){return 7}
 }
+function ratingTest() {
+    
+    console.log('Rating Test');
+    console.log('Corr / Rating');
+    
+    for (var i = 0; i < NUM_OF_QUESTIONS; i += 1){
+        score = i + 1;
+        rate_num = getRating();
+        console.log(score, RANKS[rate_num].name);
+    }
+}
 function moveToEnd(){
     var score_str = score + " из " + NUM_OF_QUESTIONS;
     var rank_obj = RANKS[ getRating() ];
@@ -81,7 +92,10 @@ var share = Ya.share2(document.getElementsByClassName("ya-share2")[0]);
 const TITLES = {"q": "Наше?","corr": "Верно!", "wrong": "Не-а...", "end": "Поздравляем!"};
 
 const NUM_OF_QUESTIONS = ( document.getElementsByClassName("card-wrapper").length - 2 ) / 2 ;
-const ANSWERS = [true, true, false, true, false, false, true, false, false, true, true, false, false, false, true, false, false, false, true, false, true, true, false, true, false, true, true, false, true, true, false, false, true];
+// with january
+const ANSWERS = [true, true, false, true, false, false, true, false, false, true, true, false, false, false, true, false, false, false, true, false, true, true, false, true, false, true, true, false, true, true, false, false, false];
+//  No january
+//const ANSWERS = [true, true, false, true, false, false, true, false, false, true, true, false, false, false, true, false, false, false, true, false, true, true, false, true, false, true, true, false, true, true, false, false];
 const RANKS = [{"name":"дикарь","img":"https://stepanzh.github.io/etymology/img/dikar.png",}, 
                 {"name":"профан","img":"https://stepanzh.github.io/etymology/img/profan.png"}, 
                 {"name":"простак","img":"https://stepanzh.github.io/etymology/img/prostak.png"},

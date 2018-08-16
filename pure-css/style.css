@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: sans;
+  font-size: 16px;
+}
+.body-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  position: relative;
+  width: 10em;
+  height: 10em;
+  
+/*   background: lightgreen; */
+}
+/* control inner size of buttons */
+.btn-wrapper > div {  
+  width: 70%;
+  height: 70%;
+  cursor: pointer;
+}
+/* [>] EXIT BUTTON */
+.exit--circle {
+  position: relative;
+  border-radius: 100%;
+  background: salmon;
+  
+  box-shadow: 0 0 0 0 lightsalmon;
+  
+  transition: transform .5s;
+}
+.exit--circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 1em transparent;
+  transition: box-shadow 1s;
+}
+.exit--circle .bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  width: 80%;
+  height: 10px;
+  
+  border-radius: 5px;
+  background: white;
+}
+
+.exit--circle .bar:first-child {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+.exit--circle .bar:last-child {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+/* [<] EXIT BUTTON */
+/* [>] MINIMIZE BUTTON */
+.minimize {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.minimize .bar {
+  height: 5%;
+  width: 70%;
+  background-color: salmon;
+  transition: transform .5s;
+}
+.minimize .bar:first-child {
+  transform: translateY(-250%);
+}
+.minimize .bar:nth-child(2){
+  box-shadow: 0 0 0 0 lightsalmon;
+}
+.minimize .bar:last-child {
+  transform: translateY(250%);
+}
+.minimize:hover .bar {
+  transition: transform .5s, box-shadow 1s .25s;
+}
+.minimize:hover .bar:first-child {
+  top: 50%;
+  transform: translateY(100%);
+}
+.minimize:hover .bar:nth-child(2) {
+  box-shadow: 0 0 0 .85em transparent;
+}
+.minimize:hover .bar:last-child {
+  top: 50%;
+  transform: translateY(-100%);
+}
+/* [<] MINIMIZE BUTTON */

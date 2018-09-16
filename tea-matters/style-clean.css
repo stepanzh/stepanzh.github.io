@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-size: 5px;
+  font-size: calc(5px + (10 - 5)*((100vw - 320px)/1600));
+  background: transparent;
+}
+.body-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+.sky {
+  position: relative;
+  width: 100%;
+  height: 100%;
+/*   width: 50%;
+  height: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+  background: radial-gradient(
+    circle at top center,
+    #1a082cff 0,
+    #1a082cff 65%,
+    #33097aff 100%
+  );
+  overflow: hidden;
+}
+.sky__stars {
+  position: relative;
+  width: 100%;
+  height: 100%;
+/*   left: 50%; */
+/*   transform: translate(-50%,-50%) rotate(0deg); */
+  background: radial-gradient(
+    red 0,
+    red 40px,
+    transparent 100%;
+  );
+/*   animation: rotation360 800s; */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  
+}
+@keyframes rotation360 {
+  0% {
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%,-50%) rotate(360deg);
+  }
+}
+.star {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+  transition: all .3s;
+}
+.js-blink {
+  opacity: .5;
+  transform: translate(-50%,-50%) scale(.7);
+/*   transition: all .3s; */
+}
+.star--small {
+  width: 10px;
+  height: 10px;
+}
+.star--medium {
+  width: 15px;
+  height: 15px;
+}
+.star--big {
+  width: 20px;
+  height: 20px;
+}
+.star--red {background: #fcbdbdff;}
+.star--yellow {background: #fcf8bdff;}
+.star--blue {background: #cbc0f9ff;}
+.star--white {background: white;}
+.sky__lamp {
+  position: absolute;
+  width: 40em;
+  height: 40em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  background: #f4f1a8;
+  animation: doubleBoxShadow 4s linear 1s infinite;
+}
+@keyframes doubleBoxShadow {
+  0% {
+    box-shadow: 0 0 0 0 #f4f1a880,
+      0 0 0 0 #f4f1a830;
+  }
+  35% {
+    box-shadow: 0 0 0 6em #f4f1a880,
+      0 0 0 12em #f4f1a830;
+  }
+  100% {
+    box-shadow: 0 0 0 10em #f4f1a800,
+      0 0 0 18em #f4f1a800;
+  }
+}
+.tea {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translate(-50%,-50%) rotate(10deg);
+  transform-origin: 48% 5%;
+  background: center/100% url(tea.svg) no-repeat;
+  animation: rotation 10s infinite ease-in-out;
+/*   will-change: transform; */
+}
+@keyframes rotation {
+  50% {
+    transform: translate(-50%,-50%) rotate(-10deg);
+  }
+  100% {
+    transform: translate(-50%,-50%) rotate(10deg);
+  }
+}

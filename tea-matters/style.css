@@ -117,10 +117,26 @@ body {
   width: 20px;
   height: 20px;
 }
-.star--red {background: #fcbdbdff; box-shadow: 0 0 5px 1px #fcbdbd88;}
-.star--yellow {background: #fcf8bdff; box-shadow: 0 0 5px 1px #fcf8bd88}
-.star--blue {background: #cbc0f9ff; box-shadow: 0 0 5px 1px #cbc0f988}
-.star--white {background: white; box-shadow: 0 0 5px 1px #ffffff88}
+.star--red {
+  background: #fcbdbdff; 
+  -webkit-box-shadow: 0 0 5px 1px #fcbdbd88;
+  box-shadow: 0 0 5px 1px #fcbdbd88;
+}
+.star--yellow {
+  background: #fcf8bdff;
+  -webkit-box-shadow: 0 0 5px 1px #fcf8bd88;
+  box-shadow: 0 0 5px 1px #fcf8bd88;
+}
+.star--blue {
+  background: #cbc0f9ff;
+  -webkit-box-shadow: 0 0 5px 1px #cbc0f988;
+  box-shadow: 0 0 5px 1px #cbc0f988;
+}
+.star--white {
+  background: white;
+  -webkit-box-shadow: 0 0 5px 1px #ffffff88;
+  box-shadow: 0 0 5px 1px #ffffff88;
+}
 .sky__lamp {
   position: absolute;
   width: 40em;

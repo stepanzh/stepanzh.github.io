@@ -51,7 +51,9 @@ body {
   border-radius: 2em;
   text-align: center;
 }
-
+.btn:hover {
+  cursor: pointer;
+}
 #btn-init {
   display: none;
 }

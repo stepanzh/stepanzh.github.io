@@ -38,16 +38,18 @@ body {
 {
   display: flex;
   margin: 0 10px;
+  width: 45%;
 }
-#control__lr {
-  
+#control__lr .btn,
+#control__dr .btn
+{
+  width: 50%;
 }
 .btn {
   padding: .25em .5em;
-  margin: 5px;
   border: 1px solid black;
   border-radius: 2em;
-  font-size: 1.5em;
+  text-align: center;
 }
 
 #btn-init {

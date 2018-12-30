@@ -55,3 +55,20 @@ body {
 #btn-init {
   display: none;
 }
+#desktop-help {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 0;
+  width: 20%;
+}
+@media screen and (min-width: 900px){
+  #svg-wrapper,
+  #control {
+    width: 50%;
+    margin: auto;
+  }
+  #desktop-help {
+    display: block;
+  }
+}

@@ -295,8 +295,7 @@ function remove_line(){
     return false
 };
 
-document.addEventListener('keypress', function(e){
-    console.log(e.key);
+document.addEventListener('keydown', function(e){
     if (e.key === 'ArrowDown'){
         fig.down();
     } else if (e.key === 'ArrowLeft'){
@@ -307,6 +306,7 @@ document.addEventListener('keypress', function(e){
         fig.rotate();
     }
 });
+
 
 document.getElementById('btn-left').addEventListener('click', function(e){
     fig.left();

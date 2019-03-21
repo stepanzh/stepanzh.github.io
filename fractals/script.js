@@ -154,21 +154,15 @@ var Model = function(svgobj) {
 /* View */
 /* ************************************************************************** */
 var View = function(model) {
-    var svgobj = model.svgobj;
     var polystack; /* actual stack of SVG.Polygon objects */
-    var poly_bg_colors = [
-        {
-            r: 255,
-            g: 0,
-            b: 0
-        },
-        {
-            r: 0,
-            g: 255,
-            b: 0
-        }
-    ];
-
+    
+    var color_set = {
+        bgpoly: [
+                    hex_string_to_colorobj(document.getElementById("color-poly--1").value),
+                    hex_string_to_colorobj(document.getElementById("color-poly--2").value)
+                ]
+    };
+    
     function draw_fractal(p, bgfill, sfill){
         p.attr({
               fill: bgfill,
@@ -185,7 +179,7 @@ var View = function(model) {
         
         for (d = 0; d < depth; d += 1){
             p = ps[d];
-            bgc = gradient(poly_bg_colors, d / ( (depth > 1 ? depth : 2) - 1 ));
+            bgc = gradient(color_set.bgpoly, d / ( (depth > 1 ? depth : 2) - 1 ));
             draw_fractal(p, bgc);
         }
     }
@@ -195,11 +189,11 @@ var View = function(model) {
     
     that.render = draw_fractals;
     that.set_bgcolor_1 = function(rgb){
-        poly_bg_colors[0] = rgb;
+        color_set.bgpoly[0] = rgb;
         that.render();
     };
     that.set_bgcolor_2 = function(rgb){
-        poly_bg_colors[1] = rgb;
+        color_set.bgpoly[1] = rgb;
         that.render();
     };
     

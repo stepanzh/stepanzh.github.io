@@ -67,7 +67,8 @@ var Model = function(svgobj) {
     var fractals = [];
     var relative_koef;
     var depth; // parent + children
-    var width = 500, height = 500;
+    var width = document.getElementById('draw').clientWidth;
+    var height = document.getElementById('draw').clientHeight;
     var svgobj, bgrect;
     
     var polystack = [];         /* SVG.Polygon */
@@ -470,7 +471,6 @@ var Controller = function(model, view){
     
     var check_poly = document.getElementById('check--showpoly');
     var check_lines = document.getElementById('check--showlines');
-//    var check_manipulate = document.getElementById('check--manipulate');
     
     var that = {};
     
@@ -481,10 +481,6 @@ var Controller = function(model, view){
     that.set_relkoef = function(k){
         model.set_relative_koef(k);
     }
-    
-    /* ************************** */
-    /* events */
-    // adds EventListener for coloring
     function colorPickListener(inp, update_func){
         inp.addEventListener("change", function(e){
             var color = hex_string_to_colorobj(e.target.value)            
@@ -548,14 +544,8 @@ var Controller = function(model, view){
     
     checkBoolListener(check_poly, view.set_showpoly);
     checkBoolListener(check_lines, view.set_showlines);
-//    checkBoolListener(check_manipulate, function(bool){
-//        view.set_draggers(bool);
-//        if (bool) {that.manipulate_listeners_on();}
-//        else {that.manipulate_listeners_off();}
-//    });
     
     model.get_svgobj().on('mouseover', function(e){
-        console.log('mouseover svg');
         view.set_draggers(true);
         that.manipulate_listeners_on();
     });
@@ -569,17 +559,8 @@ var Controller = function(model, view){
 
     that.manipulate_listeners_on();
     model.set_controller(that);
-    /* ************************** */
     return that
 }
 /* ************************************************************************** */
 
-
-/* GLOBAL VARIABLES DEFINITION */
-/* SVG.js objects */
-var draw;
 var M, V;
-
-/* ************************ */
-/* fractal parameters */
-

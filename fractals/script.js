@@ -183,9 +183,16 @@ var View = function(model) {
     
     var that = {};
     
-
+    
     that.render = draw_fractals;
-//    that.set_bgcolors = function;
+    that.set_bgcolor_1 = function(rgb){
+        bg_colors[0] = rgb;
+        that.render();
+    };
+    that.set_bgcolor_2 = function(rgb){
+        bg_colors[1] = rgb;
+        that.render();
+    };
     
     return that
 };

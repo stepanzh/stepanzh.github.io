@@ -163,12 +163,16 @@ var View = function(model) {
                 ]
     };
     
+    var showpoly = document.getElementById('check--showpoly').checked;
+    var showlines = document.getElementById('check--showlines').checked;
+    
     function draw_fractal(p, bgfill, sfill){
         p.attr({
               fill: bgfill,
-              'fill-opacity': 1,
+              'fill-opacity': showpoly ? 1 : 0,
               stroke: '#000',
               'stroke-width': 1,
+              'stroke-opacity': showlines ? 1 : 0
         });
     }
     
@@ -196,6 +200,14 @@ var View = function(model) {
         color_set.bgpoly[1] = rgb;
         that.render();
     };
+    that.set_showpoly = function(f){
+        showpoly = f;
+        that.render();
+    };
+    that.set_showlines = function(f){
+        showlines = f;
+        that.render();
+    };
     
     return that
 };
@@ -211,6 +223,8 @@ var Controller = function(model, view){
     /* view controller */
     var poly_bg_picker_1 = document.getElementById("color-poly--1");
     var poly_bg_picker_2 = document.getElementById("color-poly--2");
+    var check_poly = document.getElementById('check--showpoly');
+    var check_lines = document.getElementById('check--showlines');
     
     var that = {};
     
@@ -234,6 +248,12 @@ var Controller = function(model, view){
         });
     };
     
+    function checkBoolListener(check, update_func){
+        check.addEventListener('change', function(e){
+            update_func( e.target.checked );
+        });
+    };
+    
     depth_input.oninput = function(){
         that.set_depth( parseInt(this.value) );
     }
@@ -242,6 +262,11 @@ var Controller = function(model, view){
     }
     colorPickListener(poly_bg_picker_1, view.set_bgcolor_1);
     colorPickListener(poly_bg_picker_2, view.set_bgcolor_2);
+    
+    checkBoolListener(check_poly, view.set_showpoly);
+    checkBoolListener(check_lines, view.set_showlines);
+    
+    
     /* ************************** */
     return that
 }

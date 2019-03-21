@@ -41,6 +41,9 @@ function make_draggable(svgelement, callback){
         this.off('mousemove');
     });
 }
+function sqrdistance(c1, c2){
+    return (c1[0] - c2[0])*(c1[0] - c2[0]) + (c1[1] - c2[1])*(c1[1] - c2[1])
+}
 /* ************************************************************************** */
 
 
@@ -60,7 +63,7 @@ SVG.on(document, 'DOMContentLoaded', function() {
 /* ************************************************************************** */
 var Model = function(svgobj) {
 //    var origin_coords = [[0, 0], [500, 0], [250, 500]];
-    var origin_coords = [[100, 100], [400, 100], [350, 400], [400, 450]];
+    var origin_coords = [[100, 100], [ 400, 100 ], [400, 400], [100, 400]];
     var fractals = [];
     var relative_koef;
     var depth; // parent + children
@@ -72,6 +75,8 @@ var Model = function(svgobj) {
     var polygroup, draggers_group;
     
     var last_draw_depth = 0, last_draw_vertexes, last_relative_koef;
+    
+    var view, controller;
     
     function calc_child(parent_coords) {
         var child = [];
@@ -91,9 +96,9 @@ var Model = function(svgobj) {
 
     var update_fractals = function() {
         var i, j, child_coords, points, parent_coords;
-        console.log('depth/last: ', depth, last_draw_depth);
-        console.log('fractals before update', fractals);
-        console.log('rel/last', relative_koef, last_relative_koef);
+//        console.log('depth/last: ', depth, last_draw_depth);
+//        console.log('fractals before update', fractals);
+//        console.log('rel/last', relative_koef, last_relative_koef);
         
         /* rel_koef change? */
         if (relative_koef != last_relative_koef){
@@ -127,14 +132,14 @@ var Model = function(svgobj) {
             polystack.pop().remove().forget();
         }
         
-        console.log('fractals after update', fractals);
+//        console.log('fractals after update', fractals);
         last_draw_depth = depth;
     };
     
     var synchronize_coords = function(){
         var i, j;
         console.log('fractals: ', fractals);
-        console.log('polustack = ', polystack);
+        console.log('polystack = ', polystack);
         for (i = 0; i < fractals.length; i += 1){
             console.log('i=', i);
             console.log(polystack[i].node.points);
@@ -159,7 +164,6 @@ var Model = function(svgobj) {
         } else {
             /* vertex is moved */
         }
-        
         origin_coords = coords;
     };
     
@@ -170,7 +174,6 @@ var Model = function(svgobj) {
             fractals[i] = calc_child(fractals[i-1]);
         }
     };
-    
     var move_origin_vertex = function(i, coords){
         if (i < fractals[0].length){
             fractals[0][i] = coords;
@@ -180,12 +183,87 @@ var Model = function(svgobj) {
             console.log('move_origin_vertex: trying to move unexisting vertex = ', i);
         }
     };
+    var add_origin_vertex = function(target){
+        /* coords must be < width, < height */
+        
+        /* find index where to put new vertex */
+        var i, imin, imin_second, minr, r, imin1, imin2, r1, r2;
+        var orig = fractals[0];
+        /* find closest vertex */
+        imin = 0;
+        minr = sqrdistance(orig[0], target);
+        for (i = 1; i < orig.length; i += 1){
+            r = sqrdistance(orig[i], target);
+            if (r < minr){
+                imin = i;
+            }
+        }
+        console.log('imin=', imin);
+        /* find second closest vertex */
+        imin1 = imin != origin_coords.length ? (imin+1)%origin_coords.length : 0;
+        imin2 = imin != 0 ? (imin-1)%origin_coords.length : origin_coords.length-1;
+        
+        console.log('imin1/imin2', imin1, imin2);
+        
+        r1 = sqrdistance(orig[imin1], target);
+        r2 = sqrdistance(orig[imin2], target);
+
+        imin_second = r1 < r2 ? imin1 : imin2;
+        
+        console.log('imin_second=',imin_second);
+        
+        /* update origin_coords */
+        if (imin > imin_second){
+            if (imin == orig.length-1){
+                // between i=N and i=0
+                origin_coords.push(target);
+            } else {
+                // other
+                origin_coords.splice(imin_second+1, 0, target);
+            }
+        } else {
+            if (imin_second == orig.length-1){
+                origin_coords.push(target);
+            } else {
+                origin_coords.splice(imin+1, 0, target);
+            }
+        }
+        reload();
+    };
+    var reload = function(){
+        /* clear polygons */ // is change possible? ...... ???
+        forget_obj(polystack, fractals);
+        /* create new polygons */
+        fractals.push( origin_coords );
+        polystack.push( polygroup.polygon(origin_coords) );
+        last_draw_depth = 1;
+        update_fractals();
+        /* update draggers */
+        forget_obj(origindraggers);
+        for (i = 0; i < origin_coords.length; i += 1){
+            origindraggers.push( draggers_group.circle(0) );
+            origindraggers[i].attr({cx: origin_coords[i][0], cy: origin_coords[i][1]});
+        }
+        if (controller){
+            controller.dragon();
+        }
+    };
+    
+    var forget_obj = function(objs, coord_arr){
+        var i, N = objs.length;
+        for (i = 0; i < N; i += 1){
+            objs.pop().remove().forget();
+            if (coord_arr){
+                coord_arr.pop();
+            }
+        }
+    }
     
     /* when points dragged callback(SVG.Circle) is called */
     var get_draggers_callbacks = function(){
         var calls = [];
         var i;
-        for (i = 0; i < origindraggers.length; i += 1){ /* *********************************************************************************** -1 */
+        for (i = 0; i < origindraggers.length; i += 1){
             calls.push(
                 function(i){ 
                     var f = function(el){
@@ -206,15 +284,20 @@ var Model = function(svgobj) {
 
     that.set_depth = set_depth;
     that.set_relative_koef = function(k){ relative_koef = k; update_fractals(); };
-    that.set_origin = function ( coords ){ origin_coords = coords; update_fractals(); }
+    that.set_origin = function ( coords ){ origin_coords = coords; update_fractals(); } // ??? length(coords) != length()
     
     that.get_bgrect = function(){ return bgrect };
     that.get_polys = function(){ return polystack }
     that.get_fractals = function() { return fractals }; // array of fractals' coords
     that.get_draggers = function(){ return origindraggers };
     that.get_draggers_callbacks = get_draggers_callbacks;
+    that.get_origin_coords = function(){ return origin_coords }
 
     that.move_origin_vertex = move_origin_vertex;
+    that.add_origin_vertex = add_origin_vertex;
+    
+    that.set_view = function(v){ view = v; }
+    that.set_controller = function(c){ controller = c; }
     
     that.init = function(){
         var i;
@@ -227,17 +310,19 @@ var Model = function(svgobj) {
         last_relative_koef = relative_koef;
         
         depth = document.getElementById('range--children').value;
-        
-        fractals.push( origin_coords );
-        polystack.push( polygroup.polygon(origin_coords) );
-        last_draw_depth = 1;
-        
         draggers_group = svgobj.group();
-        for (i = 0; i < origin_coords.length; i += 1){
-            origindraggers.push( draggers_group.circle(20) );
-            origindraggers[i].attr({cx: origin_coords[i][0], cy: origin_coords[i][1]})
-        }
-        update_fractals();
+        
+        reload();        
+//        fractals.push( origin_coords );
+//        polystack.push( polygroup.polygon(origin_coords) );
+//        last_draw_depth = 1;
+//        
+//        draggers_group = svgobj.group();
+//        for (i = 0; i < origin_coords.length; i += 1){
+//            origindraggers.push( draggers_group.circle(20) );
+//            origindraggers[i].attr({cx: origin_coords[i][0], cy: origin_coords[i][1]})
+//        }
+//        update_fractals();
     }
     
     that.init();
@@ -268,6 +353,8 @@ var View = function(model) {
     var showpoly = document.getElementById('check--showpoly').checked;
     var showlines = document.getElementById('check--showlines').checked;
     
+    var draggers_common_attr = {fill: 'blue', r: 10};
+    
     function draw_fractal(p, bgfill, sfill, swidth=1){
         p.attr({
               fill: bgfill,
@@ -297,7 +384,13 @@ var View = function(model) {
     }
     
     function ui_update(){
+        var i, drgs;
         model.get_bgrect().attr({fill: color_set.bg});
+        drgs = model.get_draggers();
+        for (i=0; i < drgs.length; i += 1){
+            drgs[i].attr(draggers_common_attr);
+        }
+            
     }
     
     var that = {};
@@ -328,7 +421,6 @@ var View = function(model) {
         that.render();
     };    
     
-    
     that.set_showpoly = function(f){
         showpoly = f;
         that.render();
@@ -338,6 +430,8 @@ var View = function(model) {
         that.render();
     };
     
+    
+    model.set_view(that);
     return that
 };
 /* ************************************************************************** */
@@ -390,11 +484,7 @@ var Controller = function(model, view){
     function dragndropListener(){
         var draggers = model.get_draggers();
         var callbacks = model.get_draggers_callbacks();
-        
-        console.log('controller callbacks: ', callbacks);
-        console.log('controller draggers: ', draggers);
         var i;
-        
         for (i = 0; i < draggers.length; i += 1){
             make_draggable(draggers[i], callbacks[i]);
         }
@@ -417,12 +507,10 @@ var Controller = function(model, view){
     checkBoolListener(check_poly, view.set_showpoly);
     checkBoolListener(check_lines, view.set_showlines);
     
-    dragndropListener;
-    
     that.dragon = dragndropListener;
-    
-    
+
     that.dragon();
+    model.set_controller(that);
     /* ************************** */
     return that
 }

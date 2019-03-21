@@ -63,7 +63,7 @@ SVG.on(document, 'DOMContentLoaded', function() {
 /* ************************************************************************** */
 var Model = function(svgobj) {
 //    var origin_coords = [[0, 0], [500, 0], [250, 500]];
-    var origin_coords = [[100, 100], [ 400, 100 ], [400, 400], [100, 400]];
+    var origin_coords = [[100, 100], [ 400, 100 ], [400, 400]];//, [100, 400]];
     var fractals = [];
     var relative_koef;
     var depth; // parent + children
@@ -207,15 +207,19 @@ var Model = function(svgobj) {
         r2 = sqrdistance(orig[imin2], target);
 
         imin_second = r1 < r2 ? imin1 : imin2;
-        
+        console.log('imin/sec', imin, imin_second);
         /* update origin_coords */
         if (imin > imin_second){
-            if (imin == orig.length-1){
+            if (imin != orig.length-1){
                 // between i=N and i=0
                 origin_coords.push(target);
             } else {
-                // other
-                origin_coords.splice(imin_second+1, 0, target);
+                if (imin_second == 0){
+                    origin_coords.push(target);
+                } else {
+                    // other
+                    origin_coords.splice(imin_second+1, 0, target);
+                }
             }
         } else {
             if (imin_second == orig.length-1){
@@ -299,11 +303,13 @@ var Model = function(svgobj) {
 //    that.set_origin = function ( coords ){ origin_coords = coords; update_fractals(); } // ??? length(coords) != length()
     
     that.get_bgrect = function(){ return bgrect };
-    that.get_polys = function(){ return polystack }
+    that.get_polys = function(){ return polystack };
     that.get_fractals = function() { return fractals }; // array of fractals' coords
     that.get_draggers = function(){ return origindraggers };
     that.get_draggers_callbacks = get_draggers_callbacks;
-    that.get_origin_coords = function(){ return origin_coords }
+    that.get_origin_coords = function(){ return origin_coords };
+    that.get_bgobj = function(){ return bgrect };
+    that.get_svgobj = function(){ return svgobj };
 
     that.move_origin_vertex = move_origin_vertex;
     that.add_origin_vertex = add_origin_vertex;
@@ -316,7 +322,6 @@ var Model = function(svgobj) {
         var i;
         svgobj = SVG('draw').size(width, height);
         bgrect = svgobj.rect(width, height);
-
         polygroup = svgobj.group();
         
         relative_koef = document.getElementById('range--corners').value;
@@ -381,7 +386,6 @@ var View = function(model) {
             linesc = gradient(color_set.lines, clevel);
             swidth = 0.5 + 1 * clevel;
             
-            
             draw_fractal(p, bgc, linesc, swidth);
         }
     }
@@ -393,11 +397,20 @@ var View = function(model) {
         for (i=0; i < drgs.length; i += 1){
             drgs[i].attr(draggers_common_attr);
         }
-            
     }
     
-    var that = {};
+    function set_draggers(show = true){
+        var ds = model.get_draggers();  
+        for (let i = 0; i < ds.length; i += 1){
+            if (show){
+                ds[i].attr({'fill-opacity': 1});
+            } else {
+                ds[i].attr({'fill-opacity': 0});
+            }
+        }
+    };
     
+    var that = {};
     
     that.render = function(){
         draw_fractals();
@@ -432,8 +445,10 @@ var View = function(model) {
         showlines = f;
         that.render();
     };
+    that.set_draggers = set_draggers;
     
-    
+//    that.set_draggers( document.getElementById('check--manipulate').checked );
+    that.set_draggers(false);
     model.set_view(that);
     return that
 };
@@ -455,6 +470,7 @@ var Controller = function(model, view){
     
     var check_poly = document.getElementById('check--showpoly');
     var check_lines = document.getElementById('check--showlines');
+//    var check_manipulate = document.getElementById('check--manipulate');
     
     var that = {};
     
@@ -500,6 +516,11 @@ var Controller = function(model, view){
                 rms[i]();
             });
         }
+        /* adding a vertex */
+        model.get_bgobj().on('dblclick', function(e){
+            console.log('dblclick add');
+            model.add_origin_vertex([e.layerX, e.layerY]);
+        });
     };
     function manipulate_listeners_off(){
         var draggers = model.get_draggers();
@@ -508,6 +529,7 @@ var Controller = function(model, view){
             draggers[i].off('dblclick');
             draggers[i].off('mousedown');   
         }
+        model.get_bgobj().off('dblclick');
     };
     
     depth_input.oninput = function(){
@@ -516,7 +538,7 @@ var Controller = function(model, view){
     rel_koef_input.oninput = function(){
         that.set_relkoef( parseFloat(this.value) );
     }
-    
+
     colorPickListener(poly_bg_picker_1, view.set_polycolor_1);
     colorPickListener(poly_bg_picker_2, view.set_polycolor_2);
     colorPickListener(line_picker_1, view.set_linecolor_1);
@@ -526,6 +548,21 @@ var Controller = function(model, view){
     
     checkBoolListener(check_poly, view.set_showpoly);
     checkBoolListener(check_lines, view.set_showlines);
+//    checkBoolListener(check_manipulate, function(bool){
+//        view.set_draggers(bool);
+//        if (bool) {that.manipulate_listeners_on();}
+//        else {that.manipulate_listeners_off();}
+//    });
+    
+    model.get_svgobj().on('mouseover', function(e){
+        console.log('mouseover svg');
+        view.set_draggers(true);
+        that.manipulate_listeners_on();
+    });
+    model.get_svgobj().on('mouseout', function(e){
+        view.set_draggers(false);
+        that.manipulate_listeners_off();
+    });
     
     that.manipulate_listeners_on = origin_manipulation_listeners;
     that.manipulate_listeners_off = manipulate_listeners_off;    

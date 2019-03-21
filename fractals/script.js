@@ -59,22 +59,29 @@ var Model = function(svgobj) {
         console.log('rel/last', relative_koef, last_relative_koef);
         /* origin_coords change? */
         /* rel_koef change? */
-//        if (rel_koef != last_rel_koef){
-//            console.log('rel_koef changed!');
-//            for (i = 1; i < polystack.length; i += 1){
-//                points = polystack[i-1].node.points;
-//                parent_coords = [];
-//                for (j = 0; j < points.length; j += 1){
-//                    parent_coords.push([ points[j].x, points[j].y ]);
+        if (relative_koef != last_relative_koef){
+            console.log('rel_koef changed!');
+            for (i = 1; i < fractals.length; i += 1){
+                parent_coords = [];
+                for (j = 0; j < fractals[i-1].length; j += 1){
+                    parent_coords.push([ fractals[i-1][j][0], fractals[i-1][j][1] ]);
+                }
+
+                child_coords = calc_child(parent_coords);
+                fractals[i] =  child_coords;
+                console.log('parent: ', parent_coords);
+                console.log('child: ', child_coords);
+
+//                for (j = 0; j < fractals[0].length; j += 1){
+////                    fractals[j][0] = child_coords[j][0];
+////                    fractals[j][1] = child_coords[j][1];
+//                    fractals[j] = child_coords[j];
 //                }
-//                child_coords = calc_child(parent_coords);
-//                for (j = 0; j < points.length; j += 1){
-//                    points[j].x = child_coords[j][0];
-//                    points[j].y = child_coords[j][1];
-//                }
-//            }
-//            last_rel_koef = rel_koef;
-//        }
+            }
+            synchronize_coords();
+            last_relative_koef = relative_koef;
+        };
+        
         /* number of fractals change? */
         /* number of fractals raise */
         for ( i = last_draw_depth; i < depth; i += 1){
@@ -93,6 +100,17 @@ var Model = function(svgobj) {
         last_draw_depth = depth;
     };
     
+    var synchronize_coords = function(){
+        var i, j;
+        console.log(fractals);
+        for (i = 0; i < fractals.length; i += 1){
+            for (j = 0; j < fractals[i].length; j += 1){
+                polystack[i].node.points[j].x = fractals[i][j][0];
+                polystack[i].node.points[j].y = fractals[i][j][1];
+            }
+        }
+    };
+
     var set_depth = function(d){
         console.log('model set depth d=', d);
         depth = d;

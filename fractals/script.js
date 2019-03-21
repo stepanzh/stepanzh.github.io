@@ -7,6 +7,15 @@ function gradient(colors, frac) {
     
     return 'rgb(' + r + ',' + g + ',' + b + ')'
 }
+function hex_string_to_colorobj(s){
+    var color = {};
+    
+    color.r = parseInt( s.slice(1,3), 16 );
+    color.g = parseInt( s.slice(3,5), 16 );
+    color.b = parseInt( s.slice(5,7), 16 );
+    
+    return color
+}
 /* ************************************************************************** */
 
 
@@ -147,7 +156,7 @@ var Model = function(svgobj) {
 var View = function(model) {
     var svgobj = model.svgobj;
     var polystack; /* actual stack of SVG.Polygon objects */
-    var bg_colors = [
+    var poly_bg_colors = [
         {
             r: 255,
             g: 0,
@@ -176,7 +185,7 @@ var View = function(model) {
         
         for (d = 0; d < depth; d += 1){
             p = ps[d];
-            bgc = gradient(bg_colors, d / ( (depth > 1 ? depth : 2) - 1 ));
+            bgc = gradient(poly_bg_colors, d / ( (depth > 1 ? depth : 2) - 1 ));
             draw_fractal(p, bgc);
         }
     }
@@ -186,11 +195,11 @@ var View = function(model) {
     
     that.render = draw_fractals;
     that.set_bgcolor_1 = function(rgb){
-        bg_colors[0] = rgb;
+        poly_bg_colors[0] = rgb;
         that.render();
     };
     that.set_bgcolor_2 = function(rgb){
-        bg_colors[1] = rgb;
+        poly_bg_colors[1] = rgb;
         that.render();
     };
     
@@ -201,8 +210,14 @@ var View = function(model) {
 /* Controller */
 /* ************************************************************************** */
 var Controller = function(model, view){
+    /* model controller */
     var rel_koef_input = document.getElementById('range--corners');
     var depth_input = document.getElementById('range--children');
+
+    /* view controller */
+    var poly_bg_picker_1 = document.getElementById("color-poly--1");
+    var poly_bg_picker_2 = document.getElementById("color-poly--2");
+    
     var that = {};
     
     that.set_depth = function (depth){
@@ -217,12 +232,22 @@ var Controller = function(model, view){
     
     /* ************************** */
     /* events */
+    // adds EventListener for coloring
+    function colorPickListener(inp, update_func){
+        inp.addEventListener("change", function(e){
+            var color = hex_string_to_colorobj(e.target.value)            
+            update_func(color);
+        });
+    };
+    
     depth_input.oninput = function(){
         that.set_depth( parseInt(this.value) );
     }
     rel_koef_input.oninput = function(){
         that.set_relkoef( parseFloat(this.value) );
     }
+    colorPickListener(poly_bg_picker_1, view.set_bgcolor_1);
+    colorPickListener(poly_bg_picker_2, view.set_bgcolor_2);
     /* ************************** */
     return that
 }

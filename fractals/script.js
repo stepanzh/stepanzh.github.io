@@ -60,7 +60,7 @@ SVG.on(document, 'DOMContentLoaded', function() {
 /* ************************************************************************** */
 var Model = function(svgobj) {
 //    var origin_coords = [[0, 0], [500, 0], [250, 500]];
-    var origin_coords = [[100, 100], [400, 100], [350, 400]];
+    var origin_coords = [[100, 100], [400, 100], [350, 400], [400, 450]];
     var fractals = [];
     var relative_koef;
     var depth; // parent + children

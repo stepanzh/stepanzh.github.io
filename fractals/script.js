@@ -51,7 +51,6 @@ var Model = function(svgobj) {
         return child
     };
 
-    
     var update_fractals = function() {
         var i, j, child_coords, points, parent_coords;
         console.log('depth/last: ', depth, last_draw_depth);
@@ -61,22 +60,16 @@ var Model = function(svgobj) {
         /* rel_koef change? */
         if (relative_koef != last_relative_koef){
             console.log('rel_koef changed!');
+            /* go through childs, update its coordinates and synchronize_coords */
             for (i = 1; i < fractals.length; i += 1){
                 parent_coords = [];
                 for (j = 0; j < fractals[i-1].length; j += 1){
                     parent_coords.push([ fractals[i-1][j][0], fractals[i-1][j][1] ]);
                 }
-
                 child_coords = calc_child(parent_coords);
                 fractals[i] =  child_coords;
                 console.log('parent: ', parent_coords);
                 console.log('child: ', child_coords);
-
-//                for (j = 0; j < fractals[0].length; j += 1){
-////                    fractals[j][0] = child_coords[j][0];
-////                    fractals[j][1] = child_coords[j][1];
-//                    fractals[j] = child_coords[j];
-//                }
             }
             synchronize_coords();
             last_relative_koef = relative_koef;

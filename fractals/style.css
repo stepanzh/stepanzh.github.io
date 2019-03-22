@@ -87,7 +87,7 @@ body > svg {
 /* button:focus, */
 button:hover
 {
-  border: 2px solid #F1CC2E;
+  border: 2px solid #F1CC2E; /* orange strong */
   transition: all .3s;
 }
 #poly-gen-form__btn {
@@ -112,7 +112,7 @@ button::-moz-focus-inner {
   border: 0;
 }
 button:active {
-  background: #FCF0BD;
+  background: #FCF0BD; /* orange light */
   transition: all .3s;
 }
 
@@ -208,9 +208,6 @@ input[type=range]::-ms-track
   
   transition: all .25s;
 }
-.color-show--gradient {
-  /*! background: linear-gradient(to right, #FF00FF 0%, #00FF00 100%); */
-}
 input[type=color],
 input[type=checkbox]
 {
@@ -225,6 +222,32 @@ input[type=color]{
   padding: 0;
   margin: 0;
 }
+input[type=checkbox] {
+  visibility: hidden;
+}
+.color--disable {
+/*   width: 2.2em; */
+/*   height: .1em; */
+/*   background: #c5c5c5; */
+  position: relative;
+  border-radius: 3px;
+}
+.color--disable label {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  background: #ededed;
+  border: 1px solid #c5c5c5;
+}
+.color--disable input[type=checkbox]:checked + label {
+  background: white;
+}
+
 .menu__item:last-of-type .item__func {
   display: flex;
   justify-content: space-around;

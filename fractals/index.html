@@ -10,7 +10,7 @@
     <div id="app">
         <div id="menu">
             <div class="menu__item">
-                <p class="item__label">Вершины</p>
+                <p class="item__label">Управление вершинами</p>
                 <div class="item__func">
                     <div>
                         <span>добавление</span><span>двойной клик вне фрактала</span>
@@ -20,6 +20,16 @@
                     </div>
                     <div>
                         <span>перемещение</span><span>перетаскивание мышью</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__item">
+                <p class="item__label">Шаблоны правильных многоугольников</p>
+                <div class="item__func">
+                    <div id="poly-gen-form">
+                        <span>число вершин</span>
+                        <input type="text" id="inp-num-vertexes" value="9" maxlength="2"/>
+                        <button id="poly-gen-form__btn">сгенерировать</button>
                     </div>
                 </div>
             </div>
@@ -79,8 +89,8 @@
             <div class="menu__item">
                 <p class="item__label">Сохранить</p>
                 <div class="item__func">
-                    <span>SVG</span>
-                    <span>PNG</span>
+                    <button id="btn-save-svg">SVG</button>
+                    <button id="btn-save-png">PNG</button>
                 </div>
             </div>
             <footer><a href="https://stepanzh.github.io/" target="_blank">stepanzh.github.io</a></footer>

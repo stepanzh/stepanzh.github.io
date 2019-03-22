@@ -53,9 +53,21 @@ function make_draggable(svgelement, callback){
         this.off('mousemove');
     });
 }
-//function sqrdistance(c1, c2){
-//    return (c1[0] - c2[0])*(c1[0] - c2[0]) + (c1[1] - c2[1])*(c1[1] - c2[1])
-//}
+function gen_regular_polygon(w, h, n, phi0 = 0, offset = 0.05) {
+    if (n < 3 ){ // assert
+        console.log('trying to generate polygon with n of vertexes < 3');
+        return
+    }
+    
+    let xc = w / 2, yc = h / 2;
+    let r = (1 - 2 * offset) * Math.min(w, h) / 2;
+    let coords = [];
+    
+    for (let i = 0; i < n; i += 1){
+        coords.push([ xc + r * Math.cos(phi0 + 2*Math.PI * i / n), yc + r * Math.sin(phi0 + 2*Math.PI * i / n)])
+    }
+    return coords
+}
 /* ************************************************************************** */
 
 
@@ -107,15 +119,12 @@ var Model = function(svgobj) {
         return child
     };
 
+    /* when rel_koef or depth is changed call it */
     var update_fractals = function() {
         var i, j, child_coords, points, parent_coords;
-//        console.log('depth/last: ', depth, last_draw_depth);
-//        console.log('fractals before update', fractals);
-//        console.log('rel/last', relative_koef, last_relative_koef);
         
         /* rel_koef change? */
         if (relative_koef != last_relative_koef){
-//            console.log('rel_koef changed!');
             /* go through childs, update its coordinates and synchronize_coords */
             for (i = 1; i < fractals.length; i += 1){
                 parent_coords = [];
@@ -124,8 +133,6 @@ var Model = function(svgobj) {
                 }
                 child_coords = calc_child(parent_coords);
                 fractals[i] =  child_coords;
-//                console.log('parent: ', parent_coords);
-//                console.log('child: ', child_coords);
             }
             synchronize_coords();
             last_relative_koef = relative_koef;
@@ -140,25 +147,17 @@ var Model = function(svgobj) {
         }
         /* number of fractals decrease: depth < last_draw_depth */
         for ( i = depth; i < last_draw_depth; i += 1){
-//            console.log('popping');
             fractals.pop();
             polystack.pop().remove().forget();
         }
-        
-//        console.log('fractals after update', fractals);
         last_draw_depth = depth;
     };
     
     var synchronize_coords = function(){
         var i, j;
-//        console.log('fractals: ', fractals);
-//        console.log('polystack = ', polystack);
         for (i = 0; i < fractals.length; i += 1){
-//            console.log('i=', i);
-//            console.log(polystack[i].node.points);
             for (j = 0; j < fractals[i].length; j += 1){
                 /* move point j */
-//                console.log('j=', j);
                 polystack[i].node.points[j].x = fractals[i][j][0];
                 polystack[i].node.points[j].y = fractals[i][j][1];
             }
@@ -166,19 +165,16 @@ var Model = function(svgobj) {
     };
 
     var set_depth = function(d){
-//        console.log('model set depth d=', d);
         depth = d;
         update_fractals();
         view.render();
     };
     
     var set_origin = function(coords){
-        if ( origin_coords.length != coords.length ){
-            /* vertex is added or removed */
-        } else {
-            /* vertex is moved */
-        }
-        origin_coords = coords;
+        if (coords.length > 2){
+            origin_coords = coords;
+            reload();
+        } else { console.log("trying to set origin <= 2"); }
     };
     
     /* origin' vertex changed position */
@@ -210,9 +206,6 @@ var Model = function(svgobj) {
         }
         rcx = rcx / N;
         rcy = rcy / N;
-//        console.log('rc ', rcx, rcy);
-//        console.log('orig', orig);
-//        console.log('target', target);
         for ( let i = 0; i < N-1; i += 1){
             console.log('i=', i);
             dy = orig[i+1][1] - orig[i][1];
@@ -221,9 +214,6 @@ var Model = function(svgobj) {
             if ( dx != 0){
                 k = dy / dx;
                 b = orig[i][1] - orig[i][0] * k;
-//                console.log("k /// b", k, b);
-//                console.log("target--eq", k*target[0] + b < target[1]);
-//                console.log("rc--ex", k*rcx +b < rcy);
                 
                 if ( (( k*target[0] + b < target[1]) && !(k*rcx +b < rcy)) || 
                         ( !( k*target[0] + b < target[1]) && (k*rcx +b < rcy) ) ){ 
@@ -239,19 +229,17 @@ var Model = function(svgobj) {
                 }
             }
         }
-//        console.log('rcx/rcy/apphere', rcx, rcy, apphere);
         // N, 0
         if (apphere == -1){
             origin_coords.push(target);
         } else {
             origin_coords.splice(apphere, 0, target);
         }
-//        console.log(origin_coords);
         reload();
     };
     
     var remove_origin_vertex = function(i){
-        console.log('removing ', i);
+//        console.log('removing ', i);
 
         if ( origin_coords.length > 3){
             controller.manipulate_listeners_off();
@@ -263,7 +251,7 @@ var Model = function(svgobj) {
             }
         }
     };
-    
+    /* when origin_coords is changed number of vertexes do it */
     var reload = function(){
         /* clear polygons */ // is change possible? ...... ???
         forget_obj(polystack, fractals);
@@ -317,8 +305,8 @@ var Model = function(svgobj) {
     
     var that = {};
 
-    that.width = width;
-    that.height = height;
+    that.get_width = function(){return width};
+    that.get_height = function(){return height};
 
     that.set_depth = set_depth;
     that.set_relative_koef = function(k){ relative_koef = k; update_fractals(); view.render();};
@@ -339,6 +327,7 @@ var Model = function(svgobj) {
     
     that.set_view = function(v){ view = v; }
     that.set_controller = function(c){ controller = c; }
+    that.set_origin = set_origin;
     
     that.resize = function(){
         svgobj.remove().forget();

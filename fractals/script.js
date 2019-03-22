@@ -86,8 +86,7 @@ SVG.on(document, 'DOMContentLoaded', function() {
 /* Model */
 /* ************************************************************************** */
 var Model = function(svgobj) {
-//    var origin_coords = [[0, 0], [500, 0], [250, 500]];
-    var origin_coords = [[100, 100], [ 400, 100 ], [400, 400]];//, [100, 400]];
+    var origin_coords;
     var fractals = [];
     var relative_koef;
     var depth; // parent + children
@@ -349,6 +348,14 @@ var Model = function(svgobj) {
         
         depth = document.getElementById('range--children').value;
         draggers_group = svgobj.group();
+        
+        let n = parseInt(document.getElementById('inp-num-vertexes').value);
+        if ( isNaN(n)){
+            n = 9;
+        } else if (n < 3){
+            n = 9;
+        } 
+        origin_coords = gen_regular_polygon(width, height, n);    
         
         reload();
     }

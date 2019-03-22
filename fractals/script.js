@@ -32,14 +32,21 @@ function make_draggable(svgelement, callback){
     svgelement.on('mousedown', function(e){
         svgelement.on('mousemove', move);
         document.addEventListener('mousemove', move);
+        
+        svgelement.style("cursor", "move");
+        document.body.style.cursor = "move";
+        
         svgelement.on('mouseup', function(){
             this.off('mousemove');
             document.removeEventListener('mousemove', move);
+            svgelement.style("cursor", "pointer");
+            document.body.style.cursor = "default";
             callback(this);
         });
         document.addEventListener('mouseup', function(e){
             svgelement.off('mousemove');
             document.removeEventListener('mousemove', move);
+            svgelement.style("cursor", "pointer");
         });
     });
     svgelement.on('mouseout', function(){
@@ -275,7 +282,10 @@ var Model = function(svgobj) {
             controller.manipulate_listeners_off();
             controller.manipulate_listeners_on();
         }
-        if (view){ view.render(); }
+        if (view){ 
+            view.reinit();
+            view.render();
+        }
     };
     
     var forget_obj = function(objs, coord_arr){
@@ -432,6 +442,7 @@ var View = function(model) {
         drgs = model.get_draggers();
         for (i=0; i < drgs.length; i += 1){
             drgs[i].attr(draggers_common_attr);
+            drgs[i].style("cursor", "pointer");
         }
         /* disabling gradient choosers */
         {
@@ -448,10 +459,10 @@ var View = function(model) {
                         menu_item_gradient.lines.classList.add(classes.disable);
         }
         /* color showers */
-        console.log('color-showers upd');
-        console.log(gradient_css_string(color_set.bgpoly[0], color_set.bgpoly[1]));
-        console.log(gradient_css_string(color_set.lines[0], color_set.lines[1]));
-        console.log(rgb_to_hexstring(color_set.bg));
+//        console.log('color-showers upd');
+//        console.log(gradient_css_string(color_set.bgpoly[0], color_set.bgpoly[1]));
+//        console.log(gradient_css_string(color_set.lines[0], color_set.lines[1]));
+//        console.log(rgb_to_hexstring(color_set.bg));
         
         color_showers.poly.style.background  = gradient_css_string(color_set.bgpoly[0], color_set.bgpoly[1]);
         color_showers.lines.style.background = gradient_css_string(color_set.lines[0], color_set.lines[1]);
@@ -506,8 +517,13 @@ var View = function(model) {
     };
     that.set_draggers = set_draggers;
     
-//    that.set_draggers( document.getElementById('check--manipulate').checked );
+    /* call it when model is reload */
+    that.reinit = function(){
+        model.get_bgobj().style('cursor', 'copy');
+    }
+    
     that.set_draggers(false);
+    that.reinit();
     model.set_view(that);
     return that
 };

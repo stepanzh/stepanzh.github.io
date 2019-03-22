@@ -69,14 +69,7 @@ body > svg {
 .menu__item.disabled .color-show {
   opacity: 0.2; 
 }
-input[type=color],
-input[type=checkbox]
-{
-  cursor: pointer;
-}
-input[type=color]:disabled {
-  cursor: not-allowed;
-}
+
 
 input[type=range] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
@@ -166,18 +159,26 @@ input[type=range]::-ms-track
   height: 1.5em;
   border-radius: 1em;
   background: yellow;
+  
+  transition: all .25s;
 }
 .color-show--gradient {
   /*! background: linear-gradient(to right, #FF00FF 0%, #00FF00 100%); */
 }
-
+input[type=color],
+input[type=checkbox]
+{
+  cursor: pointer;
+}
+input[type=color]:disabled {
+  cursor: not-allowed;
+}
 input[type=color]{
   width: 2em;
   height: 2em;
   padding: 0;
   margin: 0;
 }
-
 .menu__item:last-of-type .item__func {
   display: flex;
   justify-content: space-around;

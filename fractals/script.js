@@ -679,6 +679,12 @@ var Controller = function(model, view){
         }
     });
     
+    text_inp_vertexes.addEventListener('keyup', function(e){
+        if (e.keyCode == 13){
+            gen_poly_btn.click()
+        }
+    });
+    
     window.addEventListener('resize', function(e){
         model.resize();
         that.upd_svg_listeners();

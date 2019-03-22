@@ -22,3 +22,10 @@ Some works around styling elements and achieving ui/ux effects.
 ## AKIRA PROJECT [[LINK]](https://stepanzh.github.io/akira/)
 This is first serious and completely my work in frontend. This site is assumed to be my cv or smth like that.
 I dedicate it to Akira anime/manga. I just played with some effects and experimented.
+
+## 💫 TEA MATTERS!
+## 🌠 TEA MATTERS!
+## 🚀 TEA MATTERS!
+## 🌶️ TEA MATTERS!
+## 🌇 TEA MATTERS!
+## 🥕 TEA MATTERS!

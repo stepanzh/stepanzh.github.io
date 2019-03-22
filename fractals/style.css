@@ -120,6 +120,7 @@ input[type=range] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
+  font-size: inherit;
 }
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -171,20 +172,20 @@ input[type=range]::-ms-thumb {
 input[type=range]::-moz-range-track
 {
   width: 100%;
-  height: .1em;
+  height: 1px;
   background: #cac6ca;
   border-radius: .1em;
 }
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
-  height: .1em;
+  height: 1px;
   background: #cac6ca;
   border-radius: .1em;
 }
 input[type=range]::-ms-track
 {
   width: 100%;
-  height: .1em;
+  height: 1px;
   background: #cac6ca;
   border-radius: .1em;
 }

@@ -1,7 +1,7 @@
 # stepanzh.github.io
 The latest works are listed first.
 
-## OKTIS [[LINK]](https://stepanzh.github.io/oktis/)
+## :fire: OKTIS [[LINK]](https://stepanzh.github.io/oktis/)
 A variation of Tetris. This version is on the wall of a building. Internally it uses svg view of MVC pattern.
 SPACE for rotating figures, arrows for moving.
 

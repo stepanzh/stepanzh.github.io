@@ -46,9 +46,9 @@ function make_draggable(svgelement, callback){
         this.off('mousemove');
     });
 }
-function sqrdistance(c1, c2){
-    return (c1[0] - c2[0])*(c1[0] - c2[0]) + (c1[1] - c2[1])*(c1[1] - c2[1])
-}
+//function sqrdistance(c1, c2){
+//    return (c1[0] - c2[0])*(c1[0] - c2[0]) + (c1[1] - c2[1])*(c1[1] - c2[1])
+//}
 /* ************************************************************************** */
 
 
@@ -72,7 +72,6 @@ var Model = function(svgobj) {
     var fractals = [];
     var relative_koef;
     var depth; // parent + children
-//    var width = document.getElementById('draw').clientWidth;
     var height;
     var width;
     var svgobj, bgrect;
@@ -565,6 +564,9 @@ var Controller = function(model, view){
             draggers[i].off('mousedown');   
         }
         model.get_bgobj().off('dblclick');
+        
+        
+        
     };
     
     depth_input.oninput = function(){
@@ -584,23 +586,27 @@ var Controller = function(model, view){
     checkBoolListener(check_poly, view.set_showpoly);
     checkBoolListener(check_lines, view.set_showlines);
     
-    model.get_svgobj().on('mouseover', function(e){
-        view.set_draggers(true);
-        that.manipulate_listeners_on();
-    });
-    model.get_svgobj().on('mouseout', function(e){
-        view.set_draggers(false);
-        that.manipulate_listeners_off();
-    });
     
     that.manipulate_listeners_on = origin_manipulation_listeners;
     that.manipulate_listeners_off = manipulate_listeners_off;    
+    that.upd_svg_listeners = function(){
+        model.get_svgobj().on('mouseover', function(e){
+            view.set_draggers(true);
+            that.manipulate_listeners_on();
+        });
+        model.get_svgobj().on('mouseout', function(e){
+            view.set_draggers(false);
+            that.manipulate_listeners_off();
+        });
+    }
 
     window.addEventListener('resize', function(e){
         model.resize();
+        that.upd_svg_listeners();
     });
 
-    that.manipulate_listeners_on();
+    that.upd_svg_listeners();
+//    that.manipulate_listeners_on();
     model.set_controller(that);
     return that
 }

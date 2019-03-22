@@ -186,50 +186,103 @@ var Model = function(svgobj) {
             console.log('move_origin_vertex: trying to move unexisting vertex = ', i);
         }
     };
-    var add_origin_vertex = function(target){
-        /* coords must be < width, < height */
-        
-        /* find index where to put new vertex */
-        var i, imin, imin_second, minr, r, imin1, imin2, r1, r2;
-        var orig = fractals[0];
-        /* find closest vertex */
-        imin = 0;
-        minr = sqrdistance(orig[0], target);
-        for (i = 1; i < orig.length; i += 1){
-            r = sqrdistance(orig[i], target);
-            if (r < minr){
-                imin = i;
-            }
-        }
-        /* find second closest vertex */
-        imin1 = imin != origin_coords.length ? (imin+1)%origin_coords.length : 0;
-        imin2 = imin != 0 ? (imin-1)%origin_coords.length : origin_coords.length-1;
-        
-        r1 = sqrdistance(orig[imin1], target);
-        r2 = sqrdistance(orig[imin2], target);
+//    var add_origin_vertex = function(target){
+//        /* coords must be < width, < height */
+//        
+//        /* find index where to put new vertex */
+//        var i, imin, imin_second, minr, r, imin1, imin2, r1, r2;
+//        var orig = fractals[0];
+//        /* find closest vertex */
+//        imin = 0;
+//        minr = sqrdistance(orig[0], target);
+//        for (i = 1; i < orig.length; i += 1){
+//            r = sqrdistance(orig[i], target);
+//            if (r < minr){
+//                imin = i;
+//            }
+//        }
+//        /* find second closest vertex */
+//        imin1 = imin != origin_coords.length ? (imin+1)%origin_coords.length : 0;
+//        imin2 = imin != 0 ? (imin-1)%origin_coords.length : origin_coords.length-1;
+//        
+//        r1 = sqrdistance(orig[imin1], target);
+//        r2 = sqrdistance(orig[imin2], target);
 
-        imin_second = r1 < r2 ? imin1 : imin2;
-        console.log('imin/sec', imin, imin_second);
-        /* update origin_coords */
-        if (imin > imin_second){
-            if (imin != orig.length-1){
-                // between i=N and i=0
-                origin_coords.push(target);
+//        imin_second = r1 < r2 ? imin1 : imin2;
+//        console.log('imin/sec', imin, imin_second);
+//        /* update origin_coords */
+//        if (imin > imin_second){
+//            if (imin != orig.length-1){
+//                // between i=N and i=0
+//                origin_coords.push(target);
+//            } else {
+//                if (imin_second == 0){
+//                    origin_coords.push(target);
+//                } else {
+//                    // other
+//                    origin_coords.splice(imin_second+1, 0, target);
+//                }
+//            }
+//        } else {
+//            if (imin_second == orig.length-1){
+//                origin_coords.push(target);
+//            } else {
+//                origin_coords.splice(imin+1, 0, target);
+//            }
+//        }
+//        reload();
+//    };
+    
+    var add_origin_vertex = function(target){
+        var orig = fractals[0];
+        var N = orig.length;
+        var k, b, dx, dy, rcx, rcy;
+        var apphere = -1;
+        
+        rcx = 0; rcy =0;
+        for (i=0; i < N; i+= 1){
+            rcx += orig[i][0];
+            rcy += orig[i][1]
+        }
+        rcx = rcx / N;
+        rcy = rcy / N;
+        console.log('rc ', rcx, rcy);
+        console.log('orig', orig);
+        console.log('target', target);
+        for ( let i = 0; i < N-1; i += 1){
+            console.log('i=', i);
+            dy = orig[i+1][1] - orig[i][1];
+            dx = orig[i+1][0] - orig[i][0];
+            
+            if ( dx != 0){
+                k = dy / dx;
+                b = orig[i][1] - orig[i][0] * k;
+                console.log("k /// b", k, b);
+                console.log("target--eq", k*target[0] + b < target[1]);
+                console.log("rc--ex", k*rcx +b < rcy);
+                
+                if ( (( k*target[0] + b < target[1]) && !(k*rcx +b < rcy)) || 
+                        ( !( k*target[0] + b < target[1]) && (k*rcx +b < rcy) ) ){ 
+                    apphere = i + 1;
+                    break
+                }
+                
             } else {
-                if (imin_second == 0){
-                    origin_coords.push(target);
-                } else {
-                    // other
-                    origin_coords.splice(imin_second+1, 0, target);
+                // XOR !!!!
+                if ( !((target[0] < orig[i][0]) && (rcx < orig[i][0])) ){ 
+                    apphere = i + 1;
+                    break
                 }
             }
-        } else {
-            if (imin_second == orig.length-1){
-                origin_coords.push(target);
-            } else {
-                origin_coords.splice(imin+1, 0, target);
-            }
         }
+        console.log('rcx/rcy/apphere', rcx, rcy, apphere);
+        // N, 0
+        if (apphere == -1){
+            origin_coords.push(target);
+        } else {
+            origin_coords.splice(apphere, 0, target);
+        }
+        console.log(origin_coords);
         reload();
     };
     
@@ -524,7 +577,7 @@ var Controller = function(model, view){
         }
         /* adding a vertex */
         model.get_bgobj().on('dblclick', function(e){
-            console.log('dblclick add');
+            console.log('dblclick add: ', e.layerX, " ", e.layerY);
             model.add_origin_vertex([e.layerX, e.layerY]);
         });
     };

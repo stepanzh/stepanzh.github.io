@@ -68,6 +68,30 @@ function gen_regular_polygon(w, h, n, phi0 = 0, offset = 0.05) {
     }
     return coords
 }
+// Function to download data to a file
+function download(data, filename, type) {
+    var file = new Blob([data], {type: type});
+    if (window.navigator.msSaveOrOpenBlob) // IE10+
+        window.navigator.msSaveOrOpenBlob(file, filename);
+    else { // Others
+        var a = document.createElement("a"),
+                url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);  
+        }, 0); 
+    }
+}
+function save_svg(){
+    let data = '<?xml version="1.0" standalone="no"?>\r\n';
+    data += document.getElementById('draw').innerHTML;
+    download(data, 'fractal.svg', 'text/plain');
+}
+
 /* ************************************************************************** */
 
 

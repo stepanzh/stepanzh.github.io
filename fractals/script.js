@@ -537,6 +537,12 @@ var Controller = function(model, view){
     var check_poly = document.getElementById('check--showpoly');
     var check_lines = document.getElementById('check--showlines');
     
+    /* btns */
+    var gen_poly_btn = document.getElementById('poly-gen-form__btn');
+    
+    /**/
+    var text_inp_vertexes = document.getElementById('inp-num-vertexes');
+    
     var that = {};
     
     that.set_depth = function (depth){
@@ -626,7 +632,22 @@ var Controller = function(model, view){
             that.manipulate_listeners_off();
         });
     }
-
+    
+    gen_poly_btn.addEventListener('click', function(e){
+        let value = parseInt(text_inp_vertexes.value, 10);
+        if ( !isNaN(value) ){
+            if (value > 2){
+                text_inp_vertexes.value = value;
+                model.set_origin( gen_regular_polygon(model.get_width(), model.get_height(), value) );
+            } else {
+                // user help
+                  
+            }
+        } else {
+            // user help
+        }
+    });
+    
     window.addEventListener('resize', function(e){
         model.resize();
         that.upd_svg_listeners();

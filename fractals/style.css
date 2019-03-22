@@ -76,10 +76,19 @@ body > svg {
   text-align: center;
   outline: none;
   border: none;
-  border-bottom: 1px solid #8f868f;
+  border-bottom: 2px solid #c5c5c5;
   font-family: inherit;
   font-size: 1.1em;
   color: inherit;
+}
+#inp-num-vertexes:focus {
+  border-bottom: 2px solid #F1CC2E;
+}
+button:focus,
+button:hover
+{
+  border: 2px solid #F1CC2E;
+  transition: all .3s;
 }
 #poly-gen-form__btn {
   float: right;
@@ -103,7 +112,7 @@ button::-moz-focus-inner {
   border: 0;
 }
 button:active {
-  background: #E1F4FF;
+  background: #FCF0BD;
   transition: all .3s;
 }
 
@@ -139,6 +148,7 @@ input[type=range]::-moz-range-thumb {
   border-radius: 1em;
   cursor: pointer;
 }
+
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 2em;

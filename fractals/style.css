@@ -66,6 +66,17 @@ body > svg {
   display: inline-block;
   float: right;
 }
+.menu__item.disabled .color-show {
+  opacity: 0.2; 
+}
+input[type=color],
+input[type=checkbox]
+{
+  cursor: pointer;
+}
+input[type=color]:disabled {
+  cursor: not-allowed;
+}
 
 input[type=range] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */

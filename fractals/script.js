@@ -388,6 +388,15 @@ var View = function(model) {
         bg:    document.getElementById('show-color-bg')
     };
     
+    var menu_item_gradient = {
+        poly:  document.getElementById('menu__item--poly'),
+        lines: document.getElementById('menu__item--lines')
+    }
+    var classes = {
+        disable: "disabled"
+    };
+    
+    
     var draggers_common_attr = {fill: '#ffffff', 'stroke': '#8f868f', 'stroke-width': 1, r: 12, };
     
     function draw_fractal(p, bgfill, sfill, swidth=1){
@@ -423,6 +432,20 @@ var View = function(model) {
         drgs = model.get_draggers();
         for (i=0; i < drgs.length; i += 1){
             drgs[i].attr(draggers_common_attr);
+        }
+        /* disabling gradient choosers */
+        {
+            let inputs_poly = document.querySelectorAll("#" + menu_item_gradient.poly.id + " input[type=color]");
+            let inputs_lines = document.querySelectorAll("#" + menu_item_gradient.lines.id + " input[type=color]");
+            for (i = 0; i < inputs_poly.length; i += 1) {
+                inputs_poly[i].disabled = !showpoly;
+                inputs_lines[i].disabled = !showlines;
+            }
+           showpoly ?   menu_item_gradient.poly.classList.remove(classes.disable) : 
+                        menu_item_gradient.poly.classList.add(classes.disable);
+                        
+           showlines ?  menu_item_gradient.lines.classList.remove(classes.disable) : 
+                        menu_item_gradient.lines.classList.add(classes.disable);
         }
         /* color showers */
         console.log('color-showers upd');
@@ -585,7 +608,6 @@ var Controller = function(model, view){
     
     checkBoolListener(check_poly, view.set_showpoly);
     checkBoolListener(check_lines, view.set_showlines);
-    
     
     that.manipulate_listeners_on = origin_manipulation_listeners;
     that.manipulate_listeners_off = manipulate_listeners_off;    

@@ -1,6 +1,10 @@
 # stepanzh.github.io
 The latest works are listed first.
 
+## 🌶️ Фракталы (Fractals) [[LINK]](https://stepanzh.github.io/fractals/)
+Генератор фракталов на основе многоугольников. Ценящим геометрию. Созданный Вами фрактал можно будет сохранить!
+Polygon-based fractal generator. For "geometrical" aesthets. Generated fractals could be saved!
+
 ## OKTIS [[LINK]](https://stepanzh.github.io/oktis/)
 A variation of Tetris. This version is on the wall of a building. Internally it uses svg view of MVC pattern.
 SPACE for rotating figures, arrows for moving.

@@ -372,7 +372,7 @@ var View = function(model) {
     var showpoly = document.getElementById('check--showpoly').checked;
     var showlines = document.getElementById('check--showlines').checked;
     
-    var draggers_common_attr = {fill: 'blue', r: 10};
+    var draggers_common_attr = {fill: '#ffffff', 'stroke': '#8f868f', 'stroke-width': 1, r: 12, };
     
     function draw_fractal(p, bgfill, sfill, swidth=1){
         p.attr({
@@ -414,9 +414,9 @@ var View = function(model) {
         var ds = model.get_draggers();  
         for (let i = 0; i < ds.length; i += 1){
             if (show){
-                ds[i].attr({'fill-opacity': 1});
+                ds[i].attr({'fill-opacity': 1, 'stroke-opacity': 1});
             } else {
-                ds[i].attr({'fill-opacity': 0});
+                ds[i].attr({'fill-opacity': 0, 'stroke-opacity': 0});
             }
         }
     };

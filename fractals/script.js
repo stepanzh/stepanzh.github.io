@@ -540,6 +540,7 @@ var View = function(model) {
     /* call it when model is reload */
     that.reinit = function(){
         model.get_bgobj().style('cursor', 'copy');
+        set_draggers(false);
     }
     
     that.set_draggers(false);

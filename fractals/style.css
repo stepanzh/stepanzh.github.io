@@ -1,63 +1,202 @@
+@font-face {
+  font-family: ui;
+  src: url(./Montserrat-Regular.ttf);
+}
+
 body {
   margin: 0;
-  font-family: sans;
+  font-family: ui;
   font-size: 16px;
+  color: #505050;
+  overflow-y: hidden;
+}
+p {
+  margin: 0;
+}
+body > svg {
+  width: 0;
 }
 .body-wrapper {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
-.app {
+#app {
   width: 100%;
-  height: 95vh;
-  display: flex;
-  flex-direction: row;
-/*   flex-wrap: wrap; */
+  height: 100%;
+/*   display: flex; */
+/*   flex-direction: row; */
   background: grey;
 }
-.display {
-/*   width: 100%; */
-/*   height: 200px; */
+#menu {
   position: relative;
-  width: 75%;
+/*   width: 25%; */
+  width: 27em;
+  height: 100%;
+  background: white;
+  float: left;
+  overflow-y: scroll;
+}
+
+#display {
+  position: relative;
+  width: calc(100% - 27em);
   height: 100%;
   background: yellow;
+  float: left;
 }
+
+/* menu */
+/* ****************************************** */
+.menu__item
+{
+  padding: 1em 1em;
+}
+.item__label {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.menu__item:first-child {
+  margin-top: 3em;
+}
+.menu__item:first-child .item__func > div {
+  margin: 0.5em 0;
+}
+.menu__item:first-child .item__func span:nth-child(even) {
+  display: inline-block;
+  float: right;
+}
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+input[type=range]::-moz-focus-outer {
+    border: 0;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-moz-range-thumb {
+  width: 2em;
+  height: 2em;
+  
+  background: white;
+  border: 1px solid #8f868f;
+  border-radius: 1em;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 2em;
+  height: 2em;
+  margin-top: -14px;
+  background: white;
+  border: 1px solid #8f868f;
+  border-radius: 1em;
+  cursor: pointer;
+}
+input[type=range]::-ms-thumb {
+  width: 2em;
+  height: 2em;
+  margin-top: -14px;
+  background: white;
+  border: 1px solid #8f868f;
+  border-radius: 1em;
+  cursor: pointer;
+}
+input[type=range]::-moz-range-track
+{
+  width: 100%;
+  height: .1em;
+  background: #cac6ca;
+  border-radius: .1em;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: .1em;
+  background: #cac6ca;
+  border-radius: .1em;
+}
+input[type=range]::-ms-track
+{
+  width: 100%;
+  height: .1em;
+  background: #cac6ca;
+  border-radius: .1em;
+}
+
+.gradient-choose,
+.color-choose
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.gradient-choose,
+.color-choose {
+  flex-grow: 1;
+}
+.color-show {
+  width: 70%;
+  height: 1.5em;
+  border-radius: 1em;
+  background: yellow;
+}
+.color-show--gradient {
+  background: linear-gradient(to right, #FF00FF 0%, #00FF00 100%);
+}
+
+input[type=color]{
+  width: 2em;
+  height: 2em;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+
+.menu__item:last-of-type .item__func {
+  display: flex;
+  justify-content: space-around;
+}
+
+#menu > footer {
+  margin: 5em 0 0 0;
+  text-align: center;
+}
+/* ****************************************** */
+
+
 #draw {
   position: relative;
-  
   width: 100%;
   height: 100%;
 }
 
-.menu {
-  display: grid;
-/*   grid-template-columns: 28% 6.33% 37.7% 6.33% 1.9%; */
-  grid-template-columns: 30% 55.5% 5.09%;
-/*   grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%; */
-  grid-template-rows: auto auto auto auto auto auto;
-  grid-column-gap: 4.7%;
-  grid-row-gap: 15px;
-  
-  /*  provide left and right gaps  */
-  padding: 0 4.3%;
-  width: 15%;
-  min-width: 400px;
-/*   width: calc(100% - 2*4.3%); */
-}
-footer {
-
-}
-.menu__label
-{
-  grid-column-start: 1;
-}
-
-input[type=range]
-{
-  width: 80%;
-  margin: 0 10%;
+@media screen and (max-width: 1400px){
+  .menu__item {
+    padding: 1em 1em;
+  }
+  .menu__item:first-child {
+    margin-top: 0;
+  }
+  #menu footer {
+    margin: 3em 0 2em 0;
+  }
 }

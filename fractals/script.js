@@ -67,11 +67,12 @@ var Model = function(svgobj) {
     var fractals = [];
     var relative_koef;
     var depth; // parent + children
-    var width = document.getElementById('draw').clientWidth;
-    var height = document.getElementById('draw').clientHeight;
+//    var width = document.getElementById('draw').clientWidth;
+    var height;
+    var width;
     var svgobj, bgrect;
     
-    var polystack = [];         /* SVG.Polygon */
+    var polystack = [];      /* SVG.Polygon */
     var origindraggers = []; /* SVG.Circle */
     var polygroup, draggers_group;
     
@@ -319,8 +320,17 @@ var Model = function(svgobj) {
     that.set_view = function(v){ view = v; }
     that.set_controller = function(c){ controller = c; }
     
+    that.resize = function(){
+        svgobj.remove().forget();
+        width = document.getElementById('draw').clientWidth;
+        height = document.getElementById('draw').clientHeight;
+        that.init();
+    };
+    
     that.init = function(){
         var i;
+        width = document.getElementById('draw').clientWidth;
+        height  = document.getElementById('draw').clientHeight;
         svgobj = SVG('draw').size(width, height);
         bgrect = svgobj.rect(width, height);
         polygroup = svgobj.group();
@@ -557,6 +567,10 @@ var Controller = function(model, view){
     that.manipulate_listeners_on = origin_manipulation_listeners;
     that.manipulate_listeners_off = manipulate_listeners_off;    
 
+    window.addEventListener('resize', function(e){
+        model.resize();
+    });
+
     that.manipulate_listeners_on();
     model.set_controller(that);
     return that
@@ -564,3 +578,8 @@ var Controller = function(model, view){
 /* ************************************************************************** */
 
 var M, V;
+let hided = document.getElementsByClassName('js--hided');
+for (let i = 0; i < hided.length; i += 1){
+    hided[i].style.opacity = 0;
+    hided[i].disabled = true;
+}

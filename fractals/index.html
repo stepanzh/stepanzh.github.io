@@ -7,40 +7,89 @@
 </head>
 <body>
   <div class="body-wrapper">
-    <div class="app">
-        <div class="menu">
-            <p class="menu__label">Вершины потомка</p>
-            <input type="range" name="corners" min="0.0" max="1.0" default="0.5" step="0.005" placeholder="" id="range--corners" />
-
-            <p class="menu__label">Количество потомков</p>
-            <input type="range" name="children" min="1" max="20" default="5" step="1" id="range--children" />
-
-            <p class="menu__label">Цвет полигона: градиент</p>
-            <div class="gradient-choose" id="gradient--poly">
-                <input type="color" id="color-poly--1" value="#ff00ff">
-                <input type="color" id="color-poly--2" value="#00ff00">
+    <div id="app">
+        <div id="menu">
+            <div class="menu__item">
+                <p class="item__label">Вершины</p>
+                <div class="item__func">
+                    <div>
+                        <span>добавление</span><span>двойной клик вне фрактала</span>
+                    </div>
+                    <div>
+                        <span>удаление</span><span>двойной клик по вершине</span>
+                    </div>
+                    <div>
+                        <span>перемещение</span><span>перетаскивание мышью</span>
+                    </div>
+                </div>
             </div>
-            <div><input type="checkbox" name="show-poly" value="poly" placeholder="1" id="check--showpoly" checked /></div>
-
-            <p class="menu__label">Цвет линий: градиент</p>
-            <div class="gradient-choose" id="gradient--lines">
-                <input type="color" id="color-lines--1" value="#aaaaaa">
-                <input type="color" id="color-lines--2" value="#0000ff">
+            <div class="menu__item">
+                <p class="item__label">Положение порождённых вершин</p>
+                <div class="item__func">
+                    <input type="range" name="corners" min="0.0" max="1.0" value="0.2" default="0" step="0.005" placeholder="" id="range--corners" />
+                    
+                </div>
             </div>
-            <div><input type="checkbox" name="show-lines" value="lines" placeholder="1" id="check--showlines" checked /></div>
-           
-            <p class="menu__label">Цвет фона</p>
-            <input type="color" id="color-bg" value="#bbbbbb">
+            <div class="menu__item">
+                <p class="item__label">Глубина</p>
+                <div class="item__func">
+                    <input type="range" name="children" min="1" max="50" value="7" step="1" id="range--children" />
+                </div>
+            </div>
+            <div class="menu__item">
+                <p class="item__label">Цвет фракталов</p>
+                <div class="item__func">
+                    <div class="gradient-choose" id="gradient--poly">
+                        <input type="color" id="color-poly--1" value="#F61344">
+                        <div class="color-show color-show--gradient" id="show-color-poly--1"></div>
+                        <input type="color" id="color-poly--2" value="#80D1FF">
+                        <div class="color--disable">
+                            <input type="checkbox" name="show-poly" value="poly" placeholder="1" id="check--showpoly" checked />
+                        </div>
+                    </div>
 
-            <p class="menu__label">Сохранить</p>
-            
+                </div>
+            </div>
+            <div class="menu__item">
+                <p class="item__label">Цвет границ</p>
+                <div class="item__func">
+                    <div class="gradient-choose" id="gradient--lines">
+                        <input type="color" id="color-lines--1" value="#94001F">
+                        <div class="color-show color-show--gradient" id="show-color-poly--2"></div>
+                        <input type="color" id="color-lines--2" value="#03038B">
+                        <div class="color--disable">
+                            <input type="checkbox" name="show-lines" value="lines" placeholder="1" id="check--showlines" checked />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__item">
+                <p class="item__label">Цвет фона</p>
+                <div class="item__func">
+                    <div class="color-choose">
+                        <input type="color" id="color-bg" value="#F61344">
+                        <div class="color-show"></div>
+                        <input type="color" class="js--hided" value="#00ff00">
+                        <div class="color--disable">
+                            <input type="checkbox" class="js--hided" checked />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__item">
+                <p class="item__label">Сохранить</p>
+                <div class="item__func">
+                    <span>SVG</span>
+                    <span>PNG</span>
+                </div>
+            </div>
+            <footer><a href="https://stepanzh.github.io/" target="_blank">stepanzh.github.io</a></footer>
         </div>
-        <div class="display">
+        <div id="display">
             <div id="draw"></div>
-            <!--   + 2 buttons     -->
         </div>
     </div>
-    <footer>stepanzh CHANGE ME</footer>
+    
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.7.1/svg.js"></script>
   <script src="script.js" type="text/javascript"></script>

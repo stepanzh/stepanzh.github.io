@@ -84,7 +84,7 @@ body > svg {
 #inp-num-vertexes:focus {
   border-bottom: 2px solid #F1CC2E;
 }
-button:focus,
+/* button:focus, */
 button:hover
 {
   border: 2px solid #F1CC2E;
@@ -233,6 +233,13 @@ input[type=color]{
 #menu > footer {
   margin: 5em 0 0 0;
   text-align: center;
+}
+#menu > footer a {
+  text-decoration: none;
+  color: #a6a6a6;
+}
+#menu > footer a:focus {
+  outline: none;
 }
 /* ****************************************** */
 

@@ -16,7 +16,12 @@ function hex_string_to_colorobj(s){
     
     return color
 }
-
+function rgb_to_hexstring(rgb){
+    return "#" + ("0" + rgb.r.toString(16)).slice(-2) + ("0" + rgb.g.toString(16)).slice(-2) + ("0" + rgb.b.toString(16)).slice(-2)
+}
+function gradient_css_string(rgb1, rgb2){
+    return "linear-gradient(to right, " + rgb_to_hexstring(rgb1) +  " 5% , "+ rgb_to_hexstring(rgb2) + " 95%)"
+}
 function make_draggable(svgelement, callback){
     var move = function(e){
         svgelement.cx(e.layerX);
@@ -185,54 +190,7 @@ var Model = function(svgobj) {
         } else {
             console.log('move_origin_vertex: trying to move unexisting vertex = ', i);
         }
-    };
-//    var add_origin_vertex = function(target){
-//        /* coords must be < width, < height */
-//        
-//        /* find index where to put new vertex */
-//        var i, imin, imin_second, minr, r, imin1, imin2, r1, r2;
-//        var orig = fractals[0];
-//        /* find closest vertex */
-//        imin = 0;
-//        minr = sqrdistance(orig[0], target);
-//        for (i = 1; i < orig.length; i += 1){
-//            r = sqrdistance(orig[i], target);
-//            if (r < minr){
-//                imin = i;
-//            }
-//        }
-//        /* find second closest vertex */
-//        imin1 = imin != origin_coords.length ? (imin+1)%origin_coords.length : 0;
-//        imin2 = imin != 0 ? (imin-1)%origin_coords.length : origin_coords.length-1;
-//        
-//        r1 = sqrdistance(orig[imin1], target);
-//        r2 = sqrdistance(orig[imin2], target);
-
-//        imin_second = r1 < r2 ? imin1 : imin2;
-//        console.log('imin/sec', imin, imin_second);
-//        /* update origin_coords */
-//        if (imin > imin_second){
-//            if (imin != orig.length-1){
-//                // between i=N and i=0
-//                origin_coords.push(target);
-//            } else {
-//                if (imin_second == 0){
-//                    origin_coords.push(target);
-//                } else {
-//                    // other
-//                    origin_coords.splice(imin_second+1, 0, target);
-//                }
-//            }
-//        } else {
-//            if (imin_second == orig.length-1){
-//                origin_coords.push(target);
-//            } else {
-//                origin_coords.splice(imin+1, 0, target);
-//            }
-//        }
-//        reload();
-//    };
-    
+    };    
     var add_origin_vertex = function(target){
         var orig = fractals[0];
         var N = orig.length;
@@ -246,9 +204,9 @@ var Model = function(svgobj) {
         }
         rcx = rcx / N;
         rcy = rcy / N;
-        console.log('rc ', rcx, rcy);
-        console.log('orig', orig);
-        console.log('target', target);
+//        console.log('rc ', rcx, rcy);
+//        console.log('orig', orig);
+//        console.log('target', target);
         for ( let i = 0; i < N-1; i += 1){
             console.log('i=', i);
             dy = orig[i+1][1] - orig[i][1];
@@ -257,9 +215,9 @@ var Model = function(svgobj) {
             if ( dx != 0){
                 k = dy / dx;
                 b = orig[i][1] - orig[i][0] * k;
-                console.log("k /// b", k, b);
-                console.log("target--eq", k*target[0] + b < target[1]);
-                console.log("rc--ex", k*rcx +b < rcy);
+//                console.log("k /// b", k, b);
+//                console.log("target--eq", k*target[0] + b < target[1]);
+//                console.log("rc--ex", k*rcx +b < rcy);
                 
                 if ( (( k*target[0] + b < target[1]) && !(k*rcx +b < rcy)) || 
                         ( !( k*target[0] + b < target[1]) && (k*rcx +b < rcy) ) ){ 
@@ -275,14 +233,14 @@ var Model = function(svgobj) {
                 }
             }
         }
-        console.log('rcx/rcy/apphere', rcx, rcy, apphere);
+//        console.log('rcx/rcy/apphere', rcx, rcy, apphere);
         // N, 0
         if (apphere == -1){
             origin_coords.push(target);
         } else {
             origin_coords.splice(apphere, 0, target);
         }
-        console.log(origin_coords);
+//        console.log(origin_coords);
         reload();
     };
     
@@ -425,6 +383,12 @@ var View = function(model) {
     var showpoly = document.getElementById('check--showpoly').checked;
     var showlines = document.getElementById('check--showlines').checked;
     
+    var color_showers = {
+        poly:  document.getElementById('show-color-poly'),
+        lines: document.getElementById('show-color-lines'),
+        bg:    document.getElementById('show-color-bg')
+    };
+    
     var draggers_common_attr = {fill: '#ffffff', 'stroke': '#8f868f', 'stroke-width': 1, r: 12, };
     
     function draw_fractal(p, bgfill, sfill, swidth=1){
@@ -461,6 +425,15 @@ var View = function(model) {
         for (i=0; i < drgs.length; i += 1){
             drgs[i].attr(draggers_common_attr);
         }
+        /* color showers */
+        console.log('color-showers upd');
+        console.log(gradient_css_string(color_set.bgpoly[0], color_set.bgpoly[1]));
+        console.log(gradient_css_string(color_set.lines[0], color_set.lines[1]));
+        console.log(rgb_to_hexstring(color_set.bg));
+        
+        color_showers.poly.style.background  = gradient_css_string(color_set.bgpoly[0], color_set.bgpoly[1]);
+        color_showers.lines.style.background = gradient_css_string(color_set.lines[0], color_set.lines[1]);
+        color_showers.bg.style.background    = rgb_to_hexstring(color_set.bg);
     }
     
     function set_draggers(show = true){
@@ -480,24 +453,24 @@ var View = function(model) {
         draw_fractals();
         ui_update();
     };
-    that.set_polycolor_1 = function(rgb){
-        color_set.bgpoly[0] = rgb;
+    that.set_polycolor_1 = function(hex_string){
+        color_set.bgpoly[0] = hex_string_to_colorobj(hex_string);
         that.render();
     };
-    that.set_polycolor_2 = function(rgb){
-        color_set.bgpoly[1] = rgb;
+    that.set_polycolor_2 = function(hex_string){
+        color_set.bgpoly[1] = hex_string_to_colorobj(hex_string);
         that.render();
     };
-    that.set_linecolor_1 = function(rgb){
-        color_set.lines[0] = rgb;
+    that.set_linecolor_1 = function(hex_string){
+        color_set.lines[0] = hex_string_to_colorobj(hex_string);
         that.render();
     };
-    that.set_linecolor_2 = function(rgb){
-        color_set.lines[1] = rgb;
+    that.set_linecolor_2 = function(hex_string){
+        color_set.lines[1] = hex_string_to_colorobj(hex_string);
         that.render();
     };
-    that.set_bgcolor = function(rgb){
-        color_set.bg = rgb;
+    that.set_bgcolor = function(hex_string){
+        color_set.bg = hex_string_to_colorobj(hex_string);
         that.render();
     };    
     
@@ -526,12 +499,14 @@ var Controller = function(model, view){
     var depth_input = document.getElementById('range--children');
 
     /* view controller */
+    /* color pickers */
     var poly_bg_picker_1 = document.getElementById("color-poly--1");
     var poly_bg_picker_2 = document.getElementById("color-poly--2");
     var line_picker_1 = document.getElementById("color-lines--1");
     var line_picker_2 = document.getElementById("color-lines--2");
     var bg_picker = document.getElementById("color-bg");
     
+    /* checkboxes */
     var check_poly = document.getElementById('check--showpoly');
     var check_lines = document.getElementById('check--showlines');
     
@@ -546,8 +521,9 @@ var Controller = function(model, view){
     }
     function colorPickListener(inp, update_func){
         inp.addEventListener("change", function(e){
-            var color = hex_string_to_colorobj(e.target.value)            
-            update_func(color);
+//            var color = hex_string_to_colorobj(e.target.value)            
+//            update_func(color);
+            update_func(e.target.value);
         });
     };
     

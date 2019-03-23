@@ -1,5 +1,6 @@
 # stepanzh.github.io
 The latest works are listed first.
+You also can find my design stuff in [instagram ☂️](https://instagram.com/stepanzh_design/).
 
 ## 🌶️ Фракталы (Fractals) [[LINK]](https://stepanzh.github.io/fractals/)
 Генератор фракталов на основе многоугольников. Ценящим геометрию. Созданный Вами фрактал можно будет сохранить!

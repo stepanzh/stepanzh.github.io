@@ -2,6 +2,10 @@
 The latest works are listed first.
 You also can find my design stuff in [instagram ☂️](https://instagram.com/stepanzh_design/).
 
+## Алко ачивки [[LINK]](https://stepanzh.github.io/alco_achievements/) 📱 🖥️ 🇷🇺
+Список "достижений", которые могут быть получены в нетрезвом виде.
+Оригинал принадлежит [Анонимусу](https://2ch.hk).
+
 ## 🌶️ Фракталы (Fractals) [[LINK]](https://stepanzh.github.io/fractals/) 📵 🖥️
 Генератор фракталов на основе многоугольников. Ценящим геометрию. Созданный Вами фрактал можно будет сохранить!
 Polygon-based fractal generator. For "geometrical" aesthets. Generated fractals could be saved!
@@ -16,7 +20,7 @@ JS + CSS animation. Rotation of stars is disabled (need optimization).
 ## HSL ANIMATED GRID [[LINK]](https://stepanzh.github.io/hsl-grid/) 📵 🖥️
 A ractangle grid containing circles, which move toward to mouse and change color. Plane js.
 
-## 🌶️ НАШЕ? (NASHE?) [[LINK]](https://stepanzh.github.io/etymology/) 📱 🖥️
+## 🌶️ НАШЕ? (NASHE?) [[LINK]](https://stepanzh.github.io/etymology/) 📱 🖥️ 🇷🇺
 Познавательная игра. В ходе игрового процесса игроку предоставляются карточки с русскими словами. Задача игрока отгадать, какие из них заимствованные, а какие исконно русские. По результатам игры назначается одно из 8 званий.
 
 The game Nashe? (Is this our?) is an educational game. The gamer try to guess which words of Russian language are adopted or aboriginal. At the finish the player is granted with one of 8 titles.

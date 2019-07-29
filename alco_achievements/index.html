@@ -1,0 +1,1772 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap&subset=cyrillic" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Алко ачивки</title>
+</head>
+<body>
+<label id="statusbar-check">
+  <input type="checkbox" id="statusbar-check__btn" />
+  <div id="statusbar"><span id="lover" class="class-counter" data-class-name="lover" data-max-count="13">
+  <span class="class-counter__icon">💘</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">13</span>
+</span>
+<span id="joker" class="class-counter" data-class-name="joker" data-max-count="12">
+  <span class="class-counter__icon">🤡</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">12</span>
+</span>
+<span id="acrobat" class="class-counter" data-class-name="acrobat" data-max-count="6">
+  <span class="class-counter__icon">🤸</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">6</span>
+</span>
+<span id="leader" class="class-counter" data-class-name="leader" data-max-count="18">
+  <span class="class-counter__icon">👑</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">18</span>
+</span>
+<span id="punk" class="class-counter" data-class-name="punk" data-max-count="8">
+  <span class="class-counter__icon">👹</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">8</span>
+</span>
+<span id="ninja" class="class-counter" data-class-name="ninja" data-max-count="10">
+  <span class="class-counter__icon">👤</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">10</span>
+</span>
+<span id="alconaut" class="class-counter" data-class-name="alconaut" data-max-count="24">
+  <span class="class-counter__icon">👨‍🚀</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">24</span>
+</span>
+<span id="esthete" class="class-counter" data-class-name="esthete" data-max-count="7">
+  <span class="class-counter__icon">🧐</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">7</span>
+</span>
+<span id="frog" class="class-counter" data-class-name="frog" data-max-count="22">
+  <span class="class-counter__icon">🐸</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">22</span>
+</span>
+<span id="adventurer" class="class-counter" data-class-name="adventurer" data-max-count="28">
+  <span class="class-counter__icon">🗺️</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">28</span>
+</span>
+<span id="fighter" class="class-counter" data-class-name="fighter" data-max-count="20">
+  <span class="class-counter__icon">🥊</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">20</span>
+</span>
+<span id="criminal" class="class-counter" data-class-name="criminal" data-max-count="7">
+  <span class="class-counter__icon">🚔</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">7</span>
+</span>
+<span id="None" class="class-counter" data-class-name="None" data-max-count="35">
+  <span class="class-counter__icon">❓</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">35</span>
+</span>
+<span id="veteran" class="class-counter" data-class-name="veteran" data-max-count="20">
+  <span class="class-counter__icon">🎖️</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">20</span>
+</span>
+<span id="musician" class="class-counter" data-class-name="musician" data-max-count="4">
+  <span class="class-counter__icon">🎙️</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">4</span>
+</span>
+<span id="collector" class="class-counter" data-class-name="collector" data-max-count="5">
+  <span class="class-counter__icon">💱</span>
+  <span class="class-counter__counter"></span>
+  <span class="class-counter__counter-max">5</span>
+</span>
+</div>
+</label>
+<div id="collection"><label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="punk">
+    <div class="side front"><span class="front__text">Обоссать тёлку, пока та спит</span></div>
+    <div class="side back"><span class="back__text punk">Поцелуй принца</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Уснуть на унитазе</span></div>
+    <div class="side back"><span class="back__text adventurer">Заседание</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Проснуться со следами пиздюлей, узнать, кто это сделал</span></div>
+    <div class="side back"><span class="back__text fighter">Кто пилот, который меня сбил?</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="collector">
+    <div class="side front"><span class="front__text">Стрельнуть сигареты четырёх разных марок</span></div>
+    <div class="side back"><span class="back__text collector">Стрелок</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="collector">
+    <div class="side front"><span class="front__text">Настрелять 20 сигарет одной марки</span></div>
+    <div class="side back"><span class="back__text collector">Коллекционер</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Укусить собутыльника</span></div>
+    <div class="side back"><span class="back__text fighter">Каннибал</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="lover">
+    <div class="side front"><span class="front__text">Заняться сексом на кладбище</span></div>
+    <div class="side back"><span class="back__text lover">Некромант</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Застрять у знакомого на 3+ дня</span></div>
+    <div class="side back"><span class="back__text adventurer">Без вести пропавший</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Выпить водки 4 разных марок</span></div>
+    <div class="side back"><span class="back__text veteran">Он вам подмигивает</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Поймать истерику с бодуна</span></div>
+    <div class="side back"><span class="back__text None">Нервы наружу</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Просраться с бодуна</span></div>
+    <div class="side back"><span class="back__text veteran">Батя одобряет</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="lover">
+    <div class="side front"><span class="front__text">Бухать под дождём</span></div>
+    <div class="side back"><span class="back__text lover">Романтика</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Быть отпизженным ногами</span></div>
+    <div class="side back"><span class="back__text fighter">Три кирпича на грудь</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="esthete">
+    <div class="side front"><span class="front__text">Закусывать водку эклерами</span></div>
+    <div class="side back"><span class="back__text esthete">Сладкая жизнь</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Уйти в запой не позже 5 дней после предыдущего</span></div>
+    <div class="side back"><span class="back__text alconaut">Трезвенник до гроба</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Обблевать постель</span></div>
+    <div class="side back"><span class="back__text frog">Асинхронное плавание</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="acrobat">
+    <div class="side front"><span class="front__text">Успеть добежать до туалета и блевануть</span></div>
+    <div class="side back"><span class="back__text acrobat">Подрыв боеукладки</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Потерять человека из компашки, обнаружив на утро</span></div>
+    <div class="side back"><span class="back__text adventurer">Отряд не заметил…</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Пить, не закусывая и запивая</span></div>
+    <div class="side back"><span class="back__text veteran">Бескомпромиссный</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Получить удар током по пьяни</span></div>
+    <div class="side back"><span class="back__text fighter">Зевс</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Пить из бутылки с отбитым горлышком</span></div>
+    <div class="side back"><span class="back__text veteran">Опасное удовольствие</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Поскользнуться на собственной блевоте</span></div>
+    <div class="side back"><span class="back__text frog">Долбоеб</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Пить перед зеркалом</span></div>
+    <div class="side back"><span class="back__text alconaut">Иллюзионист</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Отбиться от похода в лесу</span></div>
+    <div class="side back"><span class="back__text adventurer">Беар Гриллс</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Выжрать литр рома</span></div>
+    <div class="side back"><span class="back__text alconaut">Пират</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="punk">
+    <div class="side front"><span class="front__text">Утопить лодку по пьяни</span></div>
+    <div class="side back"><span class="back__text punk">Джек Воробей</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Заставить всех слушать твою любимую песню</span></div>
+    <div class="side back"><span class="back__text leader">Диджей</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="punk">
+    <div class="side front"><span class="front__text">Выбросить тару в окно</span></div>
+    <div class="side back"><span class="back__text punk">Бомбардировщик</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Обблевать друга</span></div>
+    <div class="side back"><span class="back__text frog">Неудержимый</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Привезти всё бухло на себе</span></div>
+    <div class="side back"><span class="back__text leader">Важная персона</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Проебать бухло по дороге</span></div>
+    <div class="side back"><span class="back__text adventurer">Важная персона ii</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Быть пронесённым не менее 500 м</span></div>
+    <div class="side back"><span class="back__text veteran">Нас извлекут из-под обломков</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="collector">
+    <div class="side front"><span class="front__text">Настрелять больше, чем было до пьянки</span></div>
+    <div class="side back"><span class="back__text collector">Ворошиловский стрелок</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="esthete">
+    <div class="side front"><span class="front__text">Всю пьянку просидеть в кресле-качалке</span></div>
+    <div class="side back"><span class="back__text esthete">Качок</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="lover">
+    <div class="side front"><span class="front__text">Заняться сексом на стройке</span></div>
+    <div class="side back"><span class="back__text lover">Прораб</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Встретить похмелье в обезьяннике</span></div>
+    <div class="side back"><span class="back__text fighter">Рука закона</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="collector">
+    <div class="side front"><span class="front__text">Настрелять на пиво</span></div>
+    <div class="side back"><span class="back__text collector">С миру по нитке</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Пытаться тормознуть электричку</span></div>
+    <div class="side back"><span class="back__text leader">По тормозам</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Проснуться на опохмел раньше шести утра</span></div>
+    <div class="side back"><span class="back__text None">Жаворонок</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="punk">
+    <div class="side front"><span class="front__text">Нассать под барную стойку</span></div>
+    <div class="side back"><span class="back__text punk">Печаль трактирщика</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Три стакана подряд без закуски</span></div>
+    <div class="side back"><span class="back__text veteran">Спиртмастер</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Пить водку теплее 40 градусов</span></div>
+    <div class="side back"><span class="back__text veteran">Погорячее</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Наблевать на грядки</span></div>
+    <div class="side back"><span class="back__text frog">Колхозник</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="punk">
+    <div class="side front"><span class="front__text">Разбить унитаз</span></div>
+    <div class="side back"><span class="back__text punk">Сантехник</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Отрастить пивное брюхо</span></div>
+    <div class="side back"><span class="back__text None">Дом, который построил Бад</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="joker">
+    <div class="side front"><span class="front__text">Проебаться вместе с бухлом</span></div>
+    <div class="side back"><span class="back__text joker">Живым или мёртвым</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Докопаться до проводника/машиниста</span></div>
+    <div class="side back"><span class="back__text fighter">Постой, паровоз</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="esthete">
+    <div class="side front"><span class="front__text">Встать раньше всех, нажраться и лечь спать</span></div>
+    <div class="side back"><span class="back__text esthete">Ещё не время</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Ни разу не позвонить бывшей</span></div>
+    <div class="side back"><span class="back__text veteran">Стойкий оловянный</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Уломать на пьянку 1 трезвенника</span></div>
+    <div class="side back"><span class="back__text leader">Алкотролль</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Уломать на пьянку 3 трезвенника</span></div>
+    <div class="side back"><span class="back__text leader">Алкотролль ii</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Уломать на пьянку 5 трезвенников</span></div>
+    <div class="side back"><span class="back__text leader">Алкотролль iii</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Проснуться в женской одежде</span></div>
+    <div class="side back"><span class="back__text adventurer">Это ловушка</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Разбудить всех, проснувшись самому</span></div>
+    <div class="side back"><span class="back__text leader">РОТА ПОДЪЁМ!!!</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Залезть по пьяни на забор</span></div>
+    <div class="side back"><span class="back__text adventurer">Спайдермен</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Залезть по пьяни на дерево</span></div>
+    <div class="side back"><span class="back__text adventurer">Зов джунглей</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Обоссать толчок и успешно отмазаться</span></div>
+    <div class="side back"><span class="back__text adventurer">Предатель</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="lover">
+    <div class="side front"><span class="front__text">Склеить бабу, еле стоя на ногах</span></div>
+    <div class="side back"><span class="back__text lover">Дон Жуан</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="joker">
+    <div class="side front"><span class="front__text">Отмочить на свадьбе</span></div>
+    <div class="side back"><span class="back__text joker">Массовик-затейник</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="lover">
+    <div class="side front"><span class="front__text">Словить «мистера вялого» во время пьяного секса</span></div>
+    <div class="side back"><span class="back__text lover">Альфач</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Пить на протяжении 14 дней</span></div>
+    <div class="side back"><span class="back__text alconaut">Да замкнётся круг</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="esthete">
+    <div class="side front"><span class="front__text">Играть в шахматы по синьке</span></div>
+    <div class="side back"><span class="back__text esthete">Ферзевый гамбит</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Курить по пьяни, если трезвым не куришь</span></div>
+    <div class="side back"><span class="back__text None">Аллен Карр</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Пить в самолёте</span></div>
+    <div class="side back"><span class="back__text adventurer">Авиатор</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Пить в суде</span></div>
+    <div class="side back"><span class="back__text adventurer">Прокурор</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Разнять двоих пьяных</span></div>
+    <div class="side back"><span class="back__text leader">Третейский судья</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="lover">
+    <div class="side front"><span class="front__text">Трахнуть негритянку</span></div>
+    <div class="side back"><span class="back__text lover">Шоколадка</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Отключиться на сутки</span></div>
+    <div class="side back"><span class="back__text alconaut">Deep blue</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="punk">
+    <div class="side front"><span class="front__text">Сбрить бороду по пьяни</span></div>
+    <div class="side back"><span class="back__text punk">Пётр Великий</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="punk">
+    <div class="side front"><span class="front__text">Бухать с панками</span></div>
+    <div class="side back"><span class="back__text punk">Посвящение</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="punk">
+    <div class="side front"><span class="front__text">По пьяни сбрить все волосы без последствий</span></div>
+    <div class="side back"><span class="back__text punk">Сибирский цирюльник</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Получить похвалу от бати, ужравшись в хлам</span></div>
+    <div class="side back"><span class="back__text veteran">Ай малаца</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Протрезветь, не засыпая</span></div>
+    <div class="side back"><span class="back__text alconaut">Кошмарики</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Попеременно блевать и бухать</span></div>
+    <div class="side back"><span class="back__text veteran">No pain — no gain</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="lover">
+    <div class="side front"><span class="front__text">Целовать мужиков в губы</span></div>
+    <div class="side back"><span class="back__text lover">Брежнев</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Заныкать бутылку на опохмел</span></div>
+    <div class="side back"><span class="back__text veteran">Н3шечка</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Перейти с пива на водку и обратно</span></div>
+    <div class="side back"><span class="back__text alconaut">Рокировка</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="joker">
+    <div class="side front"><span class="front__text">Нассать в пиво так, чтобы никто не заметил</span></div>
+    <div class="side back"><span class="back__text joker">Уринотерапевт</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="ninja">
+    <div class="side front"><span class="front__text">бухать в 5 метрах от ППС</span></div>
+    <div class="side back"><span class="back__text ninja">Мастер маскировки</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Обоссаться более 1 раза</span></div>
+    <div class="side back"><span class="back__text frog">Трижды герой</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Восстановить события по рассказам</span></div>
+    <div class="side back"><span class="back__text None">Complete Saga</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="joker">
+    <div class="side front"><span class="front__text">Махнуть стакан спирта вместо воды</span></div>
+    <div class="side back"><span class="back__text joker">Very hard</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Пить в поликлинике</span></div>
+    <div class="side back"><span class="back__text adventurer">Народная медицина</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Пить в военкомате</span></div>
+    <div class="side back"><span class="back__text adventurer">Служу россии</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Остаться единственным трезвым</span></div>
+    <div class="side back"><span class="back__text veteran">Одинокий рейнджер</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Пить в очереди в магазине</span></div>
+    <div class="side back"><span class="back__text adventurer">Не отходя от кассы</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Выкурить 2 пачки сигарет за пьянку</span></div>
+    <div class="side back"><span class="back__text None">С дымком</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Пить в церкви</span></div>
+    <div class="side back"><span class="back__text adventurer">Кровь Господня</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Пить в мечети</span></div>
+    <div class="side back"><span class="back__text adventurer">Аллах простит</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Пить в дацане</span></div>
+    <div class="side back"><span class="back__text adventurer">Путь в Шамбалу</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Перейти с пива на водку</span></div>
+    <div class="side back"><span class="back__text alconaut">e2-e4</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Дунуть на отходняке</span></div>
+    <div class="side back"><span class="back__text None">Сицилианская защита</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Обблеваться во сне</span></div>
+    <div class="side back"><span class="back__text frog">Богатырский сон</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Оставить на опохмел только ягу</span></div>
+    <div class="side back"><span class="back__text None">Безвыходное положение</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="musician">
+    <div class="side front"><span class="front__text">Играть по пьяни на гитаре, не умея играть</span></div>
+    <div class="side back"><span class="back__text musician">Всё идёт по плану</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Бухать с афганцем/чеченцем</span></div>
+    <div class="side back"><span class="back__text None">Скажи-ка дядя…</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Закусывать снегом/льдом</span></div>
+    <div class="side back"><span class="back__text veteran">Отмороженный</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="musician">
+    <div class="side front"><span class="front__text">Сыграть по пьяни на гитаре</span></div>
+    <div class="side back"><span class="back__text musician">Бард</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Бухать в одно рыло</span></div>
+    <div class="side back"><span class="back__text alconaut">Навсегда один</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Разговаривать с предметами по синьке</span></div>
+    <div class="side back"><span class="back__text alconaut">Карлос Кастанеда</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Наблевать с корешами целое ведро</span></div>
+    <div class="side back"><span class="back__text frog">Рог изобилия</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Уйти в другую компанию по причине слива первой</span></div>
+    <div class="side back"><span class="back__text None">Единоличник</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Затащить на вписку прохожего</span></div>
+    <div class="side back"><span class="back__text leader">Социализация</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="lover">
+    <div class="side front"><span class="front__text">Попытаться трахнуть домашнее животное</span></div>
+    <div class="side back"><span class="back__text lover">Farm Sex</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="ninja">
+    <div class="side front"><span class="front__text">Спрять свою блевотину</span></div>
+    <div class="side back"><span class="back__text ninja">F-117</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Пить неизвестно с кем</span></div>
+    <div class="side back"><span class="back__text adventurer">Ваббаджек</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Блевануть от вида блевоты</span></div>
+    <div class="side back"><span class="back__text frog">Цепная реакция</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Взять на себя обязанности хозяина хаты</span></div>
+    <div class="side back"><span class="back__text leader">Будь как дома</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Бегать за кем-либо с топором</span></div>
+    <div class="side back"><span class="back__text fighter">Железный Дровосек</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Словить белочку</span></div>
+    <div class="side back"><span class="back__text None">Я пришла!</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Нассать в шкаф</span></div>
+    <div class="side back"><span class="back__text frog">Модный приговор</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Усадить за стол приехавших полицейских</span></div>
+    <div class="side back"><span class="back__text leader">Виталий Чуркин</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Напасть на соседнюю компашку</span></div>
+    <div class="side back"><span class="back__text fighter">Викинг</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="acrobat">
+    <div class="side front"><span class="front__text">Упасть с 3 этажа</span></div>
+    <div class="side back"><span class="back__text acrobat">Полёт валькирий</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Насрать под ёлкой</span></div>
+    <div class="side back"><span class="back__text frog">Дедушка Мороз</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Устроить драку в баре</span></div>
+    <div class="side back"><span class="back__text fighter">По традиции</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Танцевать под национальные песни</span></div>
+    <div class="side back"><span class="back__text None">Ирландец</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Упасть в сточную канаву</span></div>
+    <div class="side back"><span class="back__text adventurer">Купальный сезон</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Выпить стакан блевоты</span></div>
+    <div class="side back"><span class="back__text frog">Что он делает?</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Попасть домой неизвестно как</span></div>
+    <div class="side back"><span class="back__text adventurer">Аномалия</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Купить бутылку и не трогать её год</span></div>
+    <div class="side back"><span class="back__text veteran">Стальные яйца</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Прийти на работу пьяным</span></div>
+    <div class="side back"><span class="back__text None">Талант не пропьёшь</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Набить морду кому-либо за веру</span></div>
+    <div class="side back"><span class="back__text fighter">Инквизитор</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="ninja">
+    <div class="side front"><span class="front__text">Свистнуть пиво из разгружающейся машины</span></div>
+    <div class="side back"><span class="back__text ninja">Кража века</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="musician">
+    <div class="side front"><span class="front__text">Сыграть на рояле по пьяни</span></div>
+    <div class="side back"><span class="back__text musician">Маэстро</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Звонить кому попало в домофон</span></div>
+    <div class="side back"><span class="back__text adventurer">Кевин Митник</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="criminal">
+    <div class="side front"><span class="front__text">Водить бухим</span></div>
+    <div class="side back"><span class="back__text criminal">GTA</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="criminal">
+    <div class="side front"><span class="front__text">Водить бухим быстрее 120 км/ч</span></div>
+    <div class="side back"><span class="back__text criminal">GTA 2</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="criminal">
+    <div class="side front"><span class="front__text">Угнать машину</span></div>
+    <div class="side back"><span class="back__text criminal">GTA 3 </span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="criminal">
+    <div class="side front"><span class="front__text">Угнать автобус</span></div>
+    <div class="side back"><span class="back__text criminal">Vice City</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="criminal">
+    <div class="side front"><span class="front__text">Угнать поезд/плавсредство</span></div>
+    <div class="side back"><span class="back__text criminal">San Andreas</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="criminal">
+    <div class="side front"><span class="front__text">Выполнить все ачивки из серии</span></div>
+    <div class="side back"><span class="back__text criminal">GTA V</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="criminal">
+    <div class="side front"><span class="front__text">Попасться пьяным за рулём</span></div>
+    <div class="side back"><span class="back__text criminal">СЛОМАНО</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Сесть играть посреди пьянки</span></div>
+    <div class="side back"><span class="back__text None">Задрот</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Нажраться пойлом не крепче 4%</span></div>
+    <div class="side back"><span class="back__text alconaut">Капля в море</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="ninja">
+    <div class="side front"><span class="front__text">Спереть закусь и свалить</span></div>
+    <div class="side back"><span class="back__text ninja">Вас заметили</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Прийти в трезвую компании бухим</span></div>
+    <div class="side back"><span class="back__text leader">Душа компании</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Пить с владельцем бара</span></div>
+    <div class="side back"><span class="back__text leader">За счёт заведения</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Насрать на балкон соседу</span></div>
+    <div class="side back"><span class="back__text frog">Донбасс</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Проломить стену</span></div>
+    <div class="side back"><span class="back__text fighter">Крым наш</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Искать выход из метро</span></div>
+    <div class="side back"><span class="back__text adventurer">Дети подземелья</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Блевать на карусели</span></div>
+    <div class="side back"><span class="back__text frog">Токийский дрист</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Не отвечать на телефон</span></div>
+    <div class="side back"><span class="back__text None">Осада</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Прийти на учёбу бухим</span></div>
+    <div class="side back"><span class="back__text None">Гранит науки</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Опиздюлить бомжа по пьяни</span></div>
+    <div class="side back"><span class="back__text fighter">Нет милосердию</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="acrobat">
+    <div class="side front"><span class="front__text">Срезать путь до ларька через окно</span></div>
+    <div class="side back"><span class="back__text acrobat">Роковой полёт</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Закодироваться</span></div>
+    <div class="side back"><span class="back__text veteran">Назад дороги нет</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="joker">
+    <div class="side front"><span class="front__text">Попасть в товарища пробкой от шампанского</span></div>
+    <div class="side back"><span class="back__text joker">Снайпер</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Выпиздить кого-либо из квартиры</span></div>
+    <div class="side back"><span class="back__text fighter">Это моя земля!</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Обблевать старушку</span></div>
+    <div class="side back"><span class="back__text frog">Геронтофобия</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Наблевать в тарелку с закуской</span></div>
+    <div class="side back"><span class="back__text frog">Диверсант</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Допить все остатки</span></div>
+    <div class="side back"><span class="back__text alconaut">Последний герой</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Выпить больше всех и остаться самым трезвым</span></div>
+    <div class="side back"><span class="back__text alconaut">Скала</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="lover">
+    <div class="side front"><span class="front__text">Блевать во время поцелуя</span></div>
+    <div class="side back"><span class="back__text lover">Transmission complete</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="esthete">
+    <div class="side front"><span class="front__text">Проблеваться, ничего не замарав</span></div>
+    <div class="side back"><span class="back__text esthete">Перфекционист</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="esthete">
+    <div class="side front"><span class="front__text">Выпить больше всех самого дорого алкоголя</span></div>
+    <div class="side back"><span class="back__text esthete">Элитарий</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Намешать пойло, срубающее с 1 стакана</span></div>
+    <div class="side back"><span class="back__text alconaut">Селекционер</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Отправить кого-то в нокдаун, будучи пьяным</span></div>
+    <div class="side back"><span class="back__text fighter">FUS ROH DAH!</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="joker">
+    <div class="side front"><span class="front__text">Поджечь и выпить</span></div>
+    <div class="side back"><span class="back__text joker">Поджаренный</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Попробовать 6 напитков за вечер</span></div>
+    <div class="side back"><span class="back__text alconaut">Во всеоружии</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Заснять на камеру чьи-то пьяные похождения</span></div>
+    <div class="side back"><span class="back__text None">Орлиный взор</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Весь вечер пить один напиток, когда в наличии более 10</span></div>
+    <div class="side back"><span class="back__text None">Ортодокс</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="joker">
+    <div class="side front"><span class="front__text">Без вреда приземляться с 3+ метров, не стоя на ногах</span></div>
+    <div class="side back"><span class="back__text joker">Десантник</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="joker">
+    <div class="side front"><span class="front__text">Поджечь свой перегар</span></div>
+    <div class="side back"><span class="back__text joker">Дракончик</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="joker">
+    <div class="side front"><span class="front__text">Поджечь свой перегар и что-либо сжечь им</span></div>
+    <div class="side back"><span class="back__text joker">Дракончик ii</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Написать рабочий код, не понятный на трезвую голову</span></div>
+    <div class="side back"><span class="back__text None">Кармак</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">успешно завершить 3+ таска на Jira</span></div>
+    <div class="side back"><span class="back__text None">Патч Бармина</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="joker">
+    <div class="side front"><span class="front__text">Подлить водки в пиво чуваку, который не хочет пить</span></div>
+    <div class="side back"><span class="back__text joker">Дегустатор</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="joker">
+    <div class="side front"><span class="front__text">Намешать в бухло брома</span></div>
+    <div class="side back"><span class="back__text joker">Разврату не место</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Попасть в больницу</span></div>
+    <div class="side back"><span class="back__text adventurer">Склифосовский</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Не найти приключений на свою голую жопу</span></div>
+    <div class="side back"><span class="back__text adventurer">Эксгибиционист</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="ninja">
+    <div class="side front"><span class="front__text">Спуститься по самодельной верёвке</span></div>
+    <div class="side back"><span class="back__text ninja">Альпинист</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="ninja">
+    <div class="side front"><span class="front__text">Не спалиться в процессе альпинизма</span></div>
+    <div class="side back"><span class="back__text ninja">Синоби</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="lover">
+    <div class="side front"><span class="front__text">Обниматься с бомжами</span></div>
+    <div class="side back"><span class="back__text lover">Дамблдор, ты жив!</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Обкончать прохожего</span></div>
+    <div class="side back"><span class="back__text frog">Ниндзя</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Купить бухло, будучи несовершеннолетним</span></div>
+    <div class="side back"><span class="back__text None">Молодая гвардия</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Упав, увлечь за собой кого-либо</span></div>
+    <div class="side back"><span class="back__text None">Боулинг</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Принести на пати свой самогон</span></div>
+    <div class="side back"><span class="back__text leader">Своё – значит лучшее</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Блевануть через нос</span></div>
+    <div class="side back"><span class="back__text frog">Чистка труб</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Блевануть с корешем в один толчок</span></div>
+    <div class="side back"><span class="back__text frog">Вместе навсегда</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="esthete">
+    <div class="side front"><span class="front__text">Бухать с бомжами</span></div>
+    <div class="side back"><span class="back__text esthete">Имидж – ничто</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Выпить по стакану всего, что есть, по восходящей</span></div>
+    <div class="side back"><span class="back__text alconaut">Только вперёд</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Кидаться на собак по синьке</span></div>
+    <div class="side back"><span class="back__text fighter">Зверобой</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="acrobat">
+    <div class="side front"><span class="front__text">Перепихнуться со шлюхой без резинки</span></div>
+    <div class="side back"><span class="back__text acrobat">Рисковый</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="lover">
+    <div class="side front"><span class="front__text">Трясти мудями по пьяни</span></div>
+    <div class="side back"><span class="back__text lover">Аполлон</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Нажраться на производстве</span></div>
+    <div class="side back"><span class="back__text None">Техника безопасности</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Нажраться в лаборатории</span></div>
+    <div class="side back"><span class="back__text None">Химик</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="acrobat">
+    <div class="side front"><span class="front__text">Нажравшись, попасть в десятку</span></div>
+    <div class="side back"><span class="back__text acrobat">Дикий Запад</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Выпить 6 различных напитков по нисходящей</span></div>
+    <div class="side back"><span class="back__text alconaut">Крутое пике</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Насрать начальнику в стол</span></div>
+    <div class="side back"><span class="back__text frog">Поехавший</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Отказаться от секса по пьяни</span></div>
+    <div class="side back"><span class="back__text None">Нерушимые принципы</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Несколько раз повысить и понизить градус</span></div>
+    <div class="side back"><span class="back__text alconaut">Жонглер</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Набив морду собутыльнику, помириться с утра</span></div>
+    <div class="side back"><span class="back__text fighter">Братишка</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Одолеть троих трезвых соперников в драке</span></div>
+    <div class="side back"><span class="back__text fighter">Пьяный мастер</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Насрать в море</span></div>
+    <div class="side back"><span class="back__text frog">Бердянск</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Выпить флакон одеколона</span></div>
+    <div class="side back"><span class="back__text alconaut">Парфюмер</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Перейти на английский</span></div>
+    <div class="side back"><span class="back__text None">Ошибка резидента</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Снять кодировку раньше срока</span></div>
+    <div class="side back"><span class="back__text alconaut">Хакер</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="collector">
+    <div class="side front"><span class="front__text">Прийти домой с большей суммой, чем до пьянки</span></div>
+    <div class="side back"><span class="back__text collector">Серебряное копытце</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Потеряться по пьяни за границей</span></div>
+    <div class="side back"><span class="back__text adventurer">Руссо туристо</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Купить водку после полуночи</span></div>
+    <div class="side back"><span class="back__text leader">Вне закона</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="musician">
+    <div class="side front"><span class="front__text">Разбить гитару по пьяни</span></div>
+    <div class="side back"><span class="back__text musician">Рок-звезда</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Обосраться</span></div>
+    <div class="side back"><span class="back__text frog">Пожар бензобака</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">употребить все коктейли из фильма «ДМБ»</span></div>
+    <div class="side back"><span class="back__text alconaut">Как в армейке </span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Пройти бухим не менее 6км</span></div>
+    <div class="side back"><span class="back__text adventurer">Дальнобойщик</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Заставить соседей снизу прийти на шум</span></div>
+    <div class="side back"><span class="back__text None">Свистать всех наверх!</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Протравить 5 баек</span></div>
+    <div class="side back"><span class="back__text leader">Оратор</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Будучи в говно, приготовить сложное блюдо</span></div>
+    <div class="side back"><span class="back__text None">Рататуй</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Пить только кагор</span></div>
+    <div class="side back"><span class="back__text alconaut">Православный</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Всасывать пролитый алкоголь</span></div>
+    <div class="side back"><span class="back__text alconaut">Пылесос</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Отправить в путь транспортное средство</span></div>
+    <div class="side back"><span class="back__text None">В добрый путь!</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Вспомнить наутро о достижении «в добрый путь»</span></div>
+    <div class="side back"><span class="back__text None">Храни их Господь</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="joker">
+    <div class="side front"><span class="front__text">Сказать с похмелья, что почти не пил</span></div>
+    <div class="side back"><span class="back__text joker">Пиздобол</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="ninja">
+    <div class="side front"><span class="front__text">отлить в Volkswagen</span></div>
+    <div class="side back"><span class="back__text ninja">Мокрый жук</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Выпить больше всех, не вложив ни рубля</span></div>
+    <div class="side back"><span class="back__text None">Еврей</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Начать драку в пьяном угаре</span></div>
+    <div class="side back"><span class="back__text fighter">Дуэлянт</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Сойтись в драке с полицейским</span></div>
+    <div class="side back"><span class="back__text fighter">Повстанец</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Встать на работу после литра самогона и 2 л пива</span></div>
+    <div class="side back"><span class="back__text veteran">Трудяга</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Оплатить всю пьянку</span></div>
+    <div class="side back"><span class="back__text None">Кормилец</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="fighter">
+    <div class="side front"><span class="front__text">Получить травму и обнаружить её лишь утром</span></div>
+    <div class="side back"><span class="back__text fighter">Море по колено</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Получить «автомат» с похмелья</span></div>
+    <div class="side back"><span class="back__text None">Зачётки!</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Уговорить полицейских не разгонять пьянку</span></div>
+    <div class="side back"><span class="back__text leader">Сергей Лавров</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="acrobat">
+    <div class="side front"><span class="front__text">Нырнуть в водоём за утонувшей бутылкой</span></div>
+    <div class="side back"><span class="back__text acrobat">Жак Ив Кусто</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="ninja">
+    <div class="side front"><span class="front__text">Принести дешёвое бухло в бутылке из-под дорогого</span></div>
+    <div class="side back"><span class="back__text ninja">Читер</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="lover">
+    <div class="side front"><span class="front__text">Заняться сексом после портвейна</span></div>
+    <div class="side back"><span class="back__text lover">Полилася</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Потерять обе руки</span></div>
+    <div class="side back"><span class="back__text None">Ти-Рекс</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="None">
+    <div class="side front"><span class="front__text">Набухать в оллинклюзив на сумму, большую стоимости тура</span></div>
+    <div class="side back"><span class="back__text None">Экономист</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Отписаться в 50 алкотредах</span></div>
+    <div class="side back"><span class="back__text veteran">Интернет-зависимый</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="ninja">
+    <div class="side front"><span class="front__text">Уйти бухать, никого не разбудив</span></div>
+    <div class="side back"><span class="back__text ninja">Сэм Фишер</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="frog">
+    <div class="side front"><span class="front__text">Обосраться и обблеваться одновременно</span></div>
+    <div class="side back"><span class="back__text frog">Из всех орудий</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Сперва закусить, а потом выпить</span></div>
+    <div class="side back"><span class="back__text veteran">In Soviet Russa</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Заблудиться в родном городу</span></div>
+    <div class="side back"><span class="back__text adventurer">Сбой навигатора</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="lover">
+    <div class="side front"><span class="front__text">Зафейлить секс с девственницей</span></div>
+    <div class="side back"><span class="back__text lover">Не пробил!</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Бухать на 30-градусной жаре</span></div>
+    <div class="side back"><span class="back__text veteran">Hot point</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="leader">
+    <div class="side front"><span class="front__text">Уговорить патруль привезти домой</span></div>
+    <div class="side back"><span class="back__text leader">Ангел-хранитель</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="ninja">
+    <div class="side front"><span class="front__text">Идти по дому, не вступая в блевоту</span></div>
+    <div class="side back"><span class="back__text ninja">Миноискатель</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="adventurer">
+    <div class="side front"><span class="front__text">Пойти в неизвестное место</span></div>
+    <div class="side back"><span class="back__text adventurer">Туман войны</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="alconaut">
+    <div class="side front"><span class="front__text">Нажраться на деньги со сдачи стеклотары</span></div>
+    <div class="side back"><span class="back__text alconaut">Дифференцирование</span></div>
+  </div>
+</label>
+<label class="card-container">
+  <input type="checkbox" />
+  <div class="card" data-card-type="veteran">
+    <div class="side front"><span class="front__text">Пить спирт, запивая водой</span></div>
+    <div class="side back"><span class="back__text veteran">Аскет</span></div>
+  </div>
+</label>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

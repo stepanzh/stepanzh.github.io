@@ -6,6 +6,8 @@ You also can find my design stuff in [instagram ☂️](https://instagram.com/st
 Список "достижений", которые могут быть получены в нетрезвом виде.
 Оригинал принадлежит [Анонимусу](https://2ch.hk).
 
+![](https://stepanzh.github.io/alco_achievements/)
+
 ## 🌶️ Фракталы (Fractals) [[LINK]](https://stepanzh.github.io/fractals/) 📵 🖥️
 Генератор фракталов на основе многоугольников. Ценящим геометрию. Созданный Вами фрактал можно будет сохранить!
 Polygon-based fractal generator. For "geometrical" aesthets. Generated fractals could be saved!

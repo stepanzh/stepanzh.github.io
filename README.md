@@ -6,44 +6,39 @@ You also can find my design stuff in [instagram ☂️](https://instagram.com/st
 Список "достижений", которые могут быть получены в нетрезвом виде.
 Оригинал принадлежит [Анонимусу](https://2ch.hk).
 
-1000
-
-![](demo/1000.png)
-
-1500
-
-![](demo/1500.png)
-
-2000
-
-![](demo/2000.png)
-
-2500
-
-![](demo/2500.png)
+![](demo/alco_achievements.png)
 
 ## 🌶️ Фракталы (Fractals) [[LINK]](https://stepanzh.github.io/fractals/) 📵 🖥️
-Генератор фракталов на основе многоугольников. Ценящим геометрию. Созданный Вами фрактал можно будет сохранить!
-Polygon-based fractal generator. For "geometrical" aesthets. Generated fractals could be saved!
+Редактор фракталов на основе многоугольников. Ценящим геометрию. Созданный Вами фрактал можно будет сохранить!
+
+Polygon-based fractal editor. For "geometrical" aesthets. Generated fractals can be saved!
+
+![](demo/fractals.png)
 
 ## 🌶️ OKTIS [[LINK]](https://stepanzh.github.io/oktis/) 📱 🖥️
-A variation of Tetris. This version is on the wall of a building. Internally it uses svg view of MVC pattern.
-SPACE for rotating figures, arrows for moving.
+Тетрис на здании :)
+
+A joke variation of Tetris. This version is on the wall of a real cell-textured wall of a building. SPACE for rotating figures, arrows for moving.
+
+![](demo/oktis.png)
 
 ## 🌶️ TEA MATTERS! [[LINK]](https://stepanzh.github.io/tea-matters/) 📱 🖥️
 JS + CSS animation. Rotation of stars is disabled (need optimization).
+
+![](demo/tea-matters.png)
 
 ## HSL ANIMATED GRID [[LINK]](https://stepanzh.github.io/hsl-grid/) 📵 🖥️
 A ractangle grid containing circles, which move toward to mouse and change color. Plane js.
 
 ## 🌶️ НАШЕ? (NASHE?) [[LINK]](https://stepanzh.github.io/etymology/) 📱 🖥️ 🇷🇺
-Познавательная игра. В ходе игрового процесса игроку предоставляются карточки с русскими словами. Задача игрока отгадать, какие из них заимствованные, а какие исконно русские. По результатам игры назначается одно из 8 званий.
+Познавательная игра. Вам предоставляются карточки с русскими словами. Задача - отгадать, какие из слов заимствованные, а какие нет. По результатам игры вы получите звание.
 
-The game Nashe? (Is this our?) is an educational game. The gamer try to guess which words of Russian language are adopted or aboriginal. At the finish the player is granted with one of 8 titles.
+Nashe? (Is this our?) is an educational game. A gamer guesses if a given Russian word native or adopted. At the end, the gamer is granted with a title.
+
+![](demo/etymology.png)
 
 ## PURE-CSS [[LINK]](https://stepanzh.github.io/pure-css/) 📱 🖥️
 Some works around styling elements and achieving ui/ux effects.
 
 ## AKIRA PROJECT [[LINK]](https://stepanzh.github.io/akira/) 📵 🖥️
-This is first serious and completely my work in frontend. This site is assumed to be my cv or smth like that.
-I dedicate it to Akira anime/manga. I just played with some effects and experimented.
+The first quite serious my work in frontend. AKIRA PROJECT interactively tells plot of Akira anime.

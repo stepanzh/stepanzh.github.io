@@ -2,6 +2,11 @@
 The latest works are listed first.
 You also can find my design stuff in [instagram ☂️](https://instagram.com/stepanzh_design/).
 
+## 🌶️ 10PRINT [[LINK]](https://stepanzh.github.io/10PRINT/) 📱 🖥️
+Generative art experiments around 10PRINT maze generator.
+
+![10 PRINT maze example](https://stepanzh.github.io/10PRINT/static/tenprint_components.png)
+
 ## Алко ачивки [[LINK]](https://stepanzh.github.io/alco_achievements/) 📱 🖥️ 🇷🇺
 Список "достижений", которые могут быть получены в нетрезвом виде.
 Оригинал принадлежит [Анонимусу](https://2ch.hk).

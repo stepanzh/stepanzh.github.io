@@ -1,0 +1,97 @@
+2021.1.  10PRINT                                        [ССЫЛКА]
+
+CLI скрипты для экспериментов с алгоритмом 10PRINT. Выбор симво-
+лов, поддержка ANSI-цветов, анимация компонент лабиринта и ани-
+мированный сценарий. И всё это в терминале.
+
+CLI utilities for experiments with 10PRINT maze generator. Key
+features are custom symbols, ANSI-colors, animated wave propaga-
+tion, and animated intro-scene. And all of this in terminal.
+
+Ключевые слова: cli, graph, generative art, ascii art, maze.
+
+
+                            - 2019 -
+
+
+2019.2.  АЛКО АЧИВКИ  (BOOZECHIEVEMENTS)                [ССЫЛКА]
+
+Список анти-достижений”, которые могут быть получены в нетрезвом
+виде. Оригинал принадлежит Анонимусу.
+
+Anti-achievement list dedicated to bad drunk parties.
+
+Ключевые слова: static frontend, cards, humor.
+
+
+2019.1.  ФРАКТАЛЫ  (FRACTALS)                           [ССЫЛКА]
+
+Редактор фракталов с возможностью сохранения.
+
+Fractal editor with save to image option.
+
+Ключевые слова: browser app, visual editor, geometry.
+
+
+                            - 2018 -
+
+
+2018.6.  ОКТИС (OKTIS)                                  [ССЫЛКА]
+
+Тетрис на здании Общежития №8 Московского Физтеха. Во    Коси и
+время ремонта кирпичные стены общежития облицевали       забивай
+крупной прямоугольной плиткой.
+
+                        Коси и забивай!
+                  Всё в кайф, в струю и в жилу.
+
+I call this AR-variation of Tetris. This version of retro game
+is on students' hostel #8 of my alma mater Moscow Institute of
+Physics and Technology.
+
+Ключевые слова: browser game, tetris.
+
+
+2018.5.  ЧАЙ ВАЖЕН (TEA MATTERS)                        [ССЫЛКА]
+
+Я любитель чая, не кофе. Комплексная анимация в браузере.
+
+I like tea not coffee. CSS & JS animation.
+
+Ключевые слова: frontend animation.
+
+
+2018.4.  HSL ANIMATED GRID                              [ССЫЛКА]
+
+Маленький эксперимент с визуализацией физики на чистом JS. Прос-
+то поводите мышью.
+
+Small experiment of visualising physics written with pure JS.
+Just hover mouse for while.
+
+Ключевые слова: frontend physics.
+
+
+2018.3.  НАШЕ? (NASHE?)                                 [ССЫЛКА]
+
+Познавательная игра. Вам предоставляются карточки с русскими
+словами. Задача - отгадать, какие из слов заимствованные, а ка-
+кие нет. По результатам игры вы получите звание.
+
+Nashe? (literally 'Is this our?') is an educative game. A gamer
+guesses if a given Russian word native or adopted. At the end,
+the gamer is granted with a title.
+
+Ключевые слова: broser game, cards, linguistics.
+
+
+2018.2.  PURE CSS                                       [ССЫЛКА]
+
+DEPRECATED. Some works around styling elements and achieving
+ui/ux effects in pure css.
+
+
+2018.1.  АКИРА (AKIRA)                                  [ССЫЛКА]
+
+My first frontend project I'm proud of. It's interactively tells
+tells plot of Akira (1987).

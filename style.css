@@ -1,3 +1,10 @@
+/*
+orange     #fb9516
+pink???    #d6249f
+lightgrey  #eae9eb
+darkgrey   #d2d0d2
+*/
+
 body {
   font-size: 16px;
   font-family: 'JetBrains Mono', monospace;
@@ -7,7 +14,7 @@ body {
   justify-content: center; */
 }
 .h1 {font-weight: 500;}
-.sep {font-weight: 300;}
+.sep {font-weight: 500;}
 pre {
   margin: 0;
   font-family: inherit;
@@ -15,37 +22,63 @@ pre {
 .keywords {
   color: grey;
 }
+
 .btn {
-  color: blue;
+  color: #d6249f;
+/*   background: #d6249f; */
   text-decoration: none;
+/*   margin-left: .2em; */
 }
+.btn::before {content: '[';}
+.btn::after {content: ']';}
+.btn::before, .btn::after {color: black;}
 .btn:hover {
   color: white;
-  background: blue;
+  background: #d6249f;
+  text-decoration: none;
 }
+
 a {
   text-decoration: none;
-  color: blue;
+  color: #d6249f;
 }
 a:hover {
   text-decoration: underline;
 }
+
 /* nav */
 .nav {
   font-weight: 300;
-  background: black;
+  color: white;
+}
+.navbtn_prfx {
+  background: #000;
   color: white;
 }
 .navbtn {
+  color: white;
+  background: #fb9516;
+  box-shadow: .5em .5em 0 #eae9eb;
+  display: inline-block;
+}
+.navbtn_body::before {
+  content: '[';
+}
+.navbtn_body::after {
+  content: ']'; 
+}
+.navbtn_body::before, .navbtn_body::after {
   color: black;
-  background: darkorange;
 }
 .navbtn:hover {
-  color: darkorange;
-  background: black;
+  transform: translate(.1em, .1em);
   text-decoration: none;
+  box-shadow: .4em .4em 0 #d2d0d2;
 }
 /* end: nav */
+
+/* .title {background: #eae9eb;} */
+
 .btn.inst:hover {
   color: white;
   /* background: https://codepen.io/thomasrye/pen/VaRoYv */

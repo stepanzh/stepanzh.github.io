@@ -25,10 +25,10 @@ body {
     display: block;
   }
 }
-@media screen and (orientation:landscape)
+/* @media screen and (orientation:landscape)
   and (max-height: 650px){
-   body { font-size: 14px; }
-}
+   body { font-size: 16px; }
+} */
 /* .sep {align-self: flex-start;} */
 .h1 {font-weight: 500;}
 .sep {font-weight: 500;}

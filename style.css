@@ -13,14 +13,11 @@ em {
   color: red;
   font-style: normal;
 }
-.chapnum, .keywords {
-  color: lightgrey;
+.keywords {
+  color: grey;
 }
 .btn {
   color: blue;
-}
-.btn a {
-  color: inherit;
   text-decoration: none;
 }
 .btn:hover {
@@ -31,7 +28,15 @@ a {
   text-decoration: none;
   color: blue;
 }
-
+a:hover {
+  text-decoration: underline;
+}
+.btn.inst:hover {
+  color: white;
+  /* background: https://codepen.io/thomasrye/pen/VaRoYv */
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
 /* sacred deer scpecial */
 #scrddr_name {color: orange;}
 #scrddr_final {color: mediumturquoise;}

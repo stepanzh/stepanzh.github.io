@@ -31,3 +31,9 @@ a {
   text-decoration: none;
   color: blue;
 }
+
+/* sacred deer scpecial */
+#scrddr_name {color: orange;}
+#scrddr_final {color: mediumturquoise;}
+.scrddr_tip {color: springgreen;} /* why `?` doesn't work*/
+/* end: sacred deer scpecial */

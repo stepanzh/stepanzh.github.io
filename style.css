@@ -22,7 +22,12 @@ body {
 }
 @media screen and (max-width: 480px) {
   body {
-    display: block;
+   font-size: 11px;
+  }
+}
+@media screen and (max-width: 440px) {
+  body {
+    font-size: 9.4px;
   }
 }
 /* @media screen and (orientation:landscape)

@@ -25,6 +25,12 @@ body {
     display: block;
   }
 }
+@media screen and (orientation:landscape)
+  and (max-width: 480px){
+  body {
+    display: block;
+  }
+}
 /* .sep {align-self: flex-start;} */
 .h1 {font-weight: 500;}
 .sep {font-weight: 500;}
@@ -32,6 +38,7 @@ pre {
   margin: 0;
   font-family: inherit;
   white-space: pre;
+  font-size: inherit;
 }
 .keywords {
   color: grey;

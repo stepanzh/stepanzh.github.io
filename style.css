@@ -16,8 +16,7 @@ body {
 }
 @media screen and (max-width: 750px) {
   body {
-    font-size: calc(99.3vw / 39);
-    display: block;
+    font-size: calc(99vw / 39);
     margin: 1vw;
   }
 }
@@ -47,6 +46,16 @@ pre {
   white-space: pre;
   font-size: inherit;
 }
+.title > * {
+  display: inline-block;
+}
+.title .chapnum {
+  float: left;
+}
+.title .btns {
+  float: right;
+}
+
 .keywords {
   color: grey;
 }

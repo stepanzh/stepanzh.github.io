@@ -20,6 +20,7 @@ body {
 pre {
   margin: 0;
   font-family: inherit;
+  white-space: pre;
 }
 .keywords {
   color: grey;

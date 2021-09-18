@@ -94,4 +94,4 @@ ui/ux effects in pure css.
 2018.1.  АКИРА (AKIRA)                                    [ССЛК]
 
 My first frontend project I'm proud of. It's interactively tells
-tells plot of Akira (1987).
+plot of Akira (1987).

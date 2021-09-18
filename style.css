@@ -3,15 +3,14 @@ body {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 300;
   line-height: 1.333;
-  display: flex;
-  justify-content: center;
+/*   display: flex;
+  justify-content: center; */
 }
 .h1 {font-weight: 500;}
-.sep {font-weight: 500;}
-pre {font-family: inherit;}
-em {
-  color: red;
-  font-style: normal;
+.sep {font-weight: 300;}
+pre {
+  margin: 0;
+  font-family: inherit;
 }
 .keywords {
   color: grey;
@@ -31,6 +30,22 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/* nav */
+.nav {
+  font-weight: 300;
+  background: black;
+  color: white;
+}
+.navbtn {
+  color: black;
+  background: darkorange;
+}
+.navbtn:hover {
+  color: darkorange;
+  background: black;
+  text-decoration: none;
+}
+/* end: nav */
 .btn.inst:hover {
   color: white;
   /* background: https://codepen.io/thomasrye/pen/VaRoYv */
@@ -40,5 +55,5 @@ a:hover {
 /* sacred deer scpecial */
 #scrddr_name {color: orange;}
 #scrddr_final {color: mediumturquoise;}
-.scrddr_tip {color: springgreen;} /* why `?` doesn't work*/
+.scrddr_tip {color: green;} /* why `?` doesn't work*/
 /* end: sacred deer scpecial */

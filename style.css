@@ -14,6 +14,13 @@ body {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width: 640px){
+  body {
+    font-size: 9.5px;
+    font-size: calc(100vw * (16 - 8)/(640 - 320));
+  }
+}
+
 /* .sep {align-self: flex-start;} */
 .h1 {font-weight: 500;}
 .sep {font-weight: 500;}

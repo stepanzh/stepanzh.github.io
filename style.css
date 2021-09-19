@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  -webkit-text-size-adjust: 100%;
 }
 @media screen and (max-width: 640px){
   body {

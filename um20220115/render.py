@@ -1,5 +1,4 @@
 from collections import namedtuple
-# import sys
 from jinja2 import Template
 
 template_path = "index.html.jinja"

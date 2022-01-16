@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Угадай мелодию 15 января 2022</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <hgroup>
+    <h1>Угадай мелодию</h1>
+    <h2>15 января 2022</h2>
+  </hgroup>
+  <article>
+    <header><h3>Список композиций</h3></header>
+    <table>
+      {% for song in songlist %}
+        <tr>
+          <td class="singer">{{ song.singer }}</td>
+          <td class="song">{{ song.title }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </article>
+  <footer>
+    <p><a href="https://stepanzh.github.io/" target="_blank">stepanzh.github.io</a></p>
+    <p>Степан Захаров</p>
+  </footer>
+</body>
+</html>

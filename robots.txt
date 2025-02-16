@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /computational_thermodynamics/search*
-
-Host: stepanzh.github.io
-Sitemap: https://stepanzh.github.io/sitemap.xml
-Sitemap: https://stepanzh.github.io/computational_thermodynamics/sitemap.xml

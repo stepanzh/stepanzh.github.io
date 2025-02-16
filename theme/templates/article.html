@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block html_lang %}{{ article.lang }}{% endblock %}
+
+{% block title %}{{ SITENAME|striptags }} — {{ article.title|striptags  }}{% endblock %}
+
+{% block head %}
+  {{ super() }}
+
+  {% import 'translations.html' as translations with context %}
+  {% if translations.entry_hreflang(article) %}
+    {{ translations.entry_hreflang(article) }}
+  {% endif %}
+
+  {% if article.description %}
+    <meta name="description" content="{{article.description}}" />
+  {% endif %}
+
+  {% if article.keywords %}
+    <meta name="keywords" content="{{article.keywords}}" />
+  {% endif %}
+
+  {% for tag in article.tags %}
+    <meta name="tags" content="{{tag}}" />
+  {% endfor %}
+{% endblock %}
+
+{% block content %}
+  <article class="article">
+    <header>
+      <h2 class="article-heading">{{article.title}}</h2>
+      {% import 'translations.html' as translations with context %}
+      {{ translations.translations_for(article) }}
+    </header>
+    {{ article.content }}
+    <footer class="article-footer">
+      <p class="article-date">
+        <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime("%Y-%m-%d") }}</time>.
+      {% if article.modified %}
+        Обновлено <time datetime="{{ article.modified.isoformat() }}">{{ article.modified.strftime("%Y-%m-%d") }}</time>.
+      {% endif %}
+      </p>
+      <section class="article-footer__actions">
+        <div><a href="{{ SITEURL }}/pages/support-me.html" rel="bookmark">❤️ Поблагодарить автора</a></div>
+        <div><a href="{{ COMMON_LINKS["telegram-channel"] }}" rel="nofollow">👀 Подписаться на новости</a></div>
+      </section>
+    </footer>
+  </article>
+{% endblock %}

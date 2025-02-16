@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="index-main-container">
+    <section class="index-article-list">
+      <header>
+        <h2 class="article-list-header">Посты</h2>
+      </header>
+
+      <article class="article-list">
+      {% for article in articles_page.object_list %}
+         <article class="article-list__item">
+            <header>
+              <h2 class="article-list__item__header">
+                <a class="article-list__link" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+              </h2>
+            </header>
+            {% if article.summary %}<p class="article-list__summary">{{ article.summary|striptags }}</p>{% endif %}
+          </article>
+      {% endfor %}
+      </article>
+
+      {% if articles_page.has_other_pages() %}
+        {% include 'pagination.html' %}
+      {% endif %}
+    </section>
+
+    <section class="index-welcome">
+      <header><h4>Привет! Я Степан Захаров.</h4></header>
+      <p>Я создаю программы для науки, бизнеса и людей. Под десктопы, мобильники, веб и микроконтроллеры, а мой бэкграунд это физика и математика.</p>
+      <p>
+        Здесь я делюсь личным опытом.
+        Все новости в <a href="{{ COMMON_LINKS["telegram-channel"] }}" rel="nofollow">телеграм-канале</a>.
+      </p>
+    </section>
+  </div>
+{% endblock content %}

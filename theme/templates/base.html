@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+  <head>
+    {% block head %}
+      <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
+      <meta charset="utf-8" />
+      <meta name="generator" content="Pelican" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      {% if SITESUBTITLE %}
+        <meta name="description" content="{{ SITESUBTITLE }}" />
+      {% endif %}
+
+      <!-- Yandex.Metrika counter -->
+      <script type="text/javascript" >
+         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+         m[i].l=1*new Date();
+         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+         ym(99933624, "init", {
+              clickmap:true,
+              trackLinks:true,
+              accurateTrackBounce:true
+         });
+      </script>
+      <noscript><div><img src="https://mc.yandex.ru/watch/99933624" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+      <!-- /Yandex.Metrika counter -->
+
+      {% if STYLESHEET_URL %}
+        <link rel="stylesheet" type="text/css" href="{{ STYLESHEET_URL }}" />
+      {% endif %}
+      {% if FEED_ALL_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Full Atom Feed" />
+      {% endif %}
+      {% if FEED_ALL_RSS %}
+        <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Full RSS Feed" />
+      {% endif %}
+      {% if FEED_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Atom Feed" />
+      {% endif %}
+      {% if FEED_RSS %}
+        <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} RSS Feed" />
+      {% endif %}
+      {% if CATEGORY_FEED_ATOM and category %}
+        <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM.format(slug=category.slug) }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories Atom Feed" />
+      {% endif %}
+      {% if CATEGORY_FEED_RSS and category %}
+        <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_RSS.format(slug=category.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories RSS Feed" />
+      {% endif %}
+      {% if TAG_FEED_ATOM and tag %}
+        <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_ATOM.format(slug=tag.slug) }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags Atom Feed" />
+      {% endif %}
+      {% if TAG_FEED_RSS and tag %}
+        <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags RSS Feed" />
+      {% endif %}
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans+Caption:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/base.css" />
+
+      <!-- icons -->
+      <link rel="icon" href="/favicon.ico" sizes="32x32">
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    {% endblock head %}
+  </head>
+
+  <body>
+    {% block body %}
+      <header class="page-header">
+        {% block header %}
+          <hgroup>
+            <h1>
+              <a class="site-name" href="{{ SITEURL }}/">
+                <img src="{{ SITEURL }}/theme/images/galsia-transparent-500x500.png" />
+                <span>{{ SITENAME }}</span>
+              </a>
+            </h1>
+          </hgroup>
+        {% endblock header %}
+        {% block nav %}
+          <nav class="nav-global">
+            <span class="page-nav__item"><a href="{{ SITEURL }}/" {% if p==page %} aria-current="page" {% endif %}>Главная</a></span>
+            {% if DISPLAY_PAGES_ON_MENU %}
+              {% for p in pages %}
+                <span class="page-nav__item"><a href="{{ SITEURL }}/{{ p.url }}" {% if p==page %} aria-current="page" {% endif %}>{{ p.title }}</a></span>
+              {% endfor %}
+            {% endif %}
+          </nav>
+        {% endblock nav %}
+      </header>
+      <main class="page-main">
+        {% block content %}
+        {% endblock content %}
+      </main>
+      <footer class="page-footer">
+        {% block footer %}
+          <p>&copy; Захаров Степан</p>
+          <p>Сайт создан с помощью <a target="_blank" rel="nofollow" href="https://getpelican.com/">Pelican</a></p>
+        {% endblock footer %}
+      </footer>
+    {% endblock body %}
+  </body>
+</html>

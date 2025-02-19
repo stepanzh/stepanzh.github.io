@@ -16,6 +16,10 @@ CATEGORY_FEED_ATOM = None
 
 DELETE_OUTPUT_DIRECTORY = True
 
+PUBLISH_VERSION = True
+if not PUBLISH_VERSION:
+    print("WARN: PUBLISH_VERSION is False", file=sys.stderr)
+
 # Following items are often useful when publishing
 
 # DISQUS_SITENAME = ""

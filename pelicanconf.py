@@ -1,3 +1,5 @@
+PUBLISH_VERSION = False
+
 AUTHOR = "Степан Захаров"
 SITENAME = "stepanzh"
 SITEURL = ""

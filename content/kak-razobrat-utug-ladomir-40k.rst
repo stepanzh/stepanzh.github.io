@@ -2,10 +2,10 @@
 ##########################################
 
 :status: draft
-:date: 2024-12-01
+:date: 2024-11-24
 :modified: 2025-02-21
 :slug: kak-razobrat-utug-ladomir-40k
-:summary: Разбирал утюг, не нашёл инструкции, написал свою.
+:summary: Ремонтировал утюг, не нашёл инструкции и написал свою.
 :description: Инструкция по разбору утюга Ладомир 40К для самостоятельного ремонта.
 :keywords: ремонт утюга, разобрать утюг, разборка утюга, инструкция утюг, утюг ладомир, ремонт свомими руками, как почистить утюг
 
@@ -24,9 +24,26 @@
 
 .. 
    TODO: role?
-   TODO: ссылки на фото - тут маленькие, там полные
 
 Фотографии утюга в разобранном виде с обозначениями деталей: общий план, подошва утюга, тело и крышка ручки. 
+
+.. figure:: {static}/images/kak-razobrat-utug-ladomir-40k/01-obshiy-plan.jpeg
+   :align: center
+
+   Общий план утюга с обозначениями.
+   `Посмотреть фото в полном размере <{static}/images/kak-razobrat-utug-ladomir-40k/01-obshiy-plan.jpeg>`__.
+
+.. figure:: {static}/images/kak-razobrat-utug-ladomir-40k/02-podoshva.jpeg
+   :align: center
+
+   Подошва утюга с обозначениями.
+   `Посмотреть фото в полном размере <{static}/images/kak-razobrat-utug-ladomir-40k/01-obshiy-plan.jpeg>`__.
+
+.. figure:: {static}/images/kak-razobrat-utug-ladomir-40k/03-telo-i-ruchka.jpeg
+   :align: center
+
+   Тело и ручка утюга с обозначениями.
+   `Посмотреть фото в полном размере <{static}/images/kak-razobrat-utug-ladomir-40k/01-obshiy-plan.jpeg>`__.
 
 Корпус утюга состоит из двух частей:
 

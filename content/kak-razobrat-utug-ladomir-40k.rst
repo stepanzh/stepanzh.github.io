@@ -1,7 +1,7 @@
 Как разобрать утюг Ладомир 40К для ремонта
 ##########################################
 
-:status: draft
+:status: published
 :date: 2024-11-24
 :modified: 2025-02-21
 :slug: kak-razobrat-utug-ladomir-40k

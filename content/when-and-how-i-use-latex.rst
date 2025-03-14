@@ -10,9 +10,11 @@
 :description: todo
 :keywords: todo
 
-TODO: epigraph
+.. image:: {static}/images/when-and-how-i-use-latex/banner.svg
+   :width: 100%
+   :align: center
 
-TODO: картинка с LaTeX и упоминаемыми инструментами
+TODO: epigraph
 
 Я впервые столкнулся с TeX-ом на четвёртом курсе бакалавриата.
 Тогда мне потребовалось подать тезис на конференцию, а чуть позже и сверстать статью для сборника трудов.
@@ -292,7 +294,9 @@ neovim
 У Гила есть простые и сложные сниппеты, я брал только простые и дополнил их своими, `мой конфиг тут <https://github.com/stepanzh/neovim-config>`_.
 Ниже пара гифок, чтобы понять, как это выглядит.
 
-СНЯТЬ И ДОБАВИТЬ ПАРУ ГИФОК
+.. image:: {static}/images/when-and-how-i-use-latex/snippets-demo.gif
+   :width: 100%
+   :align: center
 
 Круто, да?
 Можно на лету набирать всякое, не отвлекаясь на скобки и бэкслэш.

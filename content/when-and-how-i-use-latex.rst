@@ -10,6 +10,8 @@
 :description: todo
 :keywords: todo
 
+TODO: epigraph
+
 TODO: картинка с LaTeX и упоминаемыми инструментами
 
 Я впервые столкнулся с TeX-ом на четвёртом курсе бакалавриата.
@@ -168,7 +170,9 @@ Typst активно поддерживают в сторонних проект
 Как я использую LaTeX?
 ======================
 
-TODO: Картинка с моим сетапом конспекта книги
+.. image:: {static}/images/when-and-how-i-use-latex/setup-example.png
+   :width: 100%
+   :align: center
 
 У меня такая связка
 

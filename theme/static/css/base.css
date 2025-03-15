@@ -30,10 +30,6 @@ h2 { font-size: 30px; }
 h3 { font-size: 24px; }
 h4 { font-size: 20px; }
 
-/* .page-header {background: red; }
-.page-main { background: green; }
-.page-footer { background: blue; } */
-
 .site-name {
   display: flex;
   align-items: center;
@@ -205,6 +201,18 @@ a:hover {
   font-size: 15px;
 }
 
+.article ul,
+.article ol {
+  padding-left: 32px;
+}
+
+@media only screen and (max-width: 600px){
+  .article ul,
+  .article ol {
+    padding-left: 16px;
+  }
+}
+
 .article .highlight {
   overflow-x: auto;
   padding: 16px;
@@ -238,6 +246,18 @@ a:hover {
 
 .article table.align-center {
   margin: auto;
+}
+
+.article blockquote {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 32px 32px;
+}
+
+@media only screen and (max-width: 600px){
+  .article blockquote {
+    margin: 32px 16px;
+  }
 }
 
 .article-date {

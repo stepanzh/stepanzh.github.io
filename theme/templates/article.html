@@ -34,10 +34,10 @@
     {{ article.content }}
     <footer class="article-footer">
       <p class="article-date">
-        <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime("%Y-%m-%d") }}</time>.
-      {% if article.modified %}
-        Обновлено <time datetime="{{ article.modified.isoformat() }}">{{ article.modified.strftime("%Y-%m-%d") }}</time>.
-      {% endif %}
+        <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime("%Y-%m-%d") }}</time>{% if article.modified %}.{% endif %}
+        {% if article.modified %}
+          Обновлено <time datetime="{{ article.modified.isoformat() }}">{{ article.modified.strftime("%Y-%m-%d") }}</time>.
+        {% endif %}
       </p>
       <section class="article-footer__actions">
         <div><a href="{{ SITEURL }}/pages/support-me.html" rel="bookmark">❤️ Поблагодарить автора</a></div>

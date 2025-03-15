@@ -201,6 +201,18 @@ a:hover {
   font-size: 15px;
 }
 
+.article ul,
+.article ol {
+  padding-left: 32px;
+}
+
+@media only screen and (max-width: 600px){
+  .article ul,
+  .article ol {
+    padding-left: 16px;
+  }
+}
+
 .article .highlight {
   overflow-x: auto;
   padding: 16px;
@@ -239,6 +251,13 @@ a:hover {
 .article blockquote {
   font-size: 18px;
   line-height: 26px;
+  margin: 32px 32px;
+}
+
+@media only screen and (max-width: 600px){
+  .article blockquote {
+    margin: 32px 16px;
+  }
 }
 
 .article-date {

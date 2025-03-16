@@ -260,6 +260,11 @@ a:hover {
   }
 }
 
+.article hr.docutils {
+  margin: 48px 0;
+  border-color: #ebebe9;
+}
+
 .article-date {
   color: var(--silver-chalice-600);
   font-style: italic;

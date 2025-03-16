@@ -248,14 +248,15 @@ a:hover {
   margin: auto;
 }
 
-.article blockquote {
+/* Epigraph is also a blockquote */
+.article blockquote:not(.epigraph) {
   font-size: 18px;
   line-height: 26px;
   margin: 32px 32px;
 }
 
 @media only screen and (max-width: 600px){
-  .article blockquote {
+  .article blockquote:not(.epigraph) {
     margin: 32px 16px;
   }
 }

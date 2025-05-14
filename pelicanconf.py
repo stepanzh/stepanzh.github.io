@@ -26,7 +26,8 @@ LINKS = (
 )
 
 COMMON_LINKS = {
-    "telegram-channel": "https://t.me/stepanzh_blog/"
+    "telegram-channel": "https://t.me/stepanzh_blog",
+    "proportio": "https://stepanzh.github.io/Proportio"
 }
 
 # Social widget

@@ -2,7 +2,7 @@ Kebab-case лучший
 #################
 
 :date: 2024-11-06
-:modified: 2025-02-09
+:modified: 2025-05-14
 :slug: note-on-kebab-case
 :summary: Сравниваем разные case, и выбираем kebab. Почему kebab-case лучше остальных написаний.
 :description: Сравниваем разные case, и выбираем kebab. Почему kebab-case лучше остальных написаний.
@@ -18,7 +18,7 @@ Kebab-case лучший
 В терминале неудобно работать с именами файлов, содержащие пробел.
 Например, команда
 
-.. code-block:: console
+.. code-block:: text
 
   head 005 kebab case.tex
 

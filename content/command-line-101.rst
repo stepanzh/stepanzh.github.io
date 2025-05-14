@@ -22,7 +22,7 @@
 Проще всего начать с примера. Представьте, что вы открыли терминал,
 ввели
 
-.. code-block:: console
+.. code-block:: shell
 
    ls -alt Downloads
 
@@ -105,7 +105,7 @@
 Киллер-фича консольного мира — перенаправление потоков.
 С помощью :code:`1>` вы можете перенаправить стандартный поток вывода в файл.
 
-.. code-block:: console
+.. code-block:: shell
 
   ls -alt Downloads 1> file-list.txt
 
@@ -115,7 +115,7 @@
 А чтобы сменить поток ввода, используется :code:`<`.
 Например, в команде
 
-.. code-block:: console
+.. code-block:: shell
 
   ls < my-list.txt
 
@@ -127,7 +127,7 @@
 Для этого используется *конвейер* (pipe) :code:`|`.
 Например,
 
-.. code-block:: console
+.. code-block:: shell
 
   ls -1 Downloads | wc -l
 
@@ -138,7 +138,7 @@
 Переменные окружения
 ====================
 
-.. code-block:: console
+.. code-block:: shell
 
   env | tail
 
@@ -168,7 +168,7 @@
 Пример посложнее.
 Попробуйте запустить какую-нибудь долгую (хотя бы минута) программу с numpy двумя командами:
 
-.. code-block:: console
+.. code-block:: shell
   
   python main.py
 
@@ -202,7 +202,7 @@
 Всякая программа имеет *код выхода* (exit code, код ошибки).
 Он хранится в специальной переменной "?".
 
-.. code-block:: console
+.. code-block:: shell
 
    echo $?
 
@@ -210,7 +210,7 @@
 
 При написании однострочников часто используется оператор :code:`&&`.
 
-.. code-block:: console
+.. code-block:: shell
 
   ls Downloads && echo hello
 
@@ -222,7 +222,7 @@
 При создании массива аргументов для программы, оболочка интерполирует значения переменных и даже результаты других команд.
 Например, при вызове
 
-.. code-block:: console
+.. code-block:: shell
 
   ls $dirout
 
@@ -237,7 +237,7 @@
 Многие unix-оболочки предоставляют механизм alias, который по сути является сокращением команд.
 Например, объявив
 
-.. code-block:: console
+.. code-block:: shell
    
   alias gst='git status'
 
@@ -248,7 +248,7 @@
 
 Чаще всего я использую такие alias-ы
 
-.. code-block:: console
+.. code-block:: shell
 
    alias gc='git commit'
    alias gd='git diff'
@@ -262,7 +262,7 @@
 
 Alias-ы интерполируются, при наборе команды вы можете считать, что alias просто подставляется.
 
-.. code-block:: console
+.. code-block:: shell
 
    gc -m 'feat: new article on command line basics'
 
@@ -270,7 +270,7 @@ Alias-ы интерполируются, при наборе команды вы
 Когда мне часто требуется построить результаты расчёта, я сохранию gnuplot-скрипт, который ожидает на вход файл с данными, а выдаёт pdf-ку.
 Так, я использую alias :code:`plt`.
 
-.. code-block:: console
+.. code-block:: shell
 
    alias plt='gnuplot -c'
 

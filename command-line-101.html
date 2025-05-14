@@ -28,6 +28,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans+Caption:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="https://stepanzh.github.io/theme/css/base.css" />
+      <link rel="stylesheet" type="text/css" href="https://stepanzh.github.io/theme/css/highlight.css" />
 
       <!-- icons -->
       <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -72,7 +73,7 @@
 Речь пойдёт об аргументах, потоках и переменных окружения.</blockquote>
 <p>Проще всего начать с примера. Представьте, что вы открыли терминал,
 ввели</p>
-<div class="highlight"><pre><span></span><span class="go">ls -alt Downloads</span>
+<div class="highlight"><pre><span></span>ls<span class="w"> </span>-alt<span class="w"> </span>Downloads
 </pre></div>
 <p>и нажали <span class="kbd">Enter</span>.
 После этого на экране терминала появляется содержимое директории Downloads.
@@ -135,13 +136,13 @@
 <p>Вернёмся к потокам std.
 Киллер-фича консольного мира — перенаправление потоков.
 С помощью <code>1&gt;</code> вы можете перенаправить стандартный поток вывода в файл.</p>
-<div class="highlight"><pre><span></span><span class="go">ls -alt Downloads 1&gt; file-list.txt</span>
+<div class="highlight"><pre><span></span>ls<span class="w"> </span>-alt<span class="w"> </span>Downloads<span class="w"> </span><span class="m">1</span>&gt;<span class="w"> </span>file-list.txt
 </pre></div>
 <p>Аналогично с потоком ошибок, но используется «кран» <code>2&gt;</code>.
 Вы можете направлять потоки вывода и ошибок в разные файлы, а можете в один, «краном» <code>&gt;</code>.</p>
 <p>А чтобы сменить поток ввода, используется <code>&lt;</code>.
 Например, в команде</p>
-<div class="highlight"><pre><span></span><span class="go">ls &lt; my-list.txt</span>
+<div class="highlight"><pre><span></span>ls<span class="w"> </span>&lt;<span class="w"> </span>my-list.txt
 </pre></div>
 <p>программа ls будет читать список директорий из файла my-list.txt.
 Помните задания по информатике, где нужно было читать ввод с клавиатуры?
@@ -149,7 +150,7 @@
 <p>Консольные программы часто создаются так, что вывод одной программы можно соединить с вводом второй.
 Для этого используется <em>конвейер</em> (pipe) <code>|</code>.
 Например,</p>
-<div class="highlight"><pre><span></span><span class="go">ls -1 Downloads | wc -l</span>
+<div class="highlight"><pre><span></span>ls<span class="w"> </span>-1<span class="w"> </span>Downloads<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
 </pre></div>
 <p>выведет на экран количество файлов в директории Downloads.
 В целом, консольный unix-мир состоит из маленьких утилит, хорошо делающих свои маленькие задачи, а конвейер позволяет собирать из утилит более сложные программы.
@@ -158,18 +159,18 @@
 </div>
 <div class="section" id="section-6">
 <h2>Переменные окружения</h2>
-<div class="highlight"><pre><span></span><span class="go">env | tail</span>
+<div class="highlight"><pre><span></span>env<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail
 
-<span class="go">LANG=ru_RU.UTF-8</span>
-<span class="go">SHELL=/bin/zsh</span>
-<span class="go">TERM_PROGRAM=iTerm.app</span>
-<span class="go">TERM=xterm-256color</span>
-<span class="go">HOME=/Users/stepanzh</span>
-<span class="go">USER=stepanzh</span>
-<span class="go">ZSH=/Users/stepanzh/.oh-my-zsh</span>
-<span class="go">PAGER=less</span>
-<span class="go">LSCOLORS=Gxfxcxdxbxegedabagacad</span>
-<span class="go">EDITOR=nvim</span>
+<span class="nv">LANG</span><span class="o">=</span>ru_RU.UTF-8
+<span class="nv">SHELL</span><span class="o">=</span>/bin/zsh
+<span class="nv">TERM_PROGRAM</span><span class="o">=</span>iTerm.app
+<span class="nv">TERM</span><span class="o">=</span>xterm-256color
+<span class="nv">HOME</span><span class="o">=</span>/Users/stepanzh
+<span class="nv">USER</span><span class="o">=</span>stepanzh
+<span class="nv">ZSH</span><span class="o">=</span>/Users/stepanzh/.oh-my-zsh
+<span class="nv">PAGER</span><span class="o">=</span>less
+<span class="nv">LSCOLORS</span><span class="o">=</span>Gxfxcxdxbxegedabagacad
+<span class="nv">EDITOR</span><span class="o">=</span>nvim
 </pre></div>
 <p>Кроме потоков и аргументов, оболочка передаёт программе <em>переменные окружения</em> (environment).
 Чаще всего, они используются как набор настроек по умолчанию.
@@ -182,9 +183,9 @@
 <h3>Пример про OpenBLAS и numpy</h3>
 <p>Пример посложнее.
 Попробуйте запустить какую-нибудь долгую (хотя бы минута) программу с numpy двумя командами:</p>
-<div class="highlight"><pre><span></span><span class="go">python main.py</span>
+<div class="highlight"><pre><span></span>python<span class="w"> </span>main.py
 
-<span class="go">OPENBLAS_NUM_THREADS=X python main.py</span>
+<span class="nv">OPENBLAS_NUM_THREADS</span><span class="o">=</span>X<span class="w"> </span>python<span class="w"> </span>main.py
 </pre></div>
 <p>где X это число ядер вашего процессора.
 Скорее всего, второй пример будет работать существенно быстрее.
@@ -209,11 +210,11 @@
 <h3>Код выхода</h3>
 <p>Всякая программа имеет <em>код выхода</em> (exit code, код ошибки).
 Он хранится в специальной переменной &quot;?&quot;.</p>
-<div class="highlight"><pre><span></span><span class="go">echo $?</span>
+<div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span>
 </pre></div>
 <p>Код 0 (ноль) по соглашению показывает отсутствие ошибки.</p>
 <p>При написании однострочников часто используется оператор <code>&amp;&amp;</code>.</p>
-<div class="highlight"><pre><span></span><span class="go">ls Downloads &amp;&amp; echo hello</span>
+<div class="highlight"><pre><span></span>ls<span class="w"> </span>Downloads<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>hello
 </pre></div>
 <p>Этот оператор проверяет код выхода, и, если код ошибочный, цепочка команд после оператора не выполняется.</p>
 </div>
@@ -221,7 +222,7 @@
 <h3>Интерполяция переменных</h3>
 <p>При создании массива аргументов для программы, оболочка интерполирует значения переменных и даже результаты других команд.
 Например, при вызове</p>
-<div class="highlight"><pre><span></span><span class="go">ls $dirout</span>
+<div class="highlight"><pre><span></span>ls<span class="w"> </span><span class="nv">$dirout</span>
 </pre></div>
 <p>оболочка подставит значение переменной <code>dirout</code>.</p>
 <p>Интерполирование опасно, когда переменные хранят значения с пробелами: так один аргумент может превратиться в несколько.
@@ -232,33 +233,33 @@
 <h3>Интерполяция alias</h3>
 <p>Многие unix-оболочки предоставляют механизм alias, который по сути является сокращением команд.
 Например, объявив</p>
-<div class="highlight"><pre><span></span><span class="go">alias gst=&#39;git status&#39;</span>
+<div class="highlight"><pre><span></span><span class="nb">alias</span><span class="w"> </span><span class="nv">gst</span><span class="o">=</span><span class="s1">&#39;git status&#39;</span>
 </pre></div>
 <p>Вы сможете по alias <code>gst</code> вызывать команду <code>git status</code>.
 Я нахожу это очень удобным в ежедневной работе, хотя многие предпочитают использовать полноценные функции вместо alias-ов.
 Да, современная оболочка имеет полноценный язык программирования.
 Чтобы функции и alias-ы были доступны всегда, их сохраняют в стартап-файле оболочки.</p>
 <p>Чаще всего я использую такие alias-ы</p>
-<div class="highlight"><pre><span></span><span class="go">alias gc=&#39;git commit&#39;</span>
-<span class="go">alias gd=&#39;git diff&#39;</span>
-<span class="go">alias gl=&#39;git pull&#39;</span>
-<span class="go">alias gp=&#39;git push&#39;</span>
-<span class="go">alias gst=&#39;git status&#39;</span>
+<div class="highlight"><pre><span></span><span class="nb">alias</span><span class="w"> </span><span class="nv">gc</span><span class="o">=</span><span class="s1">&#39;git commit&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gd</span><span class="o">=</span><span class="s1">&#39;git diff&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gl</span><span class="o">=</span><span class="s1">&#39;git pull&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gp</span><span class="o">=</span><span class="s1">&#39;git push&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gst</span><span class="o">=</span><span class="s1">&#39;git status&#39;</span>
 
-<span class="go">alias ..=&#39;cd ..&#39;</span>
+<span class="nb">alias</span><span class="w"> </span>..<span class="o">=</span><span class="s1">&#39;cd ..&#39;</span>
 
-<span class="go">alias ll=&#39;ls -lh&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -lh&#39;</span>
 </pre></div>
 <p>Alias-ы интерполируются, при наборе команды вы можете считать, что alias просто подставляется.</p>
-<div class="highlight"><pre><span></span><span class="go">gc -m &#39;feat: new article on command line basics&#39;</span>
+<div class="highlight"><pre><span></span>gc<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;feat: new article on command line basics&#39;</span>
 </pre></div>
 <p>Ещё я люблю пользоваться <a class="reference external" href="http://www.gnuplot.info/">gnuplot</a> для построения графиков.
 Когда мне часто требуется построить результаты расчёта, я сохранию gnuplot-скрипт, который ожидает на вход файл с данными, а выдаёт pdf-ку.
 Так, я использую alias <code>plt</code>.</p>
-<div class="highlight"><pre><span></span><span class="go">alias plt=&#39;gnuplot -c&#39;</span>
+<div class="highlight"><pre><span></span><span class="nb">alias</span><span class="w"> </span><span class="nv">plt</span><span class="o">=</span><span class="s1">&#39;gnuplot -c&#39;</span>
 
-<span class="go">plt residual-norm.gnuplot benchmark-summary.tsv &gt; /tmp/residual-norm.pdf</span>
-<span class="go">open /tmp/residual-norm.pdf</span>
+plt<span class="w"> </span>residual-norm.gnuplot<span class="w"> </span>benchmark-summary.tsv<span class="w"> </span>&gt;<span class="w"> </span>/tmp/residual-norm.pdf
+open<span class="w"> </span>/tmp/residual-norm.pdf
 </pre></div>
 <p>С таким подходом я за дешёво контролирую что построить и куда положить картинку.
 Например, в связке Python + <a class="reference external" href="https://matplotlib.org/">matplotlib</a> получилось бы куда больше бойлерплейта (и, вероятно, медленнее бы работало).</p>
@@ -288,7 +289,7 @@
 
     <footer class="article-footer">
       <p class="article-date">
-        <time datetime="2025-01-28T00:00:00+03:00">2025-01-28</time>.          Обновлено <time datetime="2025-02-11T00:00:00+03:00">2025-02-11</time>.
+        <time datetime="2025-01-28T00:00:00+03:00">2025-01-28</time>.          Обновлено <time datetime="2025-05-14T00:00:00+03:00">2025-05-14</time>.
       </p>
       <section class="article-footer__actions">
         <div><a href="https://stepanzh.github.io/pages/support-me.html" rel="bookmark">❤️ Поблагодарить автора</a></div>

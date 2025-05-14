@@ -239,6 +239,10 @@ a:hover {
   border-bottom: 2px solid black;
 }
 
+.article .highlighttable tbody {
+  border-bottom: none;
+}
+
 .article table th,
 .article table td {
   padding: 4px 8px;

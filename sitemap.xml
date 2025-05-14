@@ -6,7 +6,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://stepanzh.github.io/</loc>
-<lastmod>2025-05-06T22:25:04-00:00</lastmod>
+<lastmod>2025-05-14T21:52:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -20,7 +20,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://stepanzh.github.io/command-line-101.html</loc>
-<lastmod>2025-02-11T00:00:00+03:00</lastmod>
+<lastmod>2025-05-14T00:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -35,6 +35,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://stepanzh.github.io/how-to-choose-fonts-for-non-designers.html</loc>
 <lastmod>2025-02-18T00:00:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://stepanzh.github.io/julia-multiple-dispatch.html</loc>
+<lastmod>2025-05-14T00:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -55,14 +62,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://stepanzh.github.io/note-on-kebab-case.html</loc>
-<lastmod>2025-02-09T00:00:00+03:00</lastmod>
+<lastmod>2025-05-14T00:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://stepanzh.github.io/pages/about-proportio.html</loc>
-<lastmod>2025-05-06T22:25:04-00:00</lastmod>
+<lastmod>2025-05-14T21:52:28-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -90,7 +97,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://stepanzh.github.io/when-and-how-i-use-latex.html</loc>
-<lastmod>2025-03-15T00:00:00+03:00</lastmod>
+<lastmod>2025-05-14T00:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>

@@ -99,7 +99,6 @@
 В языке Julia можно так.
 
 .. code-block:: julia-repl
-  :linenos: table
 
   julia> f(x, y) = "default";
 
@@ -180,8 +179,8 @@
 .. code-block:: python
 
    x + y
-   → x.__add__(y)
-   → type(x).__add__(x, y)
+   x.__add__(y)
+   type(x).__add__(x, y)
 
 Где :code:`type(x)` превращается в :code:`int`, :code:`list` или чем там :code:`x` является в рантайме.
 Это и есть диспетчеризация, но по типу только первого аргумента.
@@ -385,12 +384,11 @@ Julia поддерживает обобщённую (generic) парадигму
 Я выражу это языком... Julia.
 
 .. code-block:: julia-repl
-  :linenos: table
 
   julia> function ρ(x, y)
              indx = findfirst(==(x), supertypes(y))
              !isnothing(indx) && return indx - 1
-
+             
              indy = findfirst(==(y), supertypes(x))
              !isnothing(indy) && return indy - 1
 
@@ -541,7 +539,7 @@ P.S. Пример обобщённого программирования в Jul
 К сожалению, нет.
 В Python отсутствует magick метод :code:`__sum__`.
 
-.. code-block:: ipython
+.. code-block:: ipythonconsole
 
   In [1]: %timeit sum(range(1, 10**6 + 1))
   9.52 ms ± 36.5 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)

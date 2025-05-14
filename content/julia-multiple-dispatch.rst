@@ -4,8 +4,8 @@
 :date: 2025-05-14
 :slug: julia-multiple-dispatch
 :summary: Ву-ху. Первый пост про язык Julia, и сразу в сердце... Рассказываю про core design фичу — multiple dispatch. Примеры, что это такое и как работает. По полочкам! А в послесловии дружеский подзатыльник Пайтону.
-:description: Рассказываю про core design фичу — multiple dispatch. Примеры, что это такое и как работает. По полочкам! А в послесловии дружеский подзатыльник Пайтону.
-:keywords: julia,multiple dispatch,язык программирования,type system,система типов
+:description: Рассказываю про core design фичу языка Julia — multiple dispatch. Примеры, что это такое и как работает. По полочкам! А в послесловии дружеский подзатыльник Пайтону.
+:keywords: julia,multiple dispatch,язык программирования,type system,система типов,множественная диспетчеризация
 
 .. _телеге: https://t.me/stepanzh_blog/
 .. _финансово поддержать: {filename}/pages/support-me.rst

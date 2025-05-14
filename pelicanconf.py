@@ -35,7 +35,7 @@ SOCIAL = (
     ("Another social link", "#"),
 )
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = False
 
 # Extra statics.
 STATIC_PATHS = ["extra/robots.txt", "extra/favicon.ico", "extra/apple-touch-icon.png"]

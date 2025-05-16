@@ -39,16 +39,17 @@ SOCIAL = (
 DEFAULT_PAGINATION = False
 
 # Extra statics.
-STATIC_PATHS = ["extra/robots.txt", "extra/favicon.ico", "extra/apple-touch-icon.png"]
+ARTICLE_EXCLUDES = ["extra"]
+STATIC_PATHS = ["extra/robots.txt", "extra/favicon.ico", "extra/apple-touch-icon.png", "extra/yandex_14d8631f799e8d1b.html"]
 EXTRA_PATH_METADATA = {
     "extra/robots.txt": {"path": "robots.txt"},
     "extra/favicon.ico": {"path": "favicon.ico"},
     "extra/apple-touch-icon.png": {"path": "apple-touch-icon.png"},
+    "extra/yandex_14d8631f799e8d1b.html": {"path": "yandex_14d8631f799e8d1b.html"},
 }
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
-
 THEME = "theme"
 
 # Navigation bar a.k.a. menu.

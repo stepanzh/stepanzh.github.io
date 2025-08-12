@@ -7,10 +7,10 @@
 :description: TODO
 :keywords: TODO
 
-.. role:: kbd
+- TODO: kbd role (2025-08-12 by Stepan Zakharov)
+- TODO: cheatsheet for windows and macos (2025-08-12 by Stepan Zakharov)
 
-.. 
-   TODO: kbd role
+.. role:: kbd
 
 .. epigraph::
 
@@ -133,7 +133,7 @@
    ======================== ======================= ========================
 
 Интересно, что система удаление в vim-е устроена иначе.
-В привычной системе мы сначала выбираем действие, а потом перемещаемся, а в normal mode vim-а наоброт: сначала «куда», а потом «что сделать».
+В привычной системе мы сначала выбираем действие, а потом перемещаемся, а в normal mode vim-а наоборот: сначала «куда», а потом «что сделать».
 
 Выделение
 =========
@@ -166,6 +166,8 @@
 Конец
 =====
 
-.. image:: {static}/images/keyboard-101-work-with-text/mouse-on-keyboard.jpg
+.. figure:: {static}/images/keyboard-101-work-with-text/mouse-on-keyboard.jpg
    :width: 100%
    :align: center
+
+   Мышь пользуется клавиатурой

@@ -1,14 +1,13 @@
 Как быстрее работать с текстом на клавиатуре
 ############################################
 
-:date: 2025-08-11
-:slug: keyboard-101-work-with-text
+:date: 2025-08-17
+:slug: text-input-101
 :summary: TODO
 :description: TODO
 :keywords: TODO
 
 - TODO: kbd role (2025-08-12 by Stepan Zakharov)
-- TODO: cheatsheet for windows and macos (2025-08-12 by Stepan Zakharov)
 
 .. role:: kbd
 
@@ -163,10 +162,15 @@
 При этом хранится только последний результат.
 Чтобы достать текст из буфера, используется вставка, а в случае с выделенным заранее текстом вставка работает как замена.
 
-Конец
-=====
+Конец и памятки
+===============
 
-.. figure:: {static}/images/keyboard-101-work-with-text/mouse-on-keyboard.jpg
+Памятки для Windows и MacOS.
+
+- `Windows <{static}/assets/text-input-101/cheatsheet-windows.pdf>`_ (pdf)
+- `MacOS <{static}/assets/text-input-101/cheatsheet-macos.pdf>`_ (pdf)
+
+.. figure:: {static}/images/text-input-101/mouse-on-keyboard.jpg
    :width: 100%
    :align: center
 

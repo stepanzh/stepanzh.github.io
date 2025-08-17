@@ -1,8 +1,11 @@
 :root {
   --hollywood-cerise-600: #d6249f;
   --hollywood-cerise-700: #be1886;
+  --silver-chalice-50: #f6f6f6;
+  --silver-chalice-200: #d5d5d3;
   --silver-chalice-600: #7e7d78;
   --silver-chalice-950: #262624;
+  --ff-mono: "PT Mono", monospace;
 }
 
 body {
@@ -159,7 +162,7 @@ a:hover {
 
 .article code,
 .highlight * {
-  font-family: "PT Mono", monospace;
+  font-family: var(--ff-mono);
 }
 
 .article header h2 { font-size: 30px; }
@@ -237,6 +240,7 @@ a:hover {
 
 .article table tbody {
   border-bottom: 2px solid black;
+  vertical-align: baseline;
 }
 
 .article .highlighttable tbody {
@@ -280,6 +284,20 @@ a:hover {
   flex-direction: column;
   gap: 8px;
   margin-top: 48px;
+}
+
+/* Keyboard shortcuts */
+.article span.kbd {
+  display: inline-block;
+  padding: 0 8px;
+  margin: 2px 0;
+  border-radius: 4px;
+  background-color: var(--silver-chalice-50);
+  border: 1px solid var(--silver-chalice-200);
+}
+
+.article td span.kbd {
+  line-height: 24px;
 }
 
 /* endregion: content (single article) */

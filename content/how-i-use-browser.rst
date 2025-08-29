@@ -189,4 +189,4 @@ Chrome, Edge или Safari?
 .. figure:: {static}/images/how-i-use-browser/bookmarks.jpeg
    :align: center
 
-   Плюс-минус в алфавитном порядке
+   Закладки плюс-минус в алфавитном порядке

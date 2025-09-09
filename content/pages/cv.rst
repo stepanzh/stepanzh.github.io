@@ -5,6 +5,8 @@ Cirriculum vitae
 :modified: 2025-09-09
 :slug: stepan-zakharov-cv
 :navorder: 12
+:description: Have over 8 years experience in R&D projects, simulation of oil reservoirs and software development for various platforms.
+:keywords: r&d, cv, resume, physics, simulation, project management, engineer, research, development
 
 Stepan Zakharov
 ---------------
@@ -31,6 +33,10 @@ Stepan Zakharov
 ⋅ `GitHub <https://github.com/stepanzh>`_
 ⋅ `Proportio <https://stepanzh.github.io/Proportio>`_
 ⋅ `t.me/stepanzh_blog <https://t.me/stepanzh_blog>`_
+
+**Languages**
+⋅ Russian
+⋅ English
 
 Professional experience
 -----------------------
@@ -115,12 +121,12 @@ Key skills
 
 - *Physics.*
   Multiphase fluid dynamics, phase equilibria, thermoelasticicity, porous medium.
-- *Modeling and simulation.*
+- *Modeling, simulation and research.*
   Problem statement and simplification, PDE and ODE solvers, numerical optimization, ill-conditioning, root finding, linear algebra.
 - *Computing.*
   High-performance numerical linear algebra, CPU and GPU computing.
 - *Software.*
-  Software architecture, testing and validation, distribution and documentation.
+  Software architecture, validation and distribution.
   Scientific software and end-user apps.
   Julia, Python, C, C#, Windows, Linux and MacOS.
 - *Management.*
@@ -129,7 +135,8 @@ Key skills
 - *Teaching.*
   Course plan, teaching adults, material preparation, instructions.
 - *User interface and experience.*
-  Business layer, design systems, navigation, typography, layout.
+  Business layer, design systems, navigation, typography, responsive layout.
   Fluent UI, Material Design 3, Figma, interfaces for technicians, tk.
 - *Web development.*
-  JavaScript, Vue 3, static sites and generators, frontend.
+  Frontend, responsive development, static sites and generators.
+  JavaScript, Vue 3, CSS 3, HTML 5.

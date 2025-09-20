@@ -20,7 +20,7 @@ Stepan Zakharov
   Curious about full picture view.
   Looking for market-driven company.
 
-  Have over 8 years experience in R&D projects and science.
+  Have over 8 years experience in R&D projects and science, PhD.
 
   `stepanzh@gmail.com <link_email_>`_
 

@@ -64,3 +64,8 @@ AUTHORS_SAVE_AS = False
 CATEGORIES_SAVE_AS = False
 CATEGORY_SAVE_AS = False
 TAGS_SAVE_AS = False
+
+MY_LANGCODE_TO_NARRATIVE = {
+    "ru": "Русский",
+    "en": "English",
+}

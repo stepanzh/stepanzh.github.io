@@ -1,8 +1,8 @@
 {% macro translations_for(article) %}
   {% if article.translations %}
-    Translations:
+    Read in
     {% for translation in article.translations %}
-      <a href="{{ SITEURL }}/{{ translation.url }}" hreflang="{{ translation.lang }}">{{ translation.lang }}</a>
+      <a href="{{ SITEURL }}/{{ translation.url }}" hreflang="{{ translation.lang }}">{{ MY_LANGCODE_TO_NARRATIVE[translation.lang] }}</a>
     {% endfor %}
   {% endif %}
 {% endmacro %}

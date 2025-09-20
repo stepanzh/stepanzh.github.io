@@ -1,137 +1,144 @@
-Cirriculum vitae
-################
+Резюме
+######
 
 :date: 2025-02-20
 :modified: 2025-09-09
 :slug: stepan-zakharov-cv
-:navorder: 12
-:description: Have over 8 years experience in R&D projects, simulation of oil reservoirs and software development for various platforms.
-:keywords: r&d, cv, resume, physics, simulation, project management, engineer, research, development
+:lang: ru
+:navorder: 11
+:description: Более 8 лет опыта в R&D и научных проектах, моделировании нефтяных месторождений и разработки ПО под различные платформы.
+:keywords: r&d, hpc, cv, сиви, резюме, физика, математика, моделирование, нир, ниокр, project management, менеджер проектов, инженер, исследования, научный сотрудник, разработчик, программист, физтех
 
-Stepan Zakharov
----------------
+Степан Захаров
+--------------
 
 .. _link_email: mailto:stepanzh@gmail.com
 
+.. _link_tg: https://t.me/red_deer
+
 ..
    
-  Like to find profitable science-heavy solutions for industry needs in collaboration with technicians and business-care guys.
-  Curious about full picture view.
-  Looking for market-driven company.
+  Решаю наукоёмкие задачи бизнеса в сотрудничестве с технической командой и менеджментом. 
+  В прошлом научный сотрудник и фрилансер.
+  Физтех — навсегда.
 
-  Have over 8 years experience in R&D projects, simulation of oil reservoirs and software development for various platforms.
+  За плечами более 8 лет опыта в R&D проектах и науке.
 
-  `stepanzh@gmail.com <link_email_>`_
+  `stepanzh@gmail.com <link_email_>`_ ⋅ `t.me/red_deer <link_tg_>`_
 
-**Contacts**
+**Контакты**
 ⋅ `stepanzh@gmail.com <link_email_>`_
-⋅ `t.me/red_deer <https://t.me/red_deer>`_
+⋅ `t.me/red_deer <link_tg_>`_
 
-**Activities**
+**Я в сети**
 ⋅ `LinkedIn <https://linkedin.com/in/stepan-zakharov-b44ab4105>`_
 ⋅ `Google Scholar <https://scholar.google.ru/citations?user=xvp7Z9oAAAAJ>`_
 ⋅ `GitHub <https://github.com/stepanzh>`_
-⋅ `Proportio <https://stepanzh.github.io/Proportio>`_
+⋅ `Пропорцио <https://stepanzh.github.io/Proportio>`_
 ⋅ `t.me/stepanzh_blog <https://t.me/stepanzh_blog>`_
 
-**Languages**
-⋅ Russian
-⋅ English
+**Языки**
+⋅ Русский
+⋅ Английский
 
-Professional experience
------------------------
+Профессиональный опыт
+---------------------
 
-Senior engineer · R&D · Huawei RRI via Coleman Group
+Старший инженер · R&D · Huawei Russian Research Institute via Coleman Group
+===========================================================================
+
+Москва, Россия ⋅ 2024 – сейчас
+
+- Разрабатал высокопроизводительные коды численной линейной алгебры, чтобы уложить имеющиеся у команды солверы в KPI по быстродействию и точноcти.
+  Искал и исследовал лучший софт, составил и распространял рекомендации для своей и соседних команд.
+- Разработал отказоустойчивый солвер для плохообусловенной задачи оптимизации (poorly-conditioned constrained quadratic programming).
+- Внедрил и поддерживал базы знаний по двум проектам в команде из 15 человек.
+  Цели: улучшить коммуникацию внутри команды и со штаб-квартирой; формулировать научно-корректные задачи, которые отвечают требованиям штаб-квартиры; упростить подготовку отчётов.
+- Руководил (3 человека в команде) подготовкой и проведением курса по языку программирования Julia с фокусом на R&D задачи.
+  С двумя коллегами провели двухмесячных курс для (примерно) 30 сотрудников.
+- Менторил одного коллегу и помогал другим.
+
+Научный сотрудник · Наука · Объединённый институт высоких температур РАН
+========================================================================
+
+Москва, Россия ⋅ 2017 – 2024
+
+- Исследовал влияние ретроградной конденсации на течения нефтей в пористой среде (фильтрация).
+  Разработал решатели для динамики флюидов (газ и жидкость) в углеводородных смесях (метод конечных объёмов и элементов, МКО, МКЭ).
+  Искал новые способы добычи газовых конденсатов.
+- Исследовал фазовое равновесие в природных смесях углеводородов.
+  Разработал быстрые и отказоустойчивые алгоритмы расчёта фазового равновесия в `изохорной <https://github.com/vvpisarev/CubicEoS.jl>`_ и изобарной постановках (нелинейная условная оптимизация и нелинейные системы уравнений).
+  Спроектировал архитектуру программ таким образом, что они могут использовать любое уравнение состояния вещества (например, уравнение Пенга-Робинсона или SAFT-уравнение).
+
+Инженер-программист · Электроника · НПП Детектор
+================================================
+
+Дубна, Московская область, Россия ⋅ 2022 – 2024
+
+- Разработал программное обеспечение и пользовательский интерфейс (Windows) для удалённого управления источниками питания.
+  Функционал: ручное и сценарное управление (автоматизация экспериментов), поддержка наборов инструкций у разных производетелей, поддержка нескольких сетевых интерфейсов.
+- Автоматизировал подготовку печатных отчётов с данными проведения экспериментов.
+  Нагрузка: примерно 150 отчётов раз в квартал.
+
+Преподаватель · Высшее образование · Московский физико-технический институт
+===========================================================================
+
+Долгопрудный, Московская область, Россия ⋅ 2019 – 2023
+
+- В соавторстве составил и затем преподавал `курс по вычислительной теплофизике <https://stepanzh.github.io/computational_thermodynamics>`_ для студентов 4-го курса, основанный на моём опыте и опыте научного руководителя в ОИВТ РАН.
+  Написал материалы для курса, они доступны онлайн.
+- Преподавал классический годовой курс по алгоритмам и структурам данных для студентов первого курса.
+  На второй год преподавания распределял подготовку домашних заданий между 5 преподавателями.
+
+Образование
+-----------
+
+Аспирантура · Московский физико-технический институт
 ====================================================
 
-Moscow, Russia ⋅ 2024 – now
+Факультет молекулярной и химической физики ⋅ 2019 — 2023
 
-- R&D in high-performance numerical linear algebra to meet duration KPI of existing solvers, find best software and provide guidelines for team members.
-- Developed robust solver for a poorly-conditioned numerical optimization problem.
-- Managed knowledge of 15-people team across two projects to improve communication within the team, to collaborate easily with headquarters and to make scientifically correct problem statements that meet business needs.
-- Managed two colleagues to prepare and teach together an R&D-focused course on Julia programming language for whole department.
-  About 30 people passed the course.
-- Mentored one newcomer, helped and guided junior colleagues.
+Тема диссертации: `Алгоритмы расчёта фазовых диаграмм флюидов на основе численной оптимизации <https://search.rsl.ru/ru/record/01012215755>`_.
+Защищался в Объединённом институте высоких температур РАН.
 
-Researcher · Science · Joint Institute for High Temperatures of RAS
-===================================================================
+Стажировка · Институт проблем безопасного развития атомной энергетики
+=====================================================================
 
-Moscow, Russia ⋅ 2017 – 2024
+Лаборатория вычислительной теплогидродинамики · 2017 — 2018
 
-- Researched impact of retrograde condensation phenomena on two-phase flow in porous medium.
-  Developed finite volume and finite element solvers for fluid dynamics of hydrocarbon mixtures.
-  Looked for innovative ways of oil extraction.
-- Researched fluid phase equilibria of natural hydrocarbons (gas, oil).
-  Developed fast and robust isobaric- and isochoric-isothermal solvers for two-phase equilibria.
-  Designed software architecture for the last solver the way it can be applied with any equation of state.
+Тема стажировки: вычислительная гидродинамика многофазных течений.
 
-Software engineer · Electronics · SPE Detector, LLC
-===================================================
+Магистратура · Московский физико-технический институт
+=====================================================
 
-Dubna, Moscow region, Russia ⋅ 2022 – 2024
+Факультет молекулярной и химической физики ⋅ 2017 — 2019
 
-- Developed desktop software and user interface for remote control (manual, scenario-based) of programmable power supplies.
-  Designed software the way it works with different instruction sets and different communication types.
-- Developed end-user app for generation print-friendly reports for internal and customer documentation.
+Дипломная работа посвящена расчётам двухфазных течений углеводородов в пористой среде.
 
-Teacher · Higher education · Moscow Institute of Physics and Technology
-=======================================================================
+Бакалавриат · Московский физико-технический институт
+====================================================
 
-Dolgoprudny, Moscow region, Russia ⋅ 2019 – 2023
+Факультет молекулярной и химической физики ⋅ 2013 — 2017
 
-- Co-authored and taught `course on computational thermodynamics <https://stepanzh.github.io/computational_thermodynamics>`_ for four-years students based on my experience in JIHT RAS.
-  Materials are available online.
-- Taught algorithms and data structures course for first-year students.
-  Managed collaboration of five teachers.
+Дипломная работа посвязена расчётам изобарного-изотермического фазового равновесия в смесях углеводородов.
 
-Education
----------
+Ключевые навыки
+---------------
 
-PhD degree · Moscow Institute of Physics and Technology
-==========================================================================
-
-Department of molecular and chemical physics ⋅ 2019 — 2023
-
-Thesis: `Methods of numerical optimization for predicting phase equilibria in fluids <https://search.rsl.ru/ru/record/01012215755>`_.
-The defence was in Joint Institute For High Temperatures of RAS.
-
-Internship · Nuclear Safety Institute of RAS
-=============================================================
-
-Department of computational thermodynamics and fluid dynamics · 2017 — 2018
-
-Topic of internship is computational fluid dynamics of multiphase flows.
-
-Master degree · Moscow Institute of Physics and Technology
-=============================================================================
-
-Department of molecular and chemical physics ⋅ 2017 — 2019
-
-Thesis is dedicated to computational fluid dynamics of two-phase flows in porous medium.
-
-Bachelor degree · Moscow Institute of Physics and Technology
-===============================================================================
-
-Department of molecular and chemical physics ⋅ 2013 — 2017
-
-Thesis is dedicated to simulation of isobaric-isothermal phase equilibria in mixtures of hydrocarbons.
-
-Key skills
-----------
-
-- *Modeling, simulation and research.*
-  Problem statement, simplification, solvers, reports.
-  Partial differential equations (PDE), ordinary differential equations (ODE), linear algebra, optimization, ill-posed problems.
-- *Computing.*
-  High-performance computing (HPC) on central (CPU) and graphical (GPU) processing units.
-- *Physics.*
-  Multiphase fluid dynamics, phase equilibria, thermoelasticicity, porous medium.
-- *Software.*
-  Software architecture, validation, distribution, documentation.
-  Scientific software and end-user apps.
-  Julia, Python, C/C++, C#, Windows, Linux and MacOS.
-- *Management.*
-  Team leadership of up to 6 people.
-  Knowledge management for team of 15 people.
-- *Teaching.*
-  Course plan, teaching adults, material preparation, instructions.
+- *Моделирование и исследования.*
+  Постановка задач, упрощение моделей, солверы (решатели), отчёты.
+  Уравнения в частных производных, дифференциальные уравнения, линейная алгебра, оптимизация, некорректные задачи.
+- *Вычисления.*
+  Высокопроизводительные вычисления, вычисления на центральных и графических процессорах.
+  Многопоточные вычисления, Nvidia CUDA.
+- *Физика.*
+  Многофазные течения, фазовое равновесие в флюидах, термоупругость, пористая среда.
+- *Программирование.*
+  Архитектура программного обеспечения, валидация, распространение, документация.
+  Научные программы, инженерные программы и программы для массового пользователя.
+  Julia, Python, C/C++, C#, Windows, Linux, MacOS.
+- *Управление.*
+  Управление командой до 6 человек.
+  Управление знаниями команды до 15 человек.
+- *Преподавание.*
+  Составление курса, руководство преподавателями, обучение совершеннолетних, подготовка материалов и инструкций.

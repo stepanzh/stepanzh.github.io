@@ -1,7 +1,7 @@
 Cirriculum vitae
 ################
 
-:date: 2025-02-15
+:date: 2025-02-20
 :modified: 2025-09-09
 :slug: stepan-zakharov-cv
 :navorder: 12
@@ -119,24 +119,19 @@ Thesis is dedicated to simulation of isobaric-isothermal phase equilibria in mix
 Key skills
 ----------
 
+- *Modeling, simulation and research.*
+  Problem statement, simplification, solvers, reports.
+  Partial differential equations (PDE), ordinary differential equations (ODE), linear algebra, optimization, ill-posed problems.
+- *Computing.*
+  High-performance computing (HPC) on central (CPU) and graphical (GPU) processing units.
 - *Physics.*
   Multiphase fluid dynamics, phase equilibria, thermoelasticicity, porous medium.
-- *Modeling, simulation and research.*
-  Problem statement and simplification, PDE and ODE solvers, numerical optimization, ill-conditioning, root finding, linear algebra.
-- *Computing.*
-  High-performance numerical linear algebra, CPU and GPU computing.
 - *Software.*
-  Software architecture, validation and distribution.
+  Software architecture, validation, distribution, documentation.
   Scientific software and end-user apps.
-  Julia, Python, C, C#, Windows, Linux and MacOS.
+  Julia, Python, C/C++, C#, Windows, Linux and MacOS.
 - *Management.*
   Team leadership of up to 6 people.
   Knowledge management for team of 15 people.
 - *Teaching.*
   Course plan, teaching adults, material preparation, instructions.
-- *User interface and experience.*
-  Business layer, design systems, navigation, typography, responsive layout.
-  Fluent UI, Material Design 3, Figma, interfaces for technicians, tk.
-- *Web development.*
-  Frontend, responsive development, static sites and generators.
-  JavaScript, Vue 3, CSS 3, HTML 5.

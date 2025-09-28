@@ -71,6 +71,7 @@ Software engineer · Electronics · SPE Detector, LLC
 
 Dubna, Moscow region, Russia ⋅ 2022 – 2024
 
+- Managed software development: collected requirements, approved list of features and user interface.
 - Developed desktop software and user interface for remote control (manual, scenario-based) of programmable power supplies.
   Designed software the way it works with different instruction sets and different communication types.
 - Developed end-user app for generation print-friendly reports for internal and customer documentation.

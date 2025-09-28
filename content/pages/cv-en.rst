@@ -13,6 +13,9 @@ Stepan Zakharov
 ---------------
 
 .. _link_email: mailto:stepanzh@gmail.com
+.. _link_tg: https://t.me/red_deer
+.. _link_proportio: https://stepanzh.github.io/Proportio
+.. _link_thermodynamics_course: https://stepanzh.github.io/computational_thermodynamics
 
 ..
    
@@ -26,13 +29,13 @@ Stepan Zakharov
 
 **Contacts**
 ⋅ `stepanzh@gmail.com <link_email_>`_
-⋅ `t.me/red_deer <https://t.me/red_deer>`_
+⋅ `t.me/red_deer <link_tg_>`_
 
 **Activities**
 ⋅ `LinkedIn <https://linkedin.com/in/stepan-zakharov-b44ab4105>`_
 ⋅ `Google Scholar <https://scholar.google.ru/citations?user=xvp7Z9oAAAAJ>`_
 ⋅ `GitHub <https://github.com/stepanzh>`_
-⋅ `Proportio <https://stepanzh.github.io/Proportio>`_
+⋅ `Proportio <link_proportio_>`_
 ⋅ `t.me/stepanzh_blog <https://t.me/stepanzh_blog>`_
 
 **Languages**
@@ -81,7 +84,7 @@ Teacher · Higher education · Moscow Institute of Physics and Technology
 
 Dolgoprudny, Moscow region, Russia ⋅ 2019 – 2023
 
-- Co-authored and taught `course on computational thermodynamics <https://stepanzh.github.io/computational_thermodynamics>`_ for four-years students based on my experience in JIHT RAS.
+- Co-authored and taught `course on computational thermodynamics <link_thermodynamics_course_>`_ for four-years students based on my experience in JIHT RAS.
   Materials are available online.
 - Taught algorithms and data structures course for first-year students.
   Managed collaboration of five teachers.
@@ -117,6 +120,28 @@ Bachelor degree · Moscow Institute of Physics and Technology
 Department of molecular and chemical physics ⋅ 2013 — 2017
 
 Thesis is dedicated to simulation of isobaric-isothermal phase equilibria in mixtures of hydrocarbons.
+
+Some projects
+-------------
+
+Proportio app
+=============
+
+I love to cook and tried new recipes each week.
+I had to scale recipes, which is tedious to do by hand.
+There were no user friendly apps for this, and that's why I created `Proportio <link_proportio_>`_.
+
+As of 2025Q3, I've got about $120 donations, 40 anonymous reviews and several user interviews.
+In 2025Q3, Proportio had about 200 active users.
+During work on Proportio I learnt about lean methodology, user interfaces and Vue 3.
+
+Course on computational thermodynamics
+======================================
+The goal was to teach students (also, they are junior researchers) for numerical methods we need in our scientific department.
+My PhD advisor create draft plan, while I created `materials <link_thermodynamics_course_>`_, continiously improved them and taught the course for three years.
+
+I learnt to teach, write clean materials and staying focused.
+Also, I welcomed Docker for the first time.
 
 Key skills
 ----------

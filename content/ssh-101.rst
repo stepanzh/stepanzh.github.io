@@ -7,18 +7,17 @@ SSH по верхам для программистов
 :description: todo
 :keywords: todo
 
+.. role:: kbd
+
 .. epigraph:: 
 
    todo
 
-- scp pupkin@192.68.0.1:~/documents/some-data.tar ~/temporary/
-- ssh mlcluster
-- scp some-data.tar mlcluster:~/temporary/
+- ssh clients
+
 - иксы
 - TODO: permissions (2025-09-27 by Stepan Zakharov)
-- TODO: passwords and keys (2025-09-27 by Stepan Zakharov)
 - TODO: jupyter (2025-09-27 by Stepan Zakharov)
-- ssh clients
 
 
 SSH: что такое и зачем
@@ -93,11 +92,11 @@ TODO: ссылка на статью про command line 101 (2025-09-27 by Step
    ssh-keygen -t ed25519 -C 'pupkin desktop'
 
 - :code:`Enter file in which to save the key`.
-  Жмите Enter, пусть ключи сохраняются в стандартное место.
+  Жмите :kbd:`Enter`, пусть ключи сохраняются в стандартное место.
 - :code:`Enter passphrase`.
-  Просто жмите Enter.
+  Просто жмите :kbd:`Enter`.
 - :code:`Enter same passphrase again`.
-  Enter!
+  :kbd:`Enter`!
 
 Что мы тут ввели?
 
@@ -170,3 +169,59 @@ TODO: ссылка на статью про command line 101 (2025-09-27 by Step
 4. Удалили ключ, чтоб больше не мешался.
 
 Готово.
+
+SCP: перекидываем файлы
+-----------------------
+SCP (secure copy) это утилита для передачи файлов по ssh.
+Она обычно устанавливается вместе с ssh клиентом.
+
+Синтаксис команды :code:`scp` мимикрирует под утилиту :code:`cp`.
+
+.. code-block:: bash
+
+   scp ~/documents/some-data.tar pupkin@192.68.0.1:~/temporary/
+
+Так локальный файл :code:`~/documents/some-data.tar` отправляется (копируется) на удалённую машину.
+В итоге на сервере появится файл :code:`/home/pupkin/temporary/some-data.tar`.
+
+.. 
+
+   Всё отличие от :code:`cp` только во втором аргументе: прежде чем указать путь, необходимо указать адрес машины и поставить двоеточие.
+
+- После того, как вы ввели :code:`pupkin@192.68.0.1:~/` пожмакайте :kbd:`Tab`.
+  По-хорошему, должна сработать подсказка для пути.
+- С опцией :code:`-r` вы можете отправлять `целые папки <https://stackoverflow.com/questions/11304895/how-do-i-copy-a-folder-from-remote-to-local-using-scp>`_.
+
+Если вы не используете подключение по ключу, то :code:`scp` будет на каждый чих требовать пароль.
+Используйте ключи!
+
+Конфиг для ssh
+--------------
+
+.. code-block:: text
+
+   Host mlcluster
+     HostName 192.168.0.1
+     User pupkin
+
+Некст левел для упрощения жизни после настройки ключей это настройка конфига.
+Базовый конфиг вверху, его стандартное место это :code:`~/.ssh/config`.
+
+Теперь дядя pupkin может подключаться к серверу такой командой.
+
+.. code-block:: bash
+
+   ssh mlcluster
+
+А отправлять файлы вот так.
+
+.. code-block:: bash
+
+   scp some-data.tar mlcluster:~/temporary/
+
+Можно считать это shorthand-ом, чтобы не запоминать юзернэйм и адрес сервера.
+
+В конфиге много настроек.
+Например, можно указать какой ключ использовать (когда у вас их несколько) или смэтчить настройки клиента и сервера (чтоб не ругались).
+
+TODO: смайлик kolobok загорает (2025-09-28 by Stepan Zakharov)

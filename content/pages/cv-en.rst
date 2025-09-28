@@ -99,6 +99,7 @@ Department of molecular and chemical physics ⋅ 2019 — 2023
 
 Thesis: `Methods of numerical optimization for predicting phase equilibria in fluids <https://search.rsl.ru/ru/record/01012215755>`_.
 The defence was in Joint Institute For High Temperatures of RAS.
+I'm PhD in thermodynamics.
 
 Internship · Nuclear Safety Institute of RAS
 =============================================================

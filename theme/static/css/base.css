@@ -263,6 +263,10 @@ a:hover {
   margin: 32px 32px;
 }
 
+.article blockquote:not(.epigraph) code {
+  font-size: 17px;
+}
+
 @media only screen and (max-width: 600px){
   .article blockquote:not(.epigraph) {
     margin: 32px 16px;

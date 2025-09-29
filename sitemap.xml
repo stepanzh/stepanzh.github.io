@@ -6,7 +6,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://stepanzh.github.io/</loc>
-<lastmod>2025-09-28T11:20:09-00:00</lastmod>
+<lastmod>2025-09-29T22:34:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -76,7 +76,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://stepanzh.github.io/pages/about-proportio.html</loc>
-<lastmod>2025-09-28T11:20:09-00:00</lastmod>
+<lastmod>2025-09-29T22:34:14-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -107,6 +107,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://stepanzh.github.io/pages/support-me.html</loc>
 <lastmod>2025-02-15T00:00:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://stepanzh.github.io/ssh-101.html</loc>
+<lastmod>2025-09-29T00:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>

@@ -2,7 +2,7 @@ Cirriculum vitae
 ################
 
 :date: 2025-02-20
-:modified: 2025-09-09
+:modified: 2025-12-21
 :slug: stepan-zakharov-cv
 :lang: en
 :navorder: 12
@@ -42,20 +42,48 @@ Stepan Zakharov
 ⋅ Russian
 ⋅ English
 
+Key skills
+----------
+
+- *Modeling, simulation and research.*
+  Problem statement, simplification, solvers, reports.
+  Partial differential equations (PDE), ordinary differential equations (ODE), linear algebra, optimization, ill-posed problems.
+- *Computing.*
+  High-performance computing (HPC) on central (CPU) and graphical (GPU) processing units.
+  Threads, non-uniform memory access (NUMA), Nvidia CUDA.
+- *Physics.*
+  Multiphase fluid dynamics, phase equilibria, heating, thermoelasticicity, porous medium.
+- *Software.*
+  Software architecture, validation, distribution, documentation.
+  Scientific software and end-user apps.
+  Julia, Python, C/C++, C#, Windows, Linux and MacOS.
+- *Management.*
+  Team leadership of up to 6 people.
+  Knowledge management for team of 15 people.
+- *Teaching.*
+  Course plan, teaching adults, material preparation, instructions.
+
 Professional experience
 -----------------------
 
 Senior engineer · R&D · Huawei Russian Research Institute via Coleman Group
 ===========================================================================
 
-Moscow, Russia ⋅ 2024 – now
+Moscow, Russia ⋅ June 2024 – December 2025
 
-- R&D in high-performance numerical linear algebra to meet performance and accuracy KPIs of existing solvers, find best software and provide guidelines for team members.
+
+- Worked on general-purpose finite element method solver for heating and elasticity problems.
+  Discussed software architecture, gathered requirements, proposed interfaces for other teams, tested performance of backends for linear algebra subproblems.
+  Stack: С/С++, Eigen, HDF5, gtest, Julia, scientific Python 3.
+- R&D in high-performance numerical linear algebra to meet performance and accuracy KPIs of existing solvers, collected (40+) software and found best, provide guidelines for team members.
+  Stack: C, Julia, scientific Python 3, multi threading, cache-friendly, GPGPU (CUDA), heterogeneous programming.
 - Developed robust solver for a poorly-conditioned numerical optimization problem (constrained quadratic programming).
+  Stack: Julia, multi threading.
 - Deployed knowledge base and managed knowledge of 15-people team across two projects to improve communication within the team, to collaborate easily with headquarters and to make scientifically correct problem statements that meet business needs, to prepare reports easier.
 - Managed two colleagues to prepare and teach together an R&D-focused course on Julia programming language for whole department.
   About 30 people passed the course.
-- Mentored one newcomer, helped and guided junior colleagues.
+  Materials were published using Quartz SSG.
+- Mentored one newcomer.
 
 Researcher · Science · Joint Institute for High Temperatures of RAS
 ===================================================================
@@ -74,10 +102,12 @@ Software engineer · Electronics · SPE Detector, LLC
 
 Dubna, Moscow region, Russia ⋅ 2022 – 2024
 
-- Managed software development: collected requirements, approved list of features and user interface.
+- Managed software development: gathered requirements, approved list of features and user interface.
 - Developed desktop software and user interface for remote control (manual, scenario-based) of programmable power supplies.
   Designed software the way it works with different instruction sets and different communication types.
+  Stack: Windows 10, C#, .NET Core, Sockets, Serial, asynchronous programming, dependency injection, WPF, CommunityToolkit.MVVM, Figma.
 - Developed end-user app for generation print-friendly reports for internal and customer documentation.
+  Stack: Windows 7 & 10, Python 3.6, sqlite3, xlsx, jinja2, wkhtmltopdf, tkinter, Figma,.
 
 Teacher · Higher education · Moscow Institute of Physics and Technology
 =======================================================================
@@ -93,7 +123,7 @@ Education
 ---------
 
 PhD degree · Moscow Institute of Physics and Technology
-==========================================================================
+=======================================================
 
 Department of molecular and chemical physics ⋅ 2019 — 2023
 
@@ -102,21 +132,21 @@ The defence was in Joint Institute For High Temperatures of RAS.
 I'm PhD in thermodynamics.
 
 Internship · Nuclear Safety Institute of RAS
-=============================================================
+============================================
 
 Department of computational thermodynamics and fluid dynamics · 2017 — 2018
 
 Topic of internship is computational fluid dynamics of multiphase flows.
 
 Master degree · Moscow Institute of Physics and Technology
-=============================================================================
+==========================================================
 
 Department of molecular and chemical physics ⋅ 2017 — 2019
 
 Thesis is dedicated to computational fluid dynamics of two-phase flows in porous medium.
 
 Bachelor degree · Moscow Institute of Physics and Technology
-===============================================================================
+============================================================
 
 Department of molecular and chemical physics ⋅ 2013 — 2017
 
@@ -143,24 +173,3 @@ My PhD advisor create draft plan, while I created `materials <link_thermodynamic
 
 I learnt to teach, write clean materials and staying focused.
 Also, I welcomed Docker for the first time.
-
-Key skills
-----------
-
-- *Modeling, simulation and research.*
-  Problem statement, simplification, solvers, reports.
-  Partial differential equations (PDE), ordinary differential equations (ODE), linear algebra, optimization, ill-posed problems.
-- *Computing.*
-  High-performance computing (HPC) on central (CPU) and graphical (GPU) processing units.
-  Threads, Nvidia CUDA.
-- *Physics.*
-  Multiphase fluid dynamics, phase equilibria, thermoelasticicity, porous medium.
-- *Software.*
-  Software architecture, validation, distribution, documentation.
-  Scientific software and end-user apps.
-  Julia, Python, C/C++, C#, Windows, Linux and MacOS.
-- *Management.*
-  Team leadership of up to 6 people.
-  Knowledge management for team of 15 people.
-- *Teaching.*
-  Course plan, teaching adults, material preparation, instructions.

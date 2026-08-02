@@ -2,7 +2,7 @@ Cirriculum vitae
 ################
 
 :date: 2025-02-20
-:modified: 2025-12-21
+:modified: 2026-08-02
 :slug: stepan-zakharov-cv
 :lang: en
 :navorder: 12
@@ -65,6 +65,14 @@ Key skills
 
 Professional experience
 -----------------------
+
+Wireless software engineer · Telecommuncations · New Telecom Solutions
+======================================================================
+
+`NTS <https://mwnts.ru/>`_ · Moscow, Russia · February 2026 – present
+
+- Developed and support components of system simulator dedicated to end-to-end testing of base station software NTS-VRAN and NTS-OSS LTE-network management system.
+  Stack: LTE, С, C++, Python.
 
 Senior engineer · R&D · Huawei Russian Research Institute via Coleman Group
 ===========================================================================
@@ -158,16 +166,14 @@ Some projects
 Proportio app
 =============
 
-I love to cook and tried new recipes each week.
-I had to scale recipes, which is tedious to do by hand.
-There were no user friendly apps for this, and that's why I created `Proportio <link_proportio_>`_.
+Сreated mobile (2026) and web (2022) app for scaling culinary recipes.
 
-As of 2025Q3, I've got about $120 donations, 40 anonymous reviews and several user interviews.
-In 2025Q3, Proportio had about 200 active users.
-During work on Proportio I learnt about lean methodology, user interfaces and Vue 3.
+- `Proportio for Android <https://www.rustore.ru/catalog/app/ru.stepanzh.proportio>`_
+- `Proportio online <link_proportio_>`_
 
 Course on computational thermodynamics
 ======================================
+
 The goal was to teach students (also, they are junior researchers) for numerical methods we need in our scientific department.
 My PhD advisor create draft plan, while I created `materials <link_thermodynamics_course_>`_, continiously improved them and taught the course for three years.
 

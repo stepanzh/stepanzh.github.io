@@ -6,7 +6,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://stepanzh.github.io/</loc>
-<lastmod>2026-05-17T19:06:50-00:00</lastmod>
+<lastmod>2026-08-02T19:01:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -76,7 +76,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://stepanzh.github.io/pages/about-proportio.html</loc>
-<lastmod>2026-05-17T19:06:50-00:00</lastmod>
+<lastmod>2026-08-02T19:01:04-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -90,7 +90,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://stepanzh.github.io/pages/stepan-zakharov-cv-en.html</loc>
-<lastmod>2025-12-21T00:00:00+03:00</lastmod>
+<lastmod>2026-08-02T00:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 <xhtml:link rel="alternate" hreflang="ru" ref="https://stepanzh.github.io/pages/stepan-zakharov-cv.html"/>
@@ -98,7 +98,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://stepanzh.github.io/pages/stepan-zakharov-cv.html</loc>
-<lastmod>2025-12-21T00:00:00+03:00</lastmod>
+<lastmod>2026-08-01T00:00:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 <xhtml:link rel="alternate" hreflang="en" ref="https://stepanzh.github.io/pages/stepan-zakharov-cv-en.html"/>

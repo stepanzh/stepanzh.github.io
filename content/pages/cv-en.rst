@@ -57,9 +57,6 @@ Key skills
   Software architecture, validation, distribution, documentation.
   Scientific software and end-user apps.
   Julia, Python, C/C++, C#, Windows, Linux and MacOS.
-- *Management.*
-  Team leadership of up to 6 people.
-  Knowledge management for team of 15 people.
 - *Teaching.*
   Course plan, teaching adults, material preparation, instructions.
 

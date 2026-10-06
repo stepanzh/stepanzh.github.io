@@ -1,6 +1,7 @@
 Kebab-case лучший
 #################
 
+:status: skip
 :date: 2024-11-06
 :modified: 2025-05-14
 :slug: note-on-kebab-case

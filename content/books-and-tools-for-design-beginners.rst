@@ -1,6 +1,7 @@
 Книги и инструменты для начинающего дизайнера
 #############################################
 
+:status: skip
 :date: 2024-12-10
 :modified: 2025-02-10
 :slug: books-and-tools-for-design-beginners

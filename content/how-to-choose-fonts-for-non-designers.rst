@@ -1,6 +1,7 @@
 Как выбрать шрифт не-дизайнеру
 #############################################
 
+:status: skip
 :date: 2024-12-06
 :modified: 2025-02-18
 :slug: how-to-choose-fonts-for-non-designers

@@ -1,6 +1,7 @@
 Когда Ctrl-Z не хватает
 #######################
 
+:status: skip
 :date: 2024-10-22
 :modified: 2025-02-09
 :slug: when-ctrl-z-is-not-enough
